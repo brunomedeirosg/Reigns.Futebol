@@ -1,0 +1,397 @@
+{
+  "versao": "0.1",
+  "cargo": "filho",
+  "cota": 10,
+  "notas": "Bloco completo do cargo FILHO (persistência: íntimo — Téo, Alice, Bento ou Manu; o elenco tem meninos e meninas). Voz: criança de verdade — muda de assunto no meio, repete o que ouviu na TV, diz tudo bem quando não está. REGRA INEGOCIÁVEL: nunca fazer o filho dar lição de moral. Todo o cargo é travado pela flag tem_filho, que nasce no bloco da companheira — quem nunca deixou ninguém entrar não tem essas cartas, e o jogo não comenta isso.",
+  "cartas": [
+    {
+      "id": "filho_declinio_01",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele faz nove anos no sábado. É dia de jogo. Ele já sabe a resposta e diz que tudo bem antes de você falar qualquer coisa.",
+      "esquerda": {
+        "rotulo": "Não jogo sábado",
+        "efeitos": {
+          "diretoria": -27,
+          "forma": 18,
+          "torcida": -9
+        },
+        "flags": [
+          "escolheu_o_filho"
+        ],
+        "fio": {
+          "id": "fio_aniversario_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Ele vai lembrar do sábado, não do gol."
+      },
+      "direita": {
+        "rotulo": "Faço gol pra ele",
+        "efeitos": {
+          "diretoria": 18,
+          "torcida": 18,
+          "forma": -12
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_aniversario_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "O gol saiu. Ele estava dormindo."
+      }
+    },
+    {
+      "id": "filho_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "filho",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele aprendeu a reconhecer o barulho da mala. Quando você pega a mala, ele vai para o quarto sem falar nada.",
+      "esquerda": {
+        "rotulo": "Levo ele na viagem",
+        "efeitos": {
+          "diretoria": -7,
+          "torcida": 7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Explico e vou",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "filho",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele brigou na escola porque um menino disse que você está velho e acabado. Ele contou rindo, o que é pior.",
+      "esquerda": {
+        "rotulo": "Vou na escola com ele",
+        "efeitos": {
+          "diretoria": -4,
+          "forma": -4,
+          "torcida": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Mando ele ignorar",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_declinio_04",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "filho",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele disse que não quer jogar bola, que quer desenhar. Falou olhando para o chão, esperando você ficar decepcionado.",
+      "esquerda": {
+        "rotulo": "Compro o material",
+        "efeitos": {
+          "dinheiro": -4,
+          "torcida": 4,
+          "forma": 4
+        },
+        "flags": [
+          "aceitou_o_filho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Insisto na bola",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_declinio_05",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "filho",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele te viu no banco pela televisão e perguntou se você foi de castigo. Perguntou de verdade, sem maldade nenhuma.",
+      "esquerda": {
+        "rotulo": "Explico a verdade",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -3,
+          "diretoria": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Digo que é descanso",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_declinio_06",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "filho",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele quer jogar no quintal e você não consegue agachar sem apoiar a mão no joelho. Ele espera com a bola no colo.",
+      "esquerda": {
+        "rotulo": "Jogo do jeito que dá",
+        "efeitos": {
+          "forma": -6,
+          "torcida": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Amanhã eu jogo",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 13,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele vai entrar em campo com você na despedida, de mão dada, na frente de sessenta mil pessoas. Ele perguntou se pode levar o boneco.",
+      "esquerda": {
+        "rotulo": "Leva o boneco",
+        "efeitos": {
+          "torcida": 16,
+          "diretoria": -11,
+          "forma": 7
+        },
+        "flags": [
+          "despedida_com_o_filho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Hoje não, filho",
+        "efeitos": {
+          "diretoria": 11,
+          "forma": 9,
+          "torcida": -9
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Primeiro mês sem jogo e você está em casa todo dia. Ele perguntou, sem reclamar, quando é que você vai viajar de novo.",
+      "esquerda": {
+        "rotulo": "Fico o ano inteiro",
+        "efeitos": {
+          "dinheiro": -25,
+          "torcida": 20,
+          "forma": 10
+        },
+        "flags": [
+          "escolheu_o_filho"
+        ],
+        "fio": {
+          "id": "fio_aniversario_b2b",
+          "em": [
+            6,
+            12
+          ]
+        },
+        "eco": "Um ano inteiro em casa é muito tempo."
+      },
+      "direita": {
+        "rotulo": "Já tenho convite",
+        "efeitos": {
+          "dinheiro": 20,
+          "diretoria": 12,
+          "torcida": -12
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_aniversario_b2a",
+          "em": [
+            6,
+            12
+          ]
+        },
+        "eco": "Ele perguntou uma vez. Não pergunta de novo."
+      }
+    },
+    {
+      "id": "filho_legado_03",
+      "era": [
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele leu na internet uma matéria antiga sobre você e perguntou o que quer dizer uma das palavras. Perguntou na mesa do almoço.",
+      "esquerda": {
+        "rotulo": "Explico tudo",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Mudo de assunto",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "filho_legado_04",
+      "era": [
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Ele mudou de ideia e quer fazer uma peneira, num clube pequeno, sem falar de quem é filho. Pediu que você não vá.",
+      "esquerda": {
+        "rotulo": "Respeito o pedido",
+        "efeitos": {
+          "forma": 4,
+          "torcida": 4,
+          "diretoria": -4
+        },
+        "flags": [
+          "respeitou_o_filho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Ligo pro coordenador",
+        "efeitos": {
+          "diretoria": 4,
+          "dinheiro": -4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    }
+  ]
+}

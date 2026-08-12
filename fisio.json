@@ -1,0 +1,629 @@
+{
+  "versao": "0.1",
+  "cargo": "fisio",
+  "cota": 18,
+  "notas": "Bloco completo do cargo DEPARTAMENTO MÉDICO (persistência: rotativo — Dra. Kênia, Dr. Aílton ou Dra. Suzana). Voz: técnica e sem eufemismo, dá o número exato de semanas, nunca dramatiza — e é por isso que assusta. É o contrapeso mecânico do empresário: ele empurra DINHEIRO, este cargo cobra o corpo. Único cargo que oferece uma opção honestamente boa e cara.",
+  "cartas": [
+    {
+      "id": "fisio_base_01",
+      "era": [
+        "base",
+        "estouro"
+      ],
+      "cargo": "fisio",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O joelho incha depois de todo treino forte. Ela quer parar você por três semanas. A peneira do profissional é em duas.",
+      "esquerda": {
+        "rotulo": "Eu aguento",
+        "efeitos": {
+          "forma": 26,
+          "diretoria": 14,
+          "torcida": -6
+        },
+        "flags": [
+          "joelho_ignorado"
+        ],
+        "fio": {
+          "id": "fio_joelho_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "O joelho tem memória melhor que a sua."
+      },
+      "direita": {
+        "rotulo": "Paro agora",
+        "efeitos": {
+          "forma": -22,
+          "diretoria": -18,
+          "torcida": 6
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "fio": {
+          "id": "fio_joelho_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Três semanas paradas custaram a peneira."
+      }
+    },
+    {
+      "id": "fisio_base_02",
+      "era": [
+        "base"
+      ],
+      "cargo": "fisio",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "{nome} mede tudo: envergadura, gordura, quanto você dorme. Diz que você é bom e que seu corpo tem dezessete anos de idade e vinte e cinco de estrada.",
+      "esquerda": {
+        "rotulo": "Sigo o plano dela",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Treino como sempre",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "fisio",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Estiramento na coxa. Ela diz três semanas e o calendário tem cinco jogos nesse período. Ela repete o número três sem mudar o tom.",
+      "esquerda": {
+        "rotulo": "Volto em duas",
+        "efeitos": {
+          "forma": -32,
+          "diretoria": 21
+        },
+        "flags": [
+          "voltou_cedo"
+        ],
+        "fio": {
+          "id": "fio_joelho_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Ela anotou a data no prontuário e sublinhou."
+      },
+      "direita": {
+        "rotulo": "Cumpro as três",
+        "efeitos": {
+          "diretoria": -27,
+          "forma": 21
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "fio": {
+          "id": "fio_joelho_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Cinco jogos passaram sem você e foram cinco."
+      }
+    },
+    {
+      "id": "fisio_estouro_02",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "fisio",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Você quer treinar de novo à tarde, por conta própria. {nome} diz que o corpo cresce no descanso e não no treino, e que ela não vai poder te acompanhar.",
+      "esquerda": {
+        "rotulo": "Treino escondido",
+        "efeitos": {
+          "forma": 18,
+          "diretoria": -11,
+          "torcida": 7
+        },
+        "flags": [
+          "treino_dobrado"
+        ]
+      },
+      "direita": {
+        "rotulo": "Faço como ela diz",
+        "efeitos": {
+          "forma": -7,
+          "diretoria": 11,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_estouro_03",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "fisio",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Você não dorme depois dos jogos noturnos. Tem gente no elenco que usa alguma coisa pra isso e ninguém pergunta o quê.",
+      "esquerda": {
+        "rotulo": "Peço a receita",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Aguento acordado",
+        "efeitos": {
+          "forma": -7,
+          "diretoria": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "fisio",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "O frio muda tudo: você aquece o dobro e a panturrilha trava mesmo assim. {nome} quer refazer seu aquecimento inteiro, o que te tira do treino coletivo.",
+      "esquerda": {
+        "rotulo": "Mudo o aquecimento",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Faço junto com o grupo",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_travessia_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "fisio",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Decisão de mata-mata, dor no tornozelo, agulha em cima da maca. {nome} explica o que a infiltração faz e o que ela esconde. Depois cala e espera.",
+      "esquerda": {
+        "rotulo": "Aplica",
+        "efeitos": {
+          "forma": -11,
+          "torcida": 12,
+          "diretoria": 9
+        },
+        "flags": [
+          "infiltracao_cronica"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não jogo hoje",
+        "efeitos": {
+          "torcida": -12,
+          "diretoria": -9,
+          "forma": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_travessia_03",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "fisio",
+      "peso": 7,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Trinta e oito e meio de febre no dia do amistoso da seleção. {nome} diz que dá para jogar e que não devia, nessa ordem e com uma pausa no meio.",
+      "esquerda": {
+        "rotulo": "Jogo assim mesmo",
+        "efeitos": {
+          "torcida": 1,
+          "forma": -11
+        },
+        "flags": [],
+        "estatisticas": {
+          "selecoes": 1
+        }
+      },
+      "direita": {
+        "rotulo": "Fico no hotel",
+        "efeitos": {
+          "forma": 4,
+          "torcida": -5
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_auge_01",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 20,
+      "texto": "Sessenta e dois jogos na temporada. Ela mostra o gráfico da sua carga e o ponto exato em que a linha deixa de ser curva e vira parede.",
+      "esquerda": {
+        "rotulo": "Poupo dois jogos",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Jogo todos",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "fisio",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O novo preparador trouxe um suplemento que acelera recuperação e está na lista de espera da agência antidopagem. {nome} não recomenda e não proíbe.",
+      "esquerda": {
+        "rotulo": "Tomo",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": 3,
+          "torcida": -3
+        },
+        "flags": [
+          "suplemento_cinzento"
+        ]
+      },
+      "direita": {
+        "rotulo": "Passo",
+        "efeitos": {
+          "forma": -3,
+          "diretoria": -3,
+          "torcida": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_auge_03",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} pediu demissão: o clube cortou o departamento médico pela metade. Ela pergunta se você quer que ela continue te acompanhando por fora.",
+      "esquerda": {
+        "rotulo": "Pago do meu bolso",
+        "efeitos": {
+          "dinheiro": -7,
+          "forma": 7
+        },
+        "flags": [
+          "fisio_particular"
+        ]
+      },
+      "direita": {
+        "rotulo": "Uso o que o clube tem",
+        "efeitos": {
+          "dinheiro": 3,
+          "forma": -3,
+          "diretoria": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 16,
+      "tipo": "catastrofica",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "joelho_ignorado"
+        ],
+        "idade": {
+          "min": 31
+        }
+      },
+      "texto": "{nome} coloca a ressonância na mesa e não diz nada por sete segundos. Aquele joelho de dezoito anos chegou com juros e correção.",
+      "esquerda": {
+        "rotulo": "Opero e volto",
+        "efeitos": {
+          "forma": -24,
+          "dinheiro": -10
+        },
+        "flags": [
+          "cirurgia_joelho"
+        ],
+        "lesao": 3
+      },
+      "direita": {
+        "rotulo": "Infiltro e jogo",
+        "efeitos": {
+          "forma": -11,
+          "diretoria": 9,
+          "torcida": 9
+        },
+        "flags": [
+          "infiltracao_cronica"
+        ]
+      }
+    },
+    {
+      "id": "fisio_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 32
+        }
+      },
+      "texto": "{nome} fecha a pasta e diz que do ponto de vista médico não há mais o que fazer nem o que impedir. A partir de agora a decisão é sua, e ela vai respeitar.",
+      "esquerda": {
+        "rotulo": "Vou até não dar mais",
+        "efeitos": {
+          "forma": -14,
+          "torcida": 11,
+          "diretoria": 7
+        },
+        "flags": [
+          "ate_o_fim"
+        ]
+      },
+      "direita": {
+        "rotulo": "Marco a despedida",
+        "efeitos": {
+          "forma": 9,
+          "torcida": -11,
+          "diretoria": -9
+        },
+        "flags": [
+          "marcou_despedida"
+        ]
+      }
+    },
+    {
+      "id": "fisio_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 7,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "O joelho bom começou a doer porque passou dez anos compensando o ruim. Ela chama isso de conta que chega em duplicata.",
+      "esquerda": {
+        "rotulo": "Trato os dois",
+        "efeitos": {
+          "forma": 6,
+          "dinheiro": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Trato o que dói",
+        "efeitos": {
+          "forma": -7,
+          "dinheiro": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "fisio",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 34
+        }
+      },
+      "texto": "Ela assina a última ficha e escreve alta na linha de baixo. Diz que em dezoito anos você foi o segundo mais teimoso que ela atendeu.",
+      "esquerda": {
+        "rotulo": "Quem foi o primeiro?",
+        "efeitos": {
+          "torcida": 7,
+          "forma": 3,
+          "diretoria": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Agradeço e saio",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "fisio",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "joelho_tratado"
+        ],
+        "idade": {
+          "min": 34
+        }
+      },
+      "texto": "{nome} quer transformar dezoito anos de fichas suas num protocolo para a base. Precisa do seu nome, do seu histórico e de você aparecendo lá toda semana.",
+      "esquerda": {
+        "rotulo": "Meu nome e meu tempo",
+        "efeitos": {
+          "diretoria": 12,
+          "torcida": 10,
+          "dinheiro": -10
+        },
+        "flags": [
+          "protocolo_com_meu_nome"
+        ]
+      },
+      "direita": {
+        "rotulo": "Usa os dados sem mim",
+        "efeitos": {
+          "dinheiro": 10,
+          "diretoria": -10,
+          "torcida": -9
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_base_03",
+      "era": [
+        "base"
+      ],
+      "cargo": "fisio",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Pesagem toda segunda, e o número está dois quilos acima do que ela quer. Ela anota e não faz comentário nenhum.",
+      "esquerda": {
+        "rotulo": "Corto a comida",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Como igual",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "fisio_base_04",
+      "era": [
+        "base"
+      ],
+      "cargo": "fisio",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} passou uma rotina de vinte minutos de alongamento por dia. Ninguém no alojamento faz, e quem faz leva apelido.",
+      "esquerda": {
+        "rotulo": "Faço mesmo assim",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": [
+          "disciplina_fisica"
+        ]
+      },
+      "direita": {
+        "rotulo": "Faço quando dá",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    }
+  ]
+}

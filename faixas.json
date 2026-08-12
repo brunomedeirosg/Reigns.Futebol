@@ -1,0 +1,24 @@
+{
+  "_leia": "FONTE ÚNICA das faixas de magnitude. Estavam duplicadas em validar-cartas.py e balancear-deriva.py, e uma ficou velha depois de um reescalonamento — o balanceador rejeitava todo candidato porque media pela régua antiga. Quem precisar das faixas lê daqui.",
+  "fator_acumulado": 1.344,
+  "_fator": "Escala de dificuldade sobre a versão original, calibrada em medições: 1,00 -> 133 decisões · 1,45 -> 84 · 1,67 -> 46 · 1,49 -> 68 · 1,41 (depois dos fios curtos entrarem no baralho) -> alvo 70. É a VARIÂNCIA que controla o tamanho da carreira; decaimento por idade e calendário não controlam.",
+  "faixas": {
+    "padrao": [
+      7,
+      14
+    ],
+    "importante": [
+      23,
+      37
+    ],
+    "legado": [
+      42,
+      61
+    ]
+  },
+  "morte": [
+    11,
+    37
+  ],
+  "_morte": "A opção segura de uma morte súbita: o peso está na morte, não no delta."
+}

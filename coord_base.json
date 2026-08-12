@@ -1,0 +1,568 @@
+{
+  "versao": "0.1",
+  "cargo": "coord_base",
+  "cota": 18,
+  "parcial": false,
+  "notas": "Bloco completo do cargo COORDENAÇÃO DE BASE (persistência: rotativo — Seu Nivaldo, Seu Barbosa ou Dona Célia). Voz: fala em provérbio e não explica o provérbio, trata todo mundo por meu filho, nunca elogia na frente dos outros. É a voz da instituição na era 1, sem cinismo. Cota subiu de 12 para 18 porque a era Base era o gargalo de variedade do jogo.",
+  "cartas": [
+    {
+      "id": "coord_base_01",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Cortaram sete moleques hoje. Seu nome não estava na lista. O do seu colega de quarto estava, e ele ainda não sabe.",
+      "esquerda": {
+        "rotulo": "Conto pra ele",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": [
+          "contou_pro_colega"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não é meu papel",
+        "efeitos": {
+          "diretoria": 10,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_02",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "O alojamento tem goteira, o almoço tem hora e o portão fecha às nove. Metade dos moleques pula o muro na sexta.",
+      "esquerda": {
+        "rotulo": "Pulo com eles",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico e durmo",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_03",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Trezentos moleques, quatro campos, quarenta minutos cada. {nome} diz que decide nos primeiros cinco e assiste o resto por respeito.",
+      "esquerda": {
+        "rotulo": "Vou pra cima na hora",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Jogo os quarenta",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_04",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "O clube não paga condução e {nome} finge não saber que metade dos moleques vem de carona no caminhão do irmão de alguém.",
+      "esquerda": {
+        "rotulo": "Peço ajuda de custo",
+        "efeitos": {
+          "diretoria": -7,
+          "dinheiro": 7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Me viro sozinho",
+        "efeitos": {
+          "diretoria": 7,
+          "dinheiro": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_05",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} escreveu uma carta te indicando para o profissional. Mostrou a carta, dobrou de novo e disse que ainda não vai mandar.",
+      "esquerda": {
+        "rotulo": "Pergunto o porquê",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Espero calado",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": [
+          "obediente"
+        ]
+      }
+    },
+    {
+      "id": "coord_base_06",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Você nunca fez exame cardíaco no clube e {nome} diz que o convênio venceu. Diz também que o seu pai morreu novo, e muda de assunto.",
+      "esquerda": {
+        "rotulo": "Pago o exame",
+        "efeitos": {
+          "dinheiro": -6,
+          "forma": 6
+        },
+        "flags": [
+          "fez_o_exame"
+        ]
+      },
+      "direita": {
+        "rotulo": "Deixo pra depois",
+        "efeitos": {
+          "dinheiro": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_07",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "{nome} disse que cavalo bom não bebe água suja e foi embora sem explicar. Metade do grupo achou elogio, metade achou bronca.",
+      "esquerda": {
+        "rotulo": "Peço a tradução",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Acho que é elogio",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_08",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Você foi mal na estreia do estadual e {nome} escalou você de novo sem dizer nada, o que é a coisa mais parecida com afeto que ele faz.",
+      "esquerda": {
+        "rotulo": "Agradeço no fim",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Só jogo",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_09",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O pai de um moleque ofereceu dinheiro a {nome} para escalar o filho no seu lugar. {nome} contou isso a você, sem explicar por quê.",
+      "esquerda": {
+        "rotulo": "Conto pro moleque",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Guardo pra mim",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_10",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} está com quatro salários atrasados e continua chegando às seis da manhã. Pediu para você não comentar isso com ninguém.",
+      "esquerda": {
+        "rotulo": "Falo com a diretoria",
+        "efeitos": {
+          "diretoria": -6,
+          "torcida": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico calado",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_11",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Choveu três dias e o campo virou barro. {nome} manda treinar igual, dizendo que o barro ensina o que a grama esconde.",
+      "esquerda": {
+        "rotulo": "Treino no barro",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Peço a academia",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_12",
+      "era": [
+        "base",
+        "estouro"
+      ],
+      "cargo": "coord_base",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Você subiu para o profissional e {nome} não foi avisado. Descobriu pelo mural, junto com os outros, e apertou sua mão sem olhar no olho.",
+      "esquerda": {
+        "rotulo": "Volto pra agradecer",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": -11,
+          "forma": -7
+        },
+        "flags": [
+          "voltou_na_base"
+        ]
+      },
+      "direita": {
+        "rotulo": "Sigo em frente",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": 11,
+          "torcida": -11
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_legado_05",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Vão dar o nome de {nome} ao campo três e pediram que você discursasse. {nome} morreu em março e ninguém do clube foi ao enterro.",
+      "esquerda": {
+        "rotulo": "Falo do enterro vazio",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": [
+          "falou_do_enterro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Falo só do campo",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_legado_06",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "O mural do corredor tem cento e oitenta fotos de garotos que passaram pela base. Você conhece o nome de seis.",
+      "esquerda": {
+        "rotulo": "Procuro os seis",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Passo direto",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 34
+        }
+      },
+      "texto": "{nome} te oferece a coordenação da base. O cargo exige licença, e a licença exige um curso de dois anos que ninguém da sua geração teve paciência de fazer.",
+      "esquerda": {
+        "rotulo": "Faço o curso",
+        "efeitos": {
+          "dinheiro": -24,
+          "diretoria": 27,
+          "forma": -9
+        },
+        "flags": [
+          "curso_de_treinador"
+        ],
+        "fio": {
+          "id": "fio_heranca_b2a",
+          "em": [
+            6,
+            12
+          ]
+        },
+        "eco": "Dois anos de aula por um crachá."
+      },
+      "direita": {
+        "rotulo": "Fico só como padrinho",
+        "efeitos": {
+          "torcida": 19,
+          "diretoria": -19,
+          "dinheiro": 9
+        },
+        "flags": [
+          "padrinho_sem_cargo"
+        ],
+        "fio": {
+          "id": "fio_heranca_b2b",
+          "em": [
+            6,
+            12
+          ]
+        },
+        "eco": "A base inteira cresce com essa resposta."
+      }
+    },
+    {
+      "id": "coord_base_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Você voltou ao clube depois de dezessete anos. {nome} te recebe com o mesmo aperto de mão de sempre e chama você pelo nome de outro moleque.",
+      "esquerda": {
+        "rotulo": "Corrijo",
+        "efeitos": {
+          "forma": 4,
+          "torcida": -4,
+          "diretoria": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo assim",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_legado_03",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Sete moleques na sala e a lista com cinco nomes na sua mão. {nome} diz que na primeira vez todo mundo chora, e que na segunda ninguém chora mais.",
+      "esquerda": {
+        "rotulo": "Falo com cada um",
+        "efeitos": {
+          "forma": -3,
+          "torcida": 7,
+          "diretoria": -3
+        },
+        "flags": [
+          "cortou_olhando_na_cara"
+        ]
+      },
+      "direita": {
+        "rotulo": "Leio a lista e saio",
+        "efeitos": {
+          "diretoria": 3,
+          "forma": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "coord_base_legado_04",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 14,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "curso_de_treinador"
+        ]
+      },
+      "texto": "Sua primeira decisão como coordenador é a goteira do alojamento ou a viagem do sub-17. O orçamento cobre uma, e {nome} já sabe qual ele escolheria.",
+      "esquerda": {
+        "rotulo": "Conserto o alojamento",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "dinheiro": -4
+        },
+        "flags": [
+          "arrumou_o_alojamento"
+        ]
+      },
+      "direita": {
+        "rotulo": "Mando eles viajarem",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "dinheiro": -4
+        },
+        "flags": []
+      }
+    }
+  ]
+}

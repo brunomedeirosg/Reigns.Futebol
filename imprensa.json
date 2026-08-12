@@ -1,0 +1,727 @@
+{
+  "versao": "0.1",
+  "cargo": "imprensa",
+  "cota": 20,
+  "notas": "Bloco completo do cargo IMPRENSA (persistência: rotativo — Bia Tavares, Rogério Sanz ou Malu Andrade). Voz: pergunta com afirmação disfarçada, sabe do vazamento antes de você, é quem te chama por {apelido}. É o principal instrumento do eixo TORCIDA ↔ DIRETORIA no jogo inteiro. Produz a segunda fonte de tomou_posicao e de escolheu_o_filho.",
+  "cartas": [
+    {
+      "id": "imprensa_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "imprensa",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Zona mista, três minutos, gravador ligado. Ela quer sua opinião sobre o treinador ter tirado o camisa 10 chorando.",
+      "esquerda": {
+        "rotulo": "Falo o que penso",
+        "efeitos": {
+          "torcida": 3,
+          "diretoria": -6
+        },
+        "flags": [
+          "fala_demais"
+        ]
+      },
+      "direita": {
+        "rotulo": "Grupo tá focado",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -9
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_estouro_02",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "imprensa",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "A manchete diz que você é a solução do clube. Você tem vinte anos e três jogos. {nome} pergunta se você concorda com a manchete dela.",
+      "esquerda": {
+        "rotulo": "Concordo",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "É cedo demais",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_estouro_03",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "imprensa",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Vazou um áudio do vestiário com uma frase sua fora de contexto. Fora de contexto, mas é sua.",
+      "esquerda": {
+        "rotulo": "Explico o contexto",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Nem confirmo",
+        "efeitos": {
+          "diretoria": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_estouro_04",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "imprensa",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ela inventou um apelido para você numa crônica e a arquibancada adotou em duas semanas. Você odeia o apelido.",
+      "esquerda": {
+        "rotulo": "Peço para parar",
+        "efeitos": {
+          "diretoria": 3,
+          "torcida": -7,
+          "forma": 3
+        },
+        "flags": [
+          "odeia_o_apelido"
+        ]
+      },
+      "direita": {
+        "rotulo": "Deixo pegar",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -3
+        },
+        "flags": [
+          "aceitou_o_apelido"
+        ]
+      }
+    },
+    {
+      "id": "imprensa_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "imprensa",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "{nome} veio de longe para te entrevistar e propõe fazer em português, o que rende manchete no Brasil e desconfiança no clube novo.",
+      "esquerda": {
+        "rotulo": "Falo em português",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Falo na língua daqui",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_travessia_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ela escreveu que a sua queda de rendimento é culpa do calendário e não sua. Não era favor: era o que os dados diziam. O clube não gostou.",
+      "esquerda": {
+        "rotulo": "Confirmo a matéria",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Me distancio dela",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_travessia_03",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ela sabe da proposta antes de você. Diz o valor certo e pergunta se você quer confirmar agora ou ser surpreendido amanhã.",
+      "esquerda": {
+        "rotulo": "Confirmo agora",
+        "efeitos": {
+          "torcida": 18,
+          "diretoria": -18
+        },
+        "flags": [
+          "vazou_a_proposta"
+        ]
+      },
+      "direita": {
+        "rotulo": "Ela publica sem mim",
+        "efeitos": {
+          "diretoria": 11,
+          "torcida": -12
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_travessia_04",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "A pauta é o seu corte de cabelo novo. Três minutos ao vivo, e é a matéria mais vista da semana no site inteiro.",
+      "esquerda": {
+        "rotulo": "Levo na brincadeira",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Peço pauta de futebol",
+        "efeitos": {
+          "diretoria": -6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Xingaram um garoto do time visitante na arquibancada, o jogo parou quatro minutos e o microfone chegou em você.",
+      "esquerda": {
+        "rotulo": "Digo o nome disso",
+        "efeitos": {
+          "torcida": 27,
+          "diretoria": -25
+        },
+        "flags": [
+          "tomou_posicao"
+        ],
+        "fio": {
+          "id": "fio_microfone_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "O garoto viu o que você fez com o microfone."
+      },
+      "direita": {
+        "rotulo": "Foco no futebol",
+        "efeitos": {
+          "diretoria": 16,
+          "torcida": -25,
+          "dinheiro": 9
+        },
+        "flags": [
+          "calou"
+        ],
+        "fio": {
+          "id": "fio_microfone_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "O garoto também viu o que você não fez."
+      }
+    },
+    {
+      "id": "imprensa_auge_02",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Um repórter perguntou o que você acha do salário das jogadoras do clube. A resposta certa é curta e cara, e você sabe as duas coisas.",
+      "esquerda": {
+        "rotulo": "Digo o número",
+        "efeitos": {
+          "torcida": 27,
+          "diretoria": -27
+        },
+        "flags": [
+          "tomou_posicao"
+        ],
+        "fio": {
+          "id": "fio_voz_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "O vestiário feminino assistiu inteiro."
+      },
+      "direita": {
+        "rotulo": "Não é minha área",
+        "efeitos": {
+          "diretoria": 20,
+          "torcida": -25
+        },
+        "flags": [
+          "calou"
+        ],
+        "fio": {
+          "id": "fio_voz_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Existe um vídeo curto dessa resposta."
+      }
+    },
+    {
+      "id": "imprensa_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 10,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Querem fazer um documentário sobre você com acesso total, inclusive à sua casa e ao seu departamento médico. Pagam bem e não cortam nada.",
+      "esquerda": {
+        "rotulo": "Acesso total",
+        "efeitos": {
+          "dinheiro": 16,
+          "torcida": 10,
+          "forma": -9
+        },
+        "flags": [
+          "documentario"
+        ]
+      },
+      "direita": {
+        "rotulo": "Sem a minha casa",
+        "efeitos": {
+          "dinheiro": -11,
+          "forma": 10,
+          "diretoria": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_auge_04",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Dez perguntas, nove sobre o treinador. {nome} guarda a décima para o final e olha para você antes de fazer.",
+      "esquerda": {
+        "rotulo": "Respondo a décima",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Encerro antes",
+        "efeitos": {
+          "diretoria": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_auge_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Saiu uma foto sua às quatro da manhã na véspera de jogo. Você não estava bebendo, e isso não aparece em foto nenhuma.",
+      "esquerda": {
+        "rotulo": "Explico",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -3,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Ignoro",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 13,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Você faltou ao jogo para o aniversário do seu filho e o clube disse que foi lesão. {nome} sabe que não foi, e pergunta na coletiva.",
+      "esquerda": {
+        "rotulo": "Digo a verdade",
+        "efeitos": {
+          "torcida": 25,
+          "diretoria": -25,
+          "forma": 9
+        },
+        "flags": [
+          "escolheu_o_filho"
+        ],
+        "fio": {
+          "id": "fio_voz_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "O clube soube o que você faz com a versão dele."
+      },
+      "direita": {
+        "rotulo": "Confirmo a lesão",
+        "efeitos": {
+          "diretoria": 20,
+          "torcida": -16,
+          "forma": -9
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_voz_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "A lesão que não existiu está no boletim."
+      }
+    },
+    {
+      "id": "imprensa_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "A matéria diz que você ganha mais que o time todo e joga menos que qualquer um. Os dois números estão certos.",
+      "esquerda": {
+        "rotulo": "Respondo com dados",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6,
+          "forma": 3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não leio jornal",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 32
+        }
+      },
+      "texto": "Ela perguntou, ao vivo, se você já pensou em parar. Perguntou com carinho, o que é bem pior do que se tivesse provocado.",
+      "esquerda": {
+        "rotulo": "Digo que já pensei",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": [
+          "admitiu_o_fim"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não pensei nisso",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_declinio_04",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Um ex-jogador que nunca ganhou nada diz na TV, toda semana, que você acabou. A audiência dele triplicou desde que começou.",
+      "esquerda": {
+        "rotulo": "Respondo o cara",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo ele falar",
+        "efeitos": {
+          "diretoria": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "{nome} te oferece a cadeira ao lado dela na transmissão. Salário bom, e você vai ter que falar mal de gente que ainda está jogando.",
+      "esquerda": {
+        "rotulo": "Aceito a cadeira",
+        "efeitos": {
+          "dinheiro": 16,
+          "torcida": -9,
+          "diretoria": -6
+        },
+        "flags": [
+          "comentarista"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não falo de quem joga",
+        "efeitos": {
+          "dinheiro": -12,
+          "torcida": 11,
+          "diretoria": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ela quer montar uma retrospectiva da sua carreira e pede que você escolha o momento que abre o programa.",
+      "esquerda": {
+        "rotulo": "Escolho um título",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": 6,
+          "dinheiro": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Escolho a estreia",
+        "efeitos": {
+          "torcida": 3,
+          "forma": 3,
+          "diretoria": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_legado_03",
+      "era": [
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Uma editora quer a sua biografia e ela seria a autora. Avisa de saída que vai perguntar sobre o empresário, sobre o joelho e sobre a separação.",
+      "esquerda": {
+        "rotulo": "Conto tudo",
+        "efeitos": {
+          "dinheiro": 12,
+          "torcida": 10,
+          "diretoria": -11
+        },
+        "flags": [
+          "contou_tudo"
+        ]
+      },
+      "direita": {
+        "rotulo": "Só o futebol",
+        "efeitos": {
+          "dinheiro": -10,
+          "diretoria": 10,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "imprensa_travessia_05",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "medidores": {
+          "forma": {
+            "min": 60
+          },
+          "torcida": {
+            "min": 45
+          }
+        }
+      },
+      "texto": "Convocação amanhã. Seu nome vazou numa lista que ninguém confirma. Seu clube tem jogo decisivo na mesma data.",
+      "esquerda": {
+        "rotulo": "Seleção sempre",
+        "efeitos": {
+          "torcida": 14,
+          "diretoria": -14
+        },
+        "flags": [
+          "prioriza_selecao"
+        ],
+        "estatisticas": {
+          "selecoes": 1
+        }
+      },
+      "direita": {
+        "rotulo": "Meu clube primeiro",
+        "efeitos": {
+          "diretoria": 14,
+          "torcida": -12
+        },
+        "flags": [
+          "recusou_selecao"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2380 @@
+{
+  "versao": "0.1",
+  "cargo": "misto",
+  "cota": 48,
+  "notas": "FIOS DE TRÊS BATIDAS. Cada fio nasce numa carta de legado que já existe (batida 1) e devolve duas voltas: a CONSEQUÊNCIA 20 a 30 cartas depois (batida 2, peso dramático importante) e o ACERTO DE CONTAS na era seguinte (batida 3, legado, com eco). Batida 1 tem 2 opções, que geram 2 batidas 2, que geram 4 batidas 3 — a progressão 2→4 que o Bruno pediu. Todas as cartas aqui têm peso 0: nunca são sorteadas, só chegam pela agenda. A batida 3 é o único lugar do jogo que usa 'tiraFlags' — é onde uma marca pode ser desfeita.",
+  "cartas": [
+    {
+      "id": "fio_joelho_b2a",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "fisio",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O exame que ela pediu um ano atrás voltou pior. Ela não disse que tinha avisado, e o silêncio dela ocupou a sala inteira.",
+      "esquerda": {
+        "rotulo": "Cirurgia agora",
+        "efeitos": {
+          "forma": -21,
+          "diretoria": -9,
+          "torcida": -6
+        },
+        "flags": [
+          "operou_o_joelho"
+        ],
+        "fio": {
+          "id": "fio_joelho_b3aa",
+          "em": [
+            22,
+            34
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Injeção e sigo",
+        "efeitos": {
+          "forma": 9,
+          "torcida": 7,
+          "dinheiro": -10
+        },
+        "flags": [
+          "infiltracao_cronica"
+        ],
+        "fio": {
+          "id": "fio_joelho_b3ab",
+          "em": [
+            22,
+            34
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_joelho_b2b",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "fisio",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O clube de cima marcou exame médico e é ela quem escreve o laudo hoje. Ela pergunta, sem ironia nenhuma, se você quer o laudo honesto ou o laudo bom.",
+      "esquerda": {
+        "rotulo": "O honesto",
+        "efeitos": {
+          "diretoria": -23,
+          "dinheiro": -12,
+          "forma": 1
+        },
+        "flags": [
+          "laudo_honesto"
+        ],
+        "fio": {
+          "id": "fio_joelho_b3ba",
+          "em": [
+            22,
+            34
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "O bom",
+        "efeitos": {
+          "dinheiro": 14,
+          "diretoria": 6,
+          "forma": -7
+        },
+        "flags": [
+          "laudo_maquiado"
+        ],
+        "fio": {
+          "id": "fio_joelho_b3bb",
+          "em": [
+            22,
+            34
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_joelho_b3aa",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele diz que você voltou da cirurgia mais lento e mais inteligente, e que dá para jogar dez anos assim. Diz isso sem tirar os olhos do vídeo.",
+      "esquerda": {
+        "rotulo": "Jogo de cabeça",
+        "efeitos": {
+          "forma": 14,
+          "diretoria": 8,
+          "torcida": -20
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "joelho_ignorado"
+        ],
+        "eco": "O corpo aceitou o acordo. Você também."
+      },
+      "direita": {
+        "rotulo": "Quero o que era",
+        "efeitos": {
+          "torcida": 21,
+          "forma": -21,
+          "diretoria": -15
+        },
+        "flags": [
+          "joelho_ignorado",
+          "treino_dobrado"
+        ],
+        "eco": "Você foi atrás de uma coisa que não volta."
+      }
+    },
+    {
+      "id": "fio_joelho_b3ab",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O joelho travou no aquecimento de uma decisão e destravou sozinho antes de alguém ver. Ela viu de longe e já está com o telefone na mão.",
+      "esquerda": {
+        "rotulo": "Saio agora",
+        "efeitos": {
+          "forma": 12,
+          "torcida": -32,
+          "diretoria": -15
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "infiltracao_cronica",
+          "joelho_ignorado"
+        ],
+        "eco": "Sair no aquecimento de uma decisão."
+      },
+      "direita": {
+        "rotulo": "Jogo assim mesmo",
+        "efeitos": {
+          "torcida": 27,
+          "diretoria": 4,
+          "forma": -21
+        },
+        "flags": [
+          "infiltracao_cronica",
+          "joelho_ignorado"
+        ],
+        "eco": "Ela guardou o número daquele aquecimento."
+      }
+    },
+    {
+      "id": "fio_joelho_b3ba",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A transferência caiu por causa do laudo e ele quer saber de quem foi a ideia de tanta honestidade. O clube de cima já contratou outro na sua posição.",
+      "esquerda": {
+        "rotulo": "A ideia foi minha",
+        "efeitos": {
+          "diretoria": -36,
+          "torcida": 12,
+          "dinheiro": -11
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "eco": "O departamento médico ouviu a sua versão."
+      },
+      "direita": {
+        "rotulo": "Foi o médico",
+        "efeitos": {
+          "diretoria": 18,
+          "dinheiro": 16,
+          "torcida": -16
+        },
+        "flags": [
+          "forcou_saida"
+        ],
+        "eco": "O médico soube quem disse o nome dele."
+      }
+    },
+    {
+      "id": "fio_joelho_b3bb",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O médico que pediu o laudo pediu também o exame antigo, e recebeu o exame antigo. Ela te avisa disso por mensagem, às onze da noite, sem dizer mais nada.",
+      "esquerda": {
+        "rotulo": "Conto antes deles",
+        "efeitos": {
+          "diretoria": -34,
+          "dinheiro": -12,
+          "torcida": 9
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "laudo_maquiado"
+        ],
+        "eco": "Chegar antes da notícia custa a notícia."
+      },
+      "direita": {
+        "rotulo": "Espero calado",
+        "efeitos": {
+          "dinheiro": 19,
+          "diretoria": -19,
+          "forma": -21
+        },
+        "flags": [
+          "joelho_ignorado",
+          "calou"
+        ],
+        "eco": "O laudo bom tinha uma segunda via."
+      }
+    },
+    {
+      "id": "fio_apostas_b2a",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "A marca quer você numa transmissão ao vivo lendo cotações do jogo do seu próprio clube. O texto já está escrito e tem o seu jeito de falar.",
+      "esquerda": {
+        "rotulo": "Leio o texto",
+        "efeitos": {
+          "dinheiro": 18,
+          "torcida": -11,
+          "diretoria": -6
+        },
+        "flags": [
+          "turne_de_patrocinio"
+        ],
+        "fio": {
+          "id": "fio_apostas_b3aa",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Não leio cotação",
+        "efeitos": {
+          "torcida": 11,
+          "dinheiro": -11,
+          "diretoria": 1
+        },
+        "flags": [
+          "recuou_do_patrocinio"
+        ],
+        "fio": {
+          "id": "fio_apostas_b3ab",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_apostas_b2b",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Quem assinou no seu lugar apareceu de relógio novo e vendeu a camisa de patrocinador da noite para o dia. {nome} te manda o vídeo dele, sem comentário.",
+      "esquerda": {
+        "rotulo": "Bloqueio o contato",
+        "efeitos": {
+          "torcida": 11,
+          "dinheiro": -11,
+          "forma": 1
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "fio": {
+          "id": "fio_apostas_b3ba",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Pergunto o valor",
+        "efeitos": {
+          "dinheiro": 12,
+          "torcida": -11,
+          "diretoria": -10
+        },
+        "flags": [
+          "reabriu_conversa_apostas"
+        ],
+        "fio": {
+          "id": "fio_apostas_b3bb",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_apostas_b3aa",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Um repórter abre o notebook e roda o vídeo da transmissão na sua frente, sem áudio, olhando a sua cara em vez da tela. Depois pergunta se você mudou de ideia.",
+      "esquerda": {
+        "rotulo": "Mudei de ideia",
+        "efeitos": {
+          "torcida": 19,
+          "dinheiro": -19,
+          "diretoria": 4
+        },
+        "flags": [
+          "rompeu_apostas"
+        ],
+        "tiraFlags": [
+          "patrocinio_apostas",
+          "turne_de_patrocinio"
+        ],
+        "eco": "Mudar de ideia na frente da câmera."
+      },
+      "direita": {
+        "rotulo": "Era o meu trabalho",
+        "efeitos": {
+          "dinheiro": 25,
+          "torcida": -21,
+          "diretoria": -12
+        },
+        "flags": [
+          "patrocinio_apostas",
+          "investigacao_apostas"
+        ],
+        "eco": "Aquele vídeo tem legenda em quatro idiomas."
+      }
+    },
+    {
+      "id": "fio_apostas_b3ab",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A marca agora patrocina o peito da camisa e ele avisa que a foto oficial do time é amanhã. Ninguém vai perguntar se você quer aparecer nela.",
+      "esquerda": {
+        "rotulo": "Não entro na foto",
+        "efeitos": {
+          "diretoria": -40,
+          "torcida": 12,
+          "dinheiro": -9
+        },
+        "flags": [
+          "recusou_apostas",
+          "atrito_tecnico"
+        ],
+        "tiraFlags": [
+          "patrocinio_apostas"
+        ],
+        "eco": "Recusar duas vezes é posição, não susto."
+      },
+      "direita": {
+        "rotulo": "É a camisa do time",
+        "efeitos": {
+          "diretoria": 21,
+          "dinheiro": 12,
+          "torcida": -16
+        },
+        "flags": [
+          "patrocinio_apostas"
+        ],
+        "eco": "Você está na foto oficial, com a marca."
+      }
+    },
+    {
+      "id": "fio_apostas_b3ba",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "organizada",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Eles abriram uma faixa enorme com uma frase sobre quem não vendeu o nome, e a frase é sobre você. Querem você na quadra deles no domingo.",
+      "esquerda": {
+        "rotulo": "Vou na quadra",
+        "efeitos": {
+          "torcida": 21,
+          "diretoria": -29,
+          "dinheiro": -9
+        },
+        "flags": [
+          "encarou_organizada",
+          "recusou_apostas"
+        ],
+        "eco": "A faixa levou três semanas para ser costurada."
+      },
+      "direita": {
+        "rotulo": "Agradeço de longe",
+        "efeitos": {
+          "diretoria": 19,
+          "dinheiro": 12,
+          "torcida": -19
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "eco": "Eles costuraram e você agradeceu por telefone."
+      }
+    },
+    {
+      "id": "fio_apostas_b3bb",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele chega com o contrato pronto e o seu nome já digitado, e diz que foi você quem procurou. Tecnicamente, foi.",
+      "esquerda": {
+        "rotulo": "Rasgo na frente dele",
+        "efeitos": {
+          "torcida": 16,
+          "dinheiro": -21,
+          "diretoria": 6
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "tiraFlags": [
+          "reabriu_conversa_apostas"
+        ],
+        "eco": "Rasgar na frente dele foi para ele ver."
+      },
+      "direita": {
+        "rotulo": "Onde eu assino",
+        "efeitos": {
+          "dinheiro": 27,
+          "torcida": -19,
+          "diretoria": -11
+        },
+        "flags": [
+          "patrocinio_apostas",
+          "investigacao_apostas"
+        ],
+        "eco": "Perguntar o valor já era metade da resposta."
+      }
+    },
+    {
+      "id": "fio_fundo_b2a",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O fundo quer você num clube que você nunca ouviu falar, por doze meses, porque a conta deles fecha melhor assim. {nome} chama isso de escada.",
+      "esquerda": {
+        "rotulo": "Subo a escada",
+        "efeitos": {
+          "dinheiro": 16,
+          "forma": -11,
+          "torcida": -7
+        },
+        "flags": [
+          "foi_pro_golfo"
+        ],
+        "fio": {
+          "id": "fio_fundo_b3aa",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Escolho onde jogo",
+        "efeitos": {
+          "forma": 11,
+          "torcida": 7,
+          "dinheiro": -7
+        },
+        "flags": [
+          "negocia_sozinho"
+        ],
+        "fio": {
+          "id": "fio_fundo_b3ab",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_fundo_b2b",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele explica que sem o fundo o clube não renova com você, e que o clube sabe disso melhor que você. A caneta fica em cima da mesa entre vocês dois.",
+      "esquerda": {
+        "rotulo": "Renovo mais curto",
+        "efeitos": {
+          "diretoria": -21,
+          "forma": 3,
+          "dinheiro": -9
+        },
+        "flags": [
+          "ultimo_contrato"
+        ],
+        "fio": {
+          "id": "fio_fundo_b3ba",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Assino cinco anos",
+        "efeitos": {
+          "diretoria": 16,
+          "dinheiro": 11,
+          "forma": -6
+        },
+        "flags": [
+          "contrato_longo"
+        ],
+        "fio": {
+          "id": "fio_fundo_b3bb",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_fundo_b3aa",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Doze meses viraram trinta e ninguém no país lembra de você jogando. Ele diz que a próxima parada é a boa e fala isso pela terceira vez.",
+      "esquerda": {
+        "rotulo": "Volto pra casa",
+        "efeitos": {
+          "torcida": 19,
+          "dinheiro": -21,
+          "forma": 3
+        },
+        "flags": [
+          "recusou_fundo"
+        ],
+        "tiraFlags": [
+          "foi_pro_golfo",
+          "fundo_comprou_direitos"
+        ],
+        "eco": "Trinta meses fora e o país esqueceu o rosto."
+      },
+      "direita": {
+        "rotulo": "Uma última parada",
+        "efeitos": {
+          "dinheiro": 29,
+          "torcida": -19,
+          "forma": -9
+        },
+        "flags": [
+          "foi_pro_golfo",
+          "fundo_comprou_direitos"
+        ],
+        "eco": "A escada tinha um degrau que não subia."
+      }
+    },
+    {
+      "id": "fio_fundo_b3ab",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O fundo saiu do seu contrato e ele quer saber quem vai bancar a próxima renovação, já que agora não tem mais ninguém no meio. A pergunta é honesta.",
+      "esquerda": {
+        "rotulo": "Eu banco",
+        "efeitos": {
+          "dinheiro": -25,
+          "diretoria": 14,
+          "forma": 4
+        },
+        "flags": [
+          "recusou_fundo",
+          "negocia_sozinho"
+        ],
+        "eco": "Você negociou sozinho e eles anotaram isso."
+      },
+      "direita": {
+        "rotulo": "Chamo outro fundo",
+        "efeitos": {
+          "dinheiro": 25,
+          "diretoria": 10,
+          "torcida": -21
+        },
+        "flags": [
+          "fundo_comprou_direitos"
+        ],
+        "eco": "Um fundo sai e outro entra pela mesma porta."
+      }
+    },
+    {
+      "id": "fio_fundo_b3ba",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O contrato curto vence agora, no meio da pior sequência da sua vida, e o fundo é o único telefone que está tocando. Ele deixa o celular na mesa, tocando.",
+      "esquerda": {
+        "rotulo": "Deixo tocar",
+        "efeitos": {
+          "torcida": 12,
+          "dinheiro": -25,
+          "diretoria": -19
+        },
+        "flags": [
+          "recusou_fundo"
+        ],
+        "tiraFlags": [
+          "fundo_comprou_direitos"
+        ],
+        "eco": "O celular parou de tocar e ficou parado."
+      },
+      "direita": {
+        "rotulo": "Atendo",
+        "efeitos": {
+          "dinheiro": 27,
+          "diretoria": 12,
+          "torcida": -16
+        },
+        "flags": [
+          "fundo_comprou_direitos",
+          "deve_pro_valdir"
+        ],
+        "eco": "Contrato curto vence sempre num mês ruim."
+      }
+    },
+    {
+      "id": "fio_fundo_b3bb",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Faltam dois anos de contrato, você não joga há seis meses e o clube prefere pagar do que escalar. Ele oferece rescisão pela metade e um cargo depois.",
+      "esquerda": {
+        "rotulo": "Cumpro o contrato",
+        "efeitos": {
+          "dinheiro": 25,
+          "torcida": -20,
+          "forma": -14
+        },
+        "flags": [
+          "contrato_longo"
+        ],
+        "eco": "Cinco anos é muito tempo para os dois lados."
+      },
+      "direita": {
+        "rotulo": "Rescindo pela metade",
+        "efeitos": {
+          "dinheiro": -21,
+          "diretoria": 11,
+          "torcida": 10
+        },
+        "flags": [
+          "forcou_saida",
+          "curso_de_treinador"
+        ],
+        "tiraFlags": [
+          "fundo_comprou_direitos"
+        ],
+        "eco": "Metade do contrato virou um cargo depois."
+      }
+    },
+    {
+      "id": "fio_cicatriz_b2a",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "fisio",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ela achou no seu exame a mesma coisa que o capitão escondeu por dois anos. Ela pergunta quem te ensinou a treinar assim, e já sabe a resposta.",
+      "esquerda": {
+        "rotulo": "Paro o treino extra",
+        "efeitos": {
+          "forma": -14,
+          "torcida": -16,
+          "diretoria": 1
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "treino_dobrado"
+        ],
+        "fio": {
+          "id": "fio_cicatriz_b3aa",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Ele chegou onde quis",
+        "efeitos": {
+          "forma": 14,
+          "torcida": 10,
+          "diretoria": -7
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "fio": {
+          "id": "fio_cicatriz_b3ab",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_cicatriz_b2b",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele se aposentou aos trinta e um e mandou uma mensagem só para você, com uma foto do joelho depois da terceira cirurgia. Não escreveu nada embaixo.",
+      "esquerda": {
+        "rotulo": "Ligo pra ele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -14,
+          "diretoria": 4
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "fio": {
+          "id": "fio_cicatriz_b3ba",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Não respondo",
+        "efeitos": {
+          "forma": 16,
+          "torcida": -11,
+          "diretoria": -9
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "fio": {
+          "id": "fio_cicatriz_b3bb",
+          "em": [
+            20,
+            32
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_cicatriz_b3aa",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele diz que o time precisa de alguém que chegue antes e que ninguém chega antes desde que você parou. Está pedindo sem pedir.",
+      "esquerda": {
+        "rotulo": "Volto a chegar antes",
+        "efeitos": {
+          "torcida": 12,
+          "diretoria": 14,
+          "forma": -14
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "eco": "Voltar a chegar antes aos trinta e dois."
+      },
+      "direita": {
+        "rotulo": "Aprendi a dosar",
+        "efeitos": {
+          "forma": 25,
+          "torcida": -16,
+          "diretoria": -18
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "treino_dobrado",
+          "joelho_ignorado"
+        ],
+        "eco": "Você parou de treinar dobrado e ninguém viu."
+      }
+    },
+    {
+      "id": "fio_cicatriz_b3ab",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "fisio",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ela mede a sua coxa, mede a outra, e a diferença é grande o suficiente para ela chamar outro médico na sala. Ninguém fala com você por um minuto.",
+      "esquerda": {
+        "rotulo": "Faço o que ela diz",
+        "efeitos": {
+          "forma": -27,
+          "torcida": -25,
+          "diretoria": 6
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "treino_dobrado",
+          "joelho_ignorado"
+        ],
+        "eco": "A diferença entre as duas coxas tinha número."
+      },
+      "direita": {
+        "rotulo": "Chamo outro médico",
+        "efeitos": {
+          "forma": 19,
+          "dinheiro": -16,
+          "torcida": 16
+        },
+        "flags": [
+          "joelho_ignorado",
+          "infiltracao_cronica"
+        ],
+        "eco": "A cicatriz dele tinha vinte centímetros."
+      }
+    },
+    {
+      "id": "fio_cicatriz_b3ba",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele conta que o moleque de dezoito treina dobrado escondido, porque alguém disse ao garoto que você fazia isso na idade dele. Pergunta o que fazer.",
+      "esquerda": {
+        "rotulo": "Digo que não",
+        "efeitos": {
+          "torcida": 16,
+          "forma": -24,
+          "diretoria": 6
+        },
+        "flags": [
+          "padrinho_do_kaique",
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "treino_dobrado"
+        ],
+        "eco": "Alguém contou ao moleque como você treinava."
+      },
+      "direita": {
+        "rotulo": "Digo que sim",
+        "efeitos": {
+          "forma": 21,
+          "torcida": -19,
+          "diretoria": -11
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "eco": "O moleque anotou e vai treinar igual."
+      }
+    },
+    {
+      "id": "fio_cicatriz_b3bb",
+      "era": [
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Vão homenagear o antigo capitão no intervalo e a produção quer você no gramado com ele. Você nunca respondeu aquela mensagem e os dois sabem.",
+      "esquerda": {
+        "rotulo": "Entro com ele",
+        "efeitos": {
+          "torcida": 19,
+          "diretoria": 10,
+          "forma": -18
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "tiraFlags": [
+          "treino_dobrado"
+        ],
+        "eco": "Você entrou no gramado sem ter respondido."
+      },
+      "direita": {
+        "rotulo": "Fico no vestiário",
+        "efeitos": {
+          "forma": 19,
+          "torcida": -25,
+          "diretoria": -9
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "eco": "Ele se aposentou e você não respondeu nada."
+      }
+    },
+    {
+      "id": "fio_microfone_b2a",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O clube publicou uma nota se distanciando do que você falou, e um programa te convidou para repetir tudo ao vivo, mais devagar.",
+      "esquerda": {
+        "rotulo": "Repito mais devagar",
+        "efeitos": {
+          "torcida": 9,
+          "diretoria": -18,
+          "dinheiro": -6
+        },
+        "flags": [
+          "tomou_posicao"
+        ],
+        "fio": {
+          "id": "fio_microfone_b3aa",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Deixo a nota falar",
+        "efeitos": {
+          "diretoria": 14,
+          "torcida": -11,
+          "dinheiro": 6
+        },
+        "flags": [
+          "calou"
+        ],
+        "fio": {
+          "id": "fio_microfone_b3ab",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_microfone_b2b",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "organizada",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Eles xingaram outro garoto no mesmo setor, no mesmo jogo, e a câmera achou você olhando para a arquibancada com o microfone perto.",
+      "esquerda": {
+        "rotulo": "Aponto o setor",
+        "efeitos": {
+          "torcida": -24,
+          "diretoria": 7,
+          "forma": 1
+        },
+        "flags": [
+          "tomou_posicao",
+          "encarou_organizada"
+        ],
+        "fio": {
+          "id": "fio_microfone_b3ba",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Olho pro chão",
+        "efeitos": {
+          "torcida": 12,
+          "diretoria": -9,
+          "forma": -7
+        },
+        "flags": [
+          "calou"
+        ],
+        "fio": {
+          "id": "fio_microfone_b3bb",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_microfone_b3aa",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele coloca na mesa uma cláusula nova de conduta pública e diz que é padrão agora, para todo mundo. O contrato é o seu e a cláusula é sobre você.",
+      "esquerda": {
+        "rotulo": "Não assino isso",
+        "efeitos": {
+          "diretoria": -30,
+          "torcida": 16,
+          "dinheiro": -9
+        },
+        "flags": [
+          "tomou_posicao",
+          "atrito_tecnico"
+        ],
+        "eco": "Não assinar cláusula padrão vira caso."
+      },
+      "direita": {
+        "rotulo": "Assino e me calo",
+        "efeitos": {
+          "diretoria": 21,
+          "dinheiro": 16,
+          "torcida": -19
+        },
+        "flags": [
+          "calou"
+        ],
+        "tiraFlags": [
+          "tomou_posicao"
+        ],
+        "eco": "Duas vezes no ar não é mais um deslize."
+      }
+    },
+    {
+      "id": "fio_microfone_b3ab",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O garoto xingado naquele jogo cresceu, joga profissional e deu uma entrevista longa. Citou pelo nome quem falou e quem não falou.",
+      "esquerda": {
+        "rotulo": "Peço desculpa a ele",
+        "efeitos": {
+          "torcida": 21,
+          "diretoria": -20,
+          "dinheiro": -11
+        },
+        "flags": [
+          "tomou_posicao"
+        ],
+        "tiraFlags": [
+          "calou"
+        ],
+        "eco": "O garoto da arquibancada tem nome e idade."
+      },
+      "direita": {
+        "rotulo": "Era outra época",
+        "efeitos": {
+          "diretoria": 19,
+          "dinheiro": 12,
+          "torcida": -25
+        },
+        "flags": [
+          "calou"
+        ],
+        "eco": "A entrevista dele fica na internet."
+      }
+    },
+    {
+      "id": "fio_microfone_b3ba",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "organizada",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Não tem faixa e não tem vaia: tem silêncio no seu setor há três jogos, e é pior. Um deles pede cinco minutos com você no estacionamento.",
+      "esquerda": {
+        "rotulo": "Dou os cinco minutos",
+        "efeitos": {
+          "torcida": 20,
+          "diretoria": -24,
+          "forma": -14
+        },
+        "flags": [
+          "encarou_organizada",
+          "tomou_posicao"
+        ],
+        "eco": "Cinco minutos num estacionamento vazio."
+      },
+      "direita": {
+        "rotulo": "Saio pelo outro lado",
+        "efeitos": {
+          "diretoria": 16,
+          "forma": 16,
+          "torcida": -21
+        },
+        "flags": [
+          "calou"
+        ],
+        "tiraFlags": [
+          "encarou_organizada"
+        ],
+        "eco": "Souberam exatamente para onde você apontou."
+      }
+    },
+    {
+      "id": "fio_microfone_b3bb",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele foi xingado ontem no mesmo setor e hoje pediu para você ir com ele à coletiva. Diz que não sabe o que falar e que você sabe.",
+      "esquerda": {
+        "rotulo": "Vou com ele",
+        "efeitos": {
+          "torcida": 20,
+          "diretoria": -24,
+          "dinheiro": -11
+        },
+        "flags": [
+          "tomou_posicao",
+          "padrinho_do_kaique"
+        ],
+        "tiraFlags": [
+          "calou"
+        ],
+        "eco": "Ele viu você olhar para o chão naquele dia."
+      },
+      "direita": {
+        "rotulo": "Ele resolve sozinho",
+        "efeitos": {
+          "diretoria": 16,
+          "dinheiro": 12,
+          "torcida": -25
+        },
+        "flags": [
+          "calou",
+          "negou_o_sucessor"
+        ],
+        "eco": "Ele foi sozinho e falou o que deu."
+      }
+    },
+    {
+      "id": "fio_laranja_b2a",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O advogado pediu todos os contratos dos últimos seis anos e ele mandou quatro. Diz que os outros dois estão com o contador, que está viajando.",
+      "esquerda": {
+        "rotulo": "Vou atrás dos dois",
+        "efeitos": {
+          "dinheiro": -12,
+          "diretoria": -10,
+          "forma": -11
+        },
+        "flags": [
+          "processou_valdir"
+        ],
+        "fio": {
+          "id": "fio_laranja_b3aa",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Quatro tá bom",
+        "efeitos": {
+          "dinheiro": 12,
+          "forma": 11,
+          "torcida": 1
+        },
+        "flags": [
+          "valdir_negocia"
+        ],
+        "fio": {
+          "id": "fio_laranja_b3ab",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_laranja_b2b",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Chegou uma intimação no clube com o seu nome e o nome de uma empresa. Ele leu antes de você e quer saber se vai ter foto de jornalista na porta.",
+      "esquerda": {
+        "rotulo": "Conto tudo a ele",
+        "efeitos": {
+          "diretoria": 10,
+          "dinheiro": -12,
+          "torcida": -9
+        },
+        "flags": [
+          "processou_valdir"
+        ],
+        "fio": {
+          "id": "fio_laranja_b3ba",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "É engano de nome",
+        "efeitos": {
+          "diretoria": -9,
+          "dinheiro": 16,
+          "forma": 4
+        },
+        "flags": [
+          "laranja"
+        ],
+        "fio": {
+          "id": "fio_laranja_b3bb",
+          "em": [
+            20,
+            30
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_laranja_b3aa",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Os dois contratos apareceram e um deles tem a sua assinatura numa página que você nunca viu. Ele propõe devolver tudo em dinheiro, hoje, sem papel.",
+      "esquerda": {
+        "rotulo": "Quero com papel",
+        "efeitos": {
+          "dinheiro": -21,
+          "diretoria": 14,
+          "torcida": 11
+        },
+        "flags": [
+          "processou_valdir",
+          "rompeu_valdir"
+        ],
+        "tiraFlags": [
+          "laranja",
+          "deve_pro_valdir"
+        ],
+        "eco": "Papel para uma coisa que não tinha papel."
+      },
+      "direita": {
+        "rotulo": "Aceito em dinheiro",
+        "efeitos": {
+          "dinheiro": 29,
+          "torcida": -16,
+          "diretoria": -11
+        },
+        "flags": [
+          "laranja"
+        ],
+        "eco": "Os dois contratos que faltavam tinham motivo."
+      }
+    },
+    {
+      "id": "fio_laranja_b3ab",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Uma reportagem publicou o organograma de uma empresa com o seu nome no topo e o dele em nenhum lugar. Pediram sua resposta até as seis da tarde.",
+      "esquerda": {
+        "rotulo": "Entrego o que sei",
+        "efeitos": {
+          "torcida": 18,
+          "dinheiro": -25,
+          "diretoria": 7
+        },
+        "flags": [
+          "processou_valdir"
+        ],
+        "tiraFlags": [
+          "laranja",
+          "valdir_negocia"
+        ],
+        "eco": "Quatro contratos eram quatro de seis."
+      },
+      "direita": {
+        "rotulo": "Não comento",
+        "efeitos": {
+          "dinheiro": 19,
+          "diretoria": -16,
+          "torcida": -21
+        },
+        "flags": [
+          "laranja",
+          "calou"
+        ],
+        "eco": "Seu nome está no topo do organograma."
+      }
+    },
+    {
+      "id": "fio_laranja_b3ba",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O clube bancou o seu advogado e agora quer que você apareça num evento institucional sobre ética no futebol. A ironia não passou por ninguém.",
+      "esquerda": {
+        "rotulo": "Vou ao evento",
+        "efeitos": {
+          "diretoria": 20,
+          "torcida": -24,
+          "dinheiro": 11
+        },
+        "flags": [
+          "processou_valdir"
+        ],
+        "tiraFlags": [
+          "laranja",
+          "deve_pro_valdir"
+        ],
+        "eco": "Ele te ouviu antes de ler no jornal. Contou."
+      },
+      "direita": {
+        "rotulo": "Não sou exemplo",
+        "efeitos": {
+          "torcida": 21,
+          "diretoria": -21,
+          "dinheiro": -11
+        },
+        "flags": [
+          "atrito_tecnico",
+          "processou_valdir"
+        ],
+        "tiraFlags": [
+          "laranja"
+        ],
+        "eco": "Recusar palco sobre ética também é notícia."
+      }
+    },
+    {
+      "id": "fio_laranja_b3bb",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A empresa que não era sua tem dívida no seu CPF e ele parou de atender. O contador viajado voltou e quer falar com você antes de falar com a polícia.",
+      "esquerda": {
+        "rotulo": "Falo com o contador",
+        "efeitos": {
+          "dinheiro": -27,
+          "diretoria": 10,
+          "torcida": 11
+        },
+        "flags": [
+          "processou_valdir"
+        ],
+        "tiraFlags": [
+          "laranja"
+        ],
+        "eco": "O contador voltou de viagem com uma pasta."
+      },
+      "direita": {
+        "rotulo": "Sumo do assunto",
+        "efeitos": {
+          "dinheiro": 16,
+          "torcida": -19,
+          "diretoria": -21
+        },
+        "flags": [
+          "laranja",
+          "deve_pro_valdir"
+        ],
+        "eco": "Engano de nome funciona uma vez só."
+      }
+    },
+    {
+      "id": "fio_sucessor_b2a",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele quer escalar os dois juntos, você atrás e o moleque na frente, e diz que a ideia foi do moleque. Pede que você aceite ou negue agora, na frente dele.",
+      "esquerda": {
+        "rotulo": "Jogo atrás dele",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": 7,
+          "forma": -11
+        },
+        "flags": [
+          "padrinho_do_kaique"
+        ],
+        "fio": {
+          "id": "fio_sucessor_b3aa",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Minha posição é minha",
+        "efeitos": {
+          "forma": 14,
+          "torcida": -11,
+          "diretoria": -9
+        },
+        "flags": [
+          "negou_o_sucessor"
+        ],
+        "fio": {
+          "id": "fio_sucessor_b3ab",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_sucessor_b2b",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Perguntaram ao moleque quem foi o jogador que mais ensinou a ele, e ele disse um nome que não é o seu. A pergunta seguinte é para você.",
+      "esquerda": {
+        "rotulo": "Concordo com ele",
+        "efeitos": {
+          "torcida": 10,
+          "forma": -14,
+          "diretoria": 4
+        },
+        "flags": [
+          "negou_o_sucessor"
+        ],
+        "fio": {
+          "id": "fio_sucessor_b3ba",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Corrijo o moleque",
+        "efeitos": {
+          "diretoria": -12,
+          "forma": 12,
+          "torcida": -6
+        },
+        "flags": [
+          "atrito_tecnico"
+        ],
+        "fio": {
+          "id": "fio_sucessor_b3bb",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_sucessor_b3aa",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele vai ser vendido e pediu ao clube uma condição escrita: que você fique até o fim do contrato, com qualquer cargo. O clube aceitou antes de te perguntar.",
+      "esquerda": {
+        "rotulo": "Aceito o cargo",
+        "efeitos": {
+          "diretoria": 18,
+          "torcida": 14,
+          "dinheiro": -12
+        },
+        "flags": [
+          "padrinho_do_kaique",
+          "curso_de_treinador"
+        ],
+        "eco": "Ele pediu para jogar com você. Isso não se pede."
+      },
+      "direita": {
+        "rotulo": "Saio junto com ele",
+        "efeitos": {
+          "torcida": 25,
+          "diretoria": -19,
+          "dinheiro": 11
+        },
+        "flags": [
+          "padrinho_do_kaique",
+          "forcou_saida"
+        ],
+        "eco": "Vocês dois saíram na mesma semana."
+      }
+    },
+    {
+      "id": "fio_sucessor_b3ab",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele é titular, é capitão e chama você de senhor no corredor. Hoje ele mandou avisar, por outra pessoa, que precisa da sua vaga no vestiário grande.",
+      "esquerda": {
+        "rotulo": "Troco de vestiário",
+        "efeitos": {
+          "torcida": 14,
+          "diretoria": 11,
+          "forma": -20
+        },
+        "flags": [
+          "padrinho_do_kaique"
+        ],
+        "tiraFlags": [
+          "negou_o_sucessor"
+        ],
+        "eco": "Você trocou de vestiário sem ninguém pedir."
+      },
+      "direita": {
+        "rotulo": "Ele que venha falar",
+        "efeitos": {
+          "forma": 19,
+          "diretoria": -21,
+          "torcida": -11
+        },
+        "flags": [
+          "negou_o_sucessor",
+          "atrito_tecnico"
+        ],
+        "eco": "Ele aprendeu a jogar sozinho e aprendeu bem."
+      }
+    },
+    {
+      "id": "fio_sucessor_b3ba",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A base quer pôr o nome de um jogador no campo de treino e a votação está entre você e o tal jogador que o moleque citou. Perguntaram se você quer disputar.",
+      "esquerda": {
+        "rotulo": "Não disputo isso",
+        "efeitos": {
+          "torcida": 19,
+          "diretoria": -20,
+          "dinheiro": -9
+        },
+        "flags": [
+          "padrinho_sem_cargo"
+        ],
+        "eco": "Você concordou em público e alguém guardou."
+      },
+      "direita": {
+        "rotulo": "Quero meu nome lá",
+        "efeitos": {
+          "diretoria": 19,
+          "dinheiro": 12,
+          "torcida": -20
+        },
+        "flags": [
+          "curso_de_treinador"
+        ],
+        "eco": "Disputar um campo de treino com um nome."
+      }
+    },
+    {
+      "id": "fio_sucessor_b3bb",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele parou de falar com você e o vestiário se dividiu em dois lados sem ninguém combinar nada. Ele está com dezenove anos e do lado maior.",
+      "esquerda": {
+        "rotulo": "Procuro ele primeiro",
+        "efeitos": {
+          "torcida": 18,
+          "forma": -24,
+          "diretoria": 10
+        },
+        "flags": [
+          "padrinho_do_kaique"
+        ],
+        "tiraFlags": [
+          "negou_o_sucessor",
+          "atrito_tecnico"
+        ],
+        "eco": "Procurar primeiro é sempre mais caro."
+      },
+      "direita": {
+        "rotulo": "Já pedi desculpa",
+        "efeitos": {
+          "forma": 16,
+          "torcida": -25,
+          "diretoria": -11
+        },
+        "flags": [
+          "negou_o_sucessor",
+          "atrito_tecnico"
+        ],
+        "eco": "Você corrigiu o moleque na frente do país."
+      }
+    },
+    {
+      "id": "fio_aniversario_b2a",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "companheira",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ela reservou dez dias fora na única janela sem jogo do ano, e a mesma janela é quando o clube marcou a pré-temporada nos Estados Unidos.",
+      "esquerda": {
+        "rotulo": "Vou com ela",
+        "efeitos": {
+          "diretoria": -16,
+          "torcida": -10,
+          "forma": -10
+        },
+        "flags": [
+          "familia_perto"
+        ],
+        "fio": {
+          "id": "fio_aniversario_b3aa",
+          "em": [
+            18,
+            28
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Vou na pré-temporada",
+        "efeitos": {
+          "diretoria": 11,
+          "forma": 9,
+          "dinheiro": 6
+        },
+        "flags": [
+          "pre_temporada_cheia"
+        ],
+        "fio": {
+          "id": "fio_aniversario_b3ab",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_aniversario_b2b",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele entrou num time pequeno perto de casa e não contou a ninguém que você é seu pai. Descobriu que dá para jogar sem isso e gostou.",
+      "esquerda": {
+        "rotulo": "Assisto de longe",
+        "efeitos": {
+          "torcida": -14,
+          "diretoria": 4,
+          "forma": 7
+        },
+        "flags": [
+          "familia_perto"
+        ],
+        "fio": {
+          "id": "fio_aniversario_b3ba",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Vou de perto",
+        "efeitos": {
+          "torcida": 19,
+          "forma": -9,
+          "dinheiro": -6
+        },
+        "flags": [
+          "escolheu_o_filho"
+        ],
+        "fio": {
+          "id": "fio_aniversario_b3bb",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_aniversario_b3aa",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele diz que a comissão anotou as ausências do ano num documento e que o documento existe para a renovação. Depois pergunta pela sua família, com educação.",
+      "esquerda": {
+        "rotulo": "Anota essa também",
+        "efeitos": {
+          "diretoria": -27,
+          "torcida": 14,
+          "dinheiro": -12
+        },
+        "flags": [
+          "familia_perto",
+          "atrito_tecnico"
+        ],
+        "eco": "Dez dias fora custaram exatamente dez dias."
+      },
+      "direita": {
+        "rotulo": "Não falto mais",
+        "efeitos": {
+          "diretoria": 21,
+          "dinheiro": 16,
+          "torcida": -16
+        },
+        "flags": [
+          "pre_temporada_cheia"
+        ],
+        "tiraFlags": [
+          "familia_perto"
+        ],
+        "eco": "O documento existe e você prometeu por ele."
+      }
+    },
+    {
+      "id": "fio_aniversario_b3ab",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele fez dez anos, doze e agora treze, e nas fotos dessas três festas você aparece em nenhuma. Ele montou o álbum ele mesmo, no computador.",
+      "esquerda": {
+        "rotulo": "Peço o álbum",
+        "efeitos": {
+          "torcida": 18,
+          "diretoria": -24,
+          "forma": -14
+        },
+        "flags": [
+          "escolheu_o_filho",
+          "familia_perto"
+        ],
+        "eco": "Ele montou o álbum sozinho, no computador."
+      },
+      "direita": {
+        "rotulo": "Compro a viagem dele",
+        "efeitos": {
+          "dinheiro": -25,
+          "diretoria": 16,
+          "torcida": 11
+        },
+        "flags": [
+          "sustenta_a_mae"
+        ],
+        "eco": "Ele parou de perguntar quando você volta."
+      }
+    },
+    {
+      "id": "fio_aniversario_b3ba",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "filho",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O time dele foi eliminado e ele chorou no carro, e só então falou que sabia que você estava indo a todos os jogos. Perguntou por que você nunca desceu.",
+      "esquerda": {
+        "rotulo": "Digo o motivo",
+        "efeitos": {
+          "torcida": 14,
+          "forma": -27,
+          "diretoria": 11
+        },
+        "flags": [
+          "escolheu_o_filho",
+          "familia_perto"
+        ],
+        "eco": "Ele jogou dois anos sem dizer o seu nome."
+      },
+      "direita": {
+        "rotulo": "Digo que era melhor",
+        "efeitos": {
+          "forma": 19,
+          "torcida": -16,
+          "diretoria": -12
+        },
+        "flags": [
+          "familia_perto"
+        ],
+        "eco": "Você decidiu o que era melhor pelos dois."
+      }
+    },
+    {
+      "id": "fio_aniversario_b3bb",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Um vídeo seu na beira de um campo de várzea, gritando com o seu filho igual qualquer pai, tem mais visualizações que qualquer gol da sua carreira.",
+      "esquerda": {
+        "rotulo": "Deixo o vídeo rolar",
+        "efeitos": {
+          "torcida": 24,
+          "diretoria": -16,
+          "forma": -14
+        },
+        "flags": [
+          "escolheu_o_filho",
+          "familia_perto"
+        ],
+        "eco": "Alguém filmou você na beira do campinho."
+      },
+      "direita": {
+        "rotulo": "Peço para tirarem",
+        "efeitos": {
+          "diretoria": 16,
+          "forma": 16,
+          "torcida": -25
+        },
+        "eco": "Tirar o vídeo é mais visto que o vídeo."
+      }
+    },
+    {
+      "id": "fio_licenca_b2a",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O curso tem aula na sexta à noite e o clube joga sexta à noite. A coordenação diz que dá para repor a aula, e o treinador diz que dá para repor o jogo.",
+      "esquerda": {
+        "rotulo": "Reponho o jogo",
+        "efeitos": {
+          "diretoria": -16,
+          "forma": -10,
+          "torcida": -10
+        },
+        "flags": [
+          "curso_de_treinador"
+        ],
+        "fio": {
+          "id": "fio_licenca_b3aa",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Reponho a aula",
+        "efeitos": {
+          "diretoria": 12,
+          "forma": 10,
+          "dinheiro": 6
+        },
+        "flags": [
+          "curso_atrasado"
+        ],
+        "fio": {
+          "id": "fio_licenca_b3ab",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_licenca_b2b",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele foi demitido e mandou o seu nome numa lista de três para a diretoria, sem avisar você. Dois da lista têm licença e você não tem.",
+      "esquerda": {
+        "rotulo": "Aceito ser cotado",
+        "efeitos": {
+          "diretoria": 14,
+          "torcida": -12,
+          "forma": -7
+        },
+        "flags": [
+          "cotado_pro_cargo"
+        ],
+        "fio": {
+          "id": "fio_licenca_b3ba",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      },
+      "direita": {
+        "rotulo": "Ainda sou jogador",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": -9,
+          "torcida": 7
+        },
+        "flags": [
+          "ainda_jogador"
+        ],
+        "fio": {
+          "id": "fio_licenca_b3bb",
+          "em": [
+            18,
+            28
+          ],
+          "proximaEra": true
+        }
+      }
+    },
+    {
+      "id": "fio_licenca_b3aa",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A licença saiu no mesmo mês da sua aposentadoria e tem duas propostas: a base daqui, com salário pequeno, ou um profissional pequeno, com salário grande.",
+      "esquerda": {
+        "rotulo": "Fico na base",
+        "efeitos": {
+          "torcida": 20,
+          "dinheiro": -21,
+          "diretoria": 11
+        },
+        "flags": [
+          "curso_de_treinador",
+          "padrinho_do_kaique"
+        ],
+        "tiraFlags": [
+          "forcou_saida"
+        ],
+        "eco": "Você faltou a jogos por uma sala de aula."
+      },
+      "direita": {
+        "rotulo": "Pego o profissional",
+        "efeitos": {
+          "dinheiro": 27,
+          "diretoria": 16,
+          "torcida": -12
+        },
+        "flags": [
+          "curso_de_treinador",
+          "forcou_saida"
+        ],
+        "eco": "A licença abriu porta e você pegou a grande."
+      }
+    },
+    {
+      "id": "fio_licenca_b3ab",
+      "era": [
+        "legado"
+      ],
+      "cargo": "coord_base",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Você parou de jogar sem licença nenhuma e a coordenação oferece um cargo de nome bonito e função nenhuma. O crachá já está impresso.",
+      "esquerda": {
+        "rotulo": "Recomeço o curso",
+        "efeitos": {
+          "dinheiro": -25,
+          "torcida": 11,
+          "diretoria": 12
+        },
+        "flags": [
+          "curso_de_treinador"
+        ],
+        "tiraFlags": [
+          "curso_atrasado"
+        ],
+        "eco": "Recomeçar aos trinta e cinco tem plateia."
+      },
+      "direita": {
+        "rotulo": "Fico com o crachá",
+        "efeitos": {
+          "dinheiro": 21,
+          "diretoria": 19,
+          "torcida": -16
+        },
+        "flags": [
+          "padrinho_sem_cargo"
+        ],
+        "eco": "A aula reposta nunca foi reposta."
+      }
+    },
+    {
+      "id": "fio_licenca_b3ba",
+      "era": [
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O clube te quer no comando e a federação não libera sem licença. Existe um jeito de contornar isso, e ele explica o jeito devagar, para você entender bem.",
+      "esquerda": {
+        "rotulo": "Só com licença",
+        "efeitos": {
+          "diretoria": -21,
+          "torcida": 14,
+          "dinheiro": -16
+        },
+        "flags": [
+          "curso_de_treinador"
+        ],
+        "eco": "Seu nome entrou numa lista e não saiu mais."
+      },
+      "direita": {
+        "rotulo": "Contorno",
+        "efeitos": {
+          "diretoria": 25,
+          "dinheiro": 19,
+          "torcida": -12
+        },
+        "flags": [
+          "laranja"
+        ],
+        "eco": "Ele explicou devagar para você entender bem."
+      }
+    },
+    {
+      "id": "fio_licenca_b3bb",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele tem vinte e dois anos, é treinador de futsal nas férias e diz que é a coisa mais difícil que já fez. Pergunta por que você nunca quis tentar.",
+      "esquerda": {
+        "rotulo": "Ainda dá tempo",
+        "efeitos": {
+          "torcida": 16,
+          "dinheiro": -19,
+          "diretoria": 16
+        },
+        "flags": [
+          "curso_de_treinador",
+          "padrinho_do_kaique"
+        ],
+        "eco": "Ele perguntou e você foi olhar o calendário."
+      },
+      "direita": {
+        "rotulo": "Fui jogador só",
+        "efeitos": {
+          "torcida": 21,
+          "forma": 11,
+          "dinheiro": 11
+        },
+        "flags": [
+          "padrinho_sem_cargo"
+        ],
+        "eco": "Você disse que ainda era jogador. E era."
+      }
+    }
+  ]
+}

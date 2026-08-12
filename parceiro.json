@@ -1,0 +1,370 @@
+{
+  "versao": "0.1",
+  "cargo": "parceiro",
+  "cota": 12,
+  "notas": "Bloco completo do cargo PARCEIRO DE ALOJAMENTO (persistência: íntimo — Vevé, Pitico, Naldinho ou Cebola). Cargo criado para resolver o gargalo de variedade da era Base. Voz: gíria e intimidade imediata, fala do sonho sem nenhuma ironia, conta tudo de si e não pergunta nada. É a única pessoa do jogo que no começo não quer nada de você além de companhia — e depois quer a sua vaga, sem ver contradição nisso.",
+  "cartas": [
+    {
+      "id": "parceiro_base_01",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele chegou no alojamento no mesmo dia que você, pegou a cama de cima e falou até as duas da manhã sobre o carro que vai comprar.",
+      "esquerda": {
+        "rotulo": "Falo até as três",
+        "efeitos": {
+          "torcida": 18,
+          "forma": -11
+        },
+        "flags": [
+          "parceiro_de_quarto"
+        ]
+      },
+      "direita": {
+        "rotulo": "Peço pra dormir",
+        "efeitos": {
+          "forma": 18,
+          "torcida": -11
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_02",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Descobriram que vocês dois jogam na mesma posição. O coordenador disse, na frente dos dois, que só um sobe.",
+      "esquerda": {
+        "rotulo": "Treino junto com ele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Treino escondido",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_03",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "O almoço é o mesmo há três meses e ele descobriu uma lanchonete a duas quadras que fia até o fim do mês.",
+      "esquerda": {
+        "rotulo": "Vou com ele",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Como no alojamento",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_04",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 12,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Cortaram ele hoje. Está arrumando a mala e perguntando se você acha que ele foi mal, e quer uma resposta honesta.",
+      "esquerda": {
+        "rotulo": "Digo a verdade",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": [
+          "foi_honesto_com_parceiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Digo que foi azar",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_05",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "A família dele parou de mandar dinheiro e ele está sem passagem para voltar no fim de semana. Ele não pediu nada, só contou.",
+      "esquerda": {
+        "rotulo": "Empresto o que tenho",
+        "efeitos": {
+          "dinheiro": -6,
+          "torcida": 6
+        },
+        "flags": [
+          "bancou_o_parceiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Finjo que não ouvi",
+        "efeitos": {
+          "dinheiro": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_06",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Sexta à noite, ele já está de tênis e diz que tem uma festa e um primo com carro. O portão fecha às nove e ele sabe disso.",
+      "esquerda": {
+        "rotulo": "Vou nessa",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_07",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele chora baixo na cama de cima umas duas vezes por semana e faz questão de achar que você não escuta.",
+      "esquerda": {
+        "rotulo": "Puxo assunto",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo ele em paz",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_08",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "A sua chuteira nova sumiu do armário e apareceu no pé dele no treino da tarde. Ele diz que achou no vestiário e não sabia de quem era.",
+      "esquerda": {
+        "rotulo": "Cobro no vestiário",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo ele usar",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_base_09",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele propõe um acordo de moleque: quem subir primeiro leva o outro. Fala sério, estende a mão, e vocês têm dezessete anos.",
+      "esquerda": {
+        "rotulo": "Aperto a mão",
+        "efeitos": {
+          "torcida": 14,
+          "forma": -11,
+          "diretoria": -6
+        },
+        "flags": [
+          "pacto_com_parceiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Cada um por si",
+        "efeitos": {
+          "forma": 14,
+          "torcida": -11
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "parceiro",
+      "peso": 14,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "pacto_com_parceiro"
+        ]
+      },
+      "texto": "Você subiu e ele não. Ele liga da cidade dele, sem cobrar nada, só para dizer que está feliz por você. Depois pergunta se ainda vale o combinado.",
+      "esquerda": {
+        "rotulo": "Falo com o clube",
+        "efeitos": {
+          "diretoria": -11,
+          "torcida": 12,
+          "dinheiro": -4
+        },
+        "flags": [
+          "honrou_o_pacto"
+        ]
+      },
+      "direita": {
+        "rotulo": "Era coisa de moleque",
+        "efeitos": {
+          "diretoria": 10,
+          "forma": 10,
+          "torcida": -10
+        },
+        "flags": [
+          "quebrou_o_pacto"
+        ]
+      }
+    },
+    {
+      "id": "parceiro_estouro_02",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "parceiro",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele apareceu no time do rival e vai te marcar no domingo. Na véspera, mandou mensagem perguntando se você quer carona pro jogo.",
+      "esquerda": {
+        "rotulo": "Aceito a carona",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Vejo você lá",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "parceiro_estouro_03",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "parceiro",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele parou de jogar e está trabalhando com o tio. Mandou foto do crachá achando graça, e não respondeu quando você perguntou se está bem.",
+      "esquerda": {
+        "rotulo": "Insisto no assunto",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -4,
+          "dinheiro": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Curto a foto e sigo",
+        "efeitos": {
+          "forma": 4,
+          "dinheiro": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    }
+  ]
+}

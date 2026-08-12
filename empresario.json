@@ -1,0 +1,872 @@
+{
+  "versao": "0.1",
+  "cota": 22,
+  "notas": "Bloco completo do cargo EMPRESÁRIO (persistência: eterno — sempre Valdir) — o único personagem presente nas seis eras. Voz: fala de você na terceira pessoa mesmo com você na frente; nunca termina uma frase com 'não'; usa 'nós' quando é lucro e 'você' quando é problema. Tensão mecânica: DINHEIRO ↔ DIRETORIA.",
+  "cartas": [
+    {
+      "id": "valdir_base_01",
+      "era": [
+        "base"
+      ],
+      "cargo": "empresario",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 17
+        }
+      },
+      "texto": "Ele viu você jogar duas vezes e já fala do seu futuro no plural. O contrato tem seis páginas e ele só deixa você ler a primeira.",
+      "esquerda": {
+        "rotulo": "Assino agora",
+        "efeitos": {
+          "dinheiro": 21,
+          "diretoria": -10
+        },
+        "flags": [
+          "assinou_com_valdir"
+        ],
+        "encadeia": "valdir_base_02",
+        "atraso": 4
+      },
+      "direita": {
+        "rotulo": "Vou mostrar em casa",
+        "efeitos": {
+          "dinheiro": -11,
+          "forma": 10,
+          "torcida": 6
+        },
+        "flags": [
+          "desconfia_de_valdir"
+        ]
+      }
+    },
+    {
+      "id": "valdir_base_02",
+      "era": [
+        "base",
+        "estouro"
+      ],
+      "cargo": "empresario",
+      "peso": 20,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "assinou_com_valdir"
+        ]
+      },
+      "texto": "{nome} comprou uma chuteira, um celular e a passagem da sua mãe. Diz que não é adiantamento. Diz que é carinho.",
+      "esquerda": {
+        "rotulo": "Aceito tudo",
+        "efeitos": {
+          "dinheiro": 18,
+          "diretoria": -11
+        },
+        "flags": [
+          "deve_pro_valdir"
+        ]
+      },
+      "direita": {
+        "rotulo": "Devolvo o celular",
+        "efeitos": {
+          "diretoria": 11,
+          "dinheiro": -11,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_base_03",
+      "era": [
+        "base"
+      ],
+      "cargo": "empresario",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} foi na sua casa sem avisar. Sua mãe serviu café e assinou uma folha que você não viu. Ela diz que ele explicou tudo direitinho.",
+      "esquerda": {
+        "rotulo": "Peço a folha de volta",
+        "efeitos": {
+          "dinheiro": -6,
+          "forma": 3,
+          "diretoria": 3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo pra lá",
+        "efeitos": {
+          "dinheiro": 6,
+          "forma": -6
+        },
+        "flags": [
+          "valdir_manda_em_casa"
+        ]
+      }
+    },
+    {
+      "id": "valdir_base_04",
+      "era": [
+        "base"
+      ],
+      "cargo": "empresario",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele diz que aqui você é o quarto da fila e que no {clube_novo} você estreia em três meses. É {patamar_novo}, e ele diz isso na frente do Seu Nivaldo.",
+      "esquerda": {
+        "rotulo": "Vou onde eu jogo",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": [
+          "trocou_de_clube_cedo"
+        ],
+        "aceitaProposta": {
+          "delta": -1
+        }
+      },
+      "direita": {
+        "rotulo": "Espero minha vez",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "empresario",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "assinou_com_valdir"
+        ]
+      },
+      "texto": "O diretor mandou mensagem pro {nome}, não pra você. Quando você pergunta o valor, ele diz que o menino não precisa se preocupar com número.",
+      "esquerda": {
+        "rotulo": "Quero ver o contrato",
+        "efeitos": {
+          "diretoria": 11,
+          "dinheiro": -11,
+          "torcida": 7
+        },
+        "flags": [
+          "negocia_sozinho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Confio nele",
+        "efeitos": {
+          "dinheiro": 19,
+          "diretoria": -11
+        },
+        "flags": [
+          "valdir_negocia"
+        ]
+      }
+    },
+    {
+      "id": "valdir_estouro_02",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "empresario",
+      "peso": 14,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "deve_pro_valdir"
+        ]
+      },
+      "texto": "Ele abre uma planilha no celular. A chuteira, o celular, a passagem, o aluguel da sua mãe. No fim tem um número e a palavra quitado, com interrogação.",
+      "esquerda": {
+        "rotulo": "Pago tudo hoje",
+        "efeitos": {
+          "dinheiro": -33,
+          "diretoria": 10,
+          "forma": 10
+        },
+        "flags": [
+          "quitou_valdir"
+        ],
+        "fio": {
+          "id": "fio_valdir_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "A planilha zerou e ele guardou o arquivo."
+      },
+      "direita": {
+        "rotulo": "Deixa rolando",
+        "efeitos": {
+          "dinheiro": 20,
+          "diretoria": -20,
+          "torcida": -10
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_valdir_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Aquela interrogação era o contrato inteiro."
+      }
+    },
+    {
+      "id": "valdir_estouro_03",
+      "era": [
+        "estouro",
+        "travessia",
+        "auge"
+      ],
+      "cargo": "empresario",
+      "peso": 7,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele apareceu no jogo, mas veio ver outro. Na saída, apresenta o moleque a você e diz que vocês dois vão brilhar juntos, um dia.",
+      "esquerda": {
+        "rotulo": "Cobro exclusividade",
+        "efeitos": {
+          "diretoria": 4,
+          "dinheiro": -4,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Sorrio pra foto",
+        "efeitos": {
+          "dinheiro": 4,
+          "torcida": 4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_estouro_04",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "empresario",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Um fundo quer comprar quarenta por cento dos seus direitos econômicos. {nome} já disse sim por telefone. Falta só você assinar embaixo.",
+      "esquerda": {
+        "rotulo": "Assino",
+        "efeitos": {
+          "dinheiro": 35,
+          "diretoria": -14,
+          "torcida": -7
+        },
+        "flags": [
+          "fundo_comprou_direitos"
+        ],
+        "fio": {
+          "id": "fio_fundo_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Ele disse sim antes de você. Isso não volta."
+      },
+      "direita": {
+        "rotulo": "Não vendo pedaço meu",
+        "efeitos": {
+          "dinheiro": -27,
+          "forma": 11,
+          "diretoria": 11
+        },
+        "flags": [
+          "recusou_fundo"
+        ],
+        "fio": {
+          "id": "fio_fundo_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Você é a única pessoa que não te vendeu."
+      }
+    },
+    {
+      "id": "valdir_estouro_05",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "empresario",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} escreve três frases num guardanapo e manda você decorar. São frases boas. Nenhuma delas é sua.",
+      "esquerda": {
+        "rotulo": "Falo do meu jeito",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "dinheiro": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Decoro o guardanapo",
+        "efeitos": {
+          "diretoria": 4,
+          "dinheiro": 4,
+          "torcida": -4
+        },
+        "flags": [
+          "fala_ensaiada"
+        ]
+      }
+    },
+    {
+      "id": "valdir_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "empresario",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "Ele alugou um apartamento a dez minutos do seu. Diz que é para cuidar de você de perto. Não trouxe a família dele.",
+      "esquerda": {
+        "rotulo": "Melhor assim",
+        "efeitos": {
+          "dinheiro": 7,
+          "forma": 3,
+          "diretoria": -3
+        },
+        "flags": [
+          "valdir_perto"
+        ]
+      },
+      "direita": {
+        "rotulo": "Prefiro meu espaço",
+        "efeitos": {
+          "forma": 3,
+          "dinheiro": -3,
+          "diretoria": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_travessia_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "empresario",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Um jornal publicou a comissão da sua transferência. O número é maior que o seu salário de dois anos. Seu telefone não para e o dele está desligado.",
+      "esquerda": {
+        "rotulo": "Cobro explicação",
+        "efeitos": {
+          "diretoria": 4,
+          "dinheiro": -4,
+          "torcida": 4
+        },
+        "flags": [
+          "cobrou_valdir"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não comento nada",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "dinheiro": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_travessia_03",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "empresario",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele quer que você treine mal por duas semanas para forçar a venda. Diz que é técnica de mercado e que todo mundo faz.",
+      "esquerda": {
+        "rotulo": "Faço o teatro",
+        "efeitos": {
+          "dinheiro": 14,
+          "diretoria": -14
+        },
+        "flags": [
+          "forcou_saida"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não faço isso",
+        "efeitos": {
+          "diretoria": 12,
+          "dinheiro": -10,
+          "torcida": 6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_travessia_04",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "empresario",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Ele te chama de filho na frente dos outros e sua mãe não gosta disso. Ele nunca perguntou se podia.",
+      "esquerda": {
+        "rotulo": "Deixo ele falar",
+        "efeitos": {
+          "dinheiro": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Corrijo na hora",
+        "efeitos": {
+          "forma": 6,
+          "dinheiro": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "empresario",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "A proposta é abrir uma empresa com o nome dos dois. Ele entra com os contatos, você entra com o nome. E com o capital.",
+      "esquerda": {
+        "rotulo": "Somos sócios",
+        "efeitos": {
+          "dinheiro": 20,
+          "diretoria": -9,
+          "forma": -4
+        },
+        "flags": [
+          "socio_valdir"
+        ],
+        "encadeia": "valdir_auge_02",
+        "atraso": 8
+      },
+      "direita": {
+        "rotulo": "Continuo só cliente",
+        "efeitos": {
+          "dinheiro": -14,
+          "diretoria": 9,
+          "forma": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "empresario",
+      "peso": 18,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "socio_valdir"
+        ]
+      },
+      "texto": "Chegou uma carta do banco sobre uma empresa que você não conhece. O sócio administrador é você. A assinatura também.",
+      "esquerda": {
+        "rotulo": "Vou ao advogado",
+        "efeitos": {
+          "dinheiro": -30,
+          "diretoria": 16,
+          "forma": -9
+        },
+        "flags": [
+          "processou_valdir"
+        ],
+        "fio": {
+          "id": "fio_laranja_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Advogado abre gaveta que não fecha mais."
+      },
+      "direita": {
+        "rotulo": "Ele explica depois",
+        "efeitos": {
+          "dinheiro": 27,
+          "diretoria": -20
+        },
+        "flags": [
+          "laranja"
+        ],
+        "fio": {
+          "id": "fio_laranja_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "A assinatura era sua. O resto se descobre."
+      }
+    },
+    {
+      "id": "valdir_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "empresario",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 26
+        },
+        "flags": [
+          "trocou_de_clube"
+        ]
+      },
+      "texto": "Você descobriu que ele recebeu do seu clube e do clube que te comprou. Ele atende no terceiro toque e a primeira palavra dele é nós.",
+      "esquerda": {
+        "rotulo": "Acabou",
+        "efeitos": {
+          "diretoria": 21,
+          "torcida": 11,
+          "dinheiro": -24
+        },
+        "flags": [
+          "rompeu_valdir"
+        ],
+        "fio": {
+          "id": "fio_valdir_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Dez anos terminaram no terceiro toque."
+      },
+      "direita": {
+        "rotulo": "Deixo passar",
+        "efeitos": {
+          "dinheiro": 27,
+          "diretoria": -11,
+          "forma": -7
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_valdir_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Ele disse nós. Você ouviu bem."
+      }
+    },
+    {
+      "id": "valdir_auge_04",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "empresario",
+      "peso": 16,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "rompeu_valdir"
+        ]
+      },
+      "texto": "A nova agência tem escritório em três países e ninguém que atende o seu telefone sabe o seu apelido. A proposta deles é melhor em tudo.",
+      "esquerda": {
+        "rotulo": "Assino com eles",
+        "efeitos": {
+          "dinheiro": 7,
+          "forma": 3,
+          "torcida": -3
+        },
+        "flags": [
+          "agencia_grande"
+        ]
+      },
+      "direita": {
+        "rotulo": "Cuido disso sozinho",
+        "efeitos": {
+          "diretoria": 3,
+          "forma": 3,
+          "dinheiro": -3
+        },
+        "flags": [
+          "sem_empresario"
+        ]
+      }
+    },
+    {
+      "id": "valdir_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "empresario",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 30
+        }
+      },
+      "texto": "Ele engordou e carrega uma pasta velha. A corrente continua por fora do colarinho. Tem uma proposta de um clube da segunda divisão e pergunta se você ainda atende ele.",
+      "esquerda": {
+        "rotulo": "Atendo, Valdir",
+        "efeitos": {
+          "dinheiro": -11,
+          "torcida": 11,
+          "forma": 6
+        },
+        "flags": [
+          "perdoou_valdir"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não conheço o senhor",
+        "efeitos": {
+          "diretoria": 11,
+          "dinheiro": 9,
+          "torcida": -11
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "empresario",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 31
+        }
+      },
+      "texto": "Proposta de um clube que ninguém do seu bairro sabe pronunciar. Três anos, valor absurdo, e ninguém nunca mais vê você jogar.",
+      "esquerda": {
+        "rotulo": "Vou pelo dinheiro",
+        "efeitos": {
+          "dinheiro": 18,
+          "torcida": -11,
+          "forma": -4
+        },
+        "flags": [
+          "foi_pro_golfo"
+        ],
+        "aceitaProposta": {
+          "delta": -1
+        }
+      },
+      "direita": {
+        "rotulo": "Quero ser visto",
+        "efeitos": {
+          "dinheiro": -11,
+          "torcida": 10,
+          "forma": 4
+        },
+        "flags": [
+          "recusou_golfo"
+        ]
+      }
+    },
+    {
+      "id": "valdir_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "empresario",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 32
+        }
+      },
+      "texto": "É um clube que você nunca ouviu falar, num país que você não sabe apontar no mapa. {nome} diz que é isso ou o telefone para de tocar de vez.",
+      "esquerda": {
+        "rotulo": "Vou",
+        "efeitos": {
+          "dinheiro": 6,
+          "forma": -3,
+          "torcida": -3
+        },
+        "flags": [
+          "ultimo_contrato"
+        ],
+        "aceitaProposta": {
+          "delta": -1
+        }
+      },
+      "direita": {
+        "rotulo": "Paro por aqui",
+        "efeitos": {
+          "diretoria": -6,
+          "forma": 3,
+          "torcida": 3
+        },
+        "flags": [
+          "recusou_ultimo"
+        ]
+      }
+    },
+    {
+      "id": "valdir_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 34
+        }
+      },
+      "texto": "Ele quer abrir uma agência com o seu nome na porta e os contatos dele por dentro. Diz que agora vocês são dois veteranos, e que dessa vez divide meio a meio.",
+      "esquerda": {
+        "rotulo": "Topo",
+        "efeitos": {
+          "dinheiro": 16,
+          "torcida": -10,
+          "diretoria": -6
+        },
+        "flags": [
+          "agencia_com_valdir"
+        ]
+      },
+      "direita": {
+        "rotulo": "Meu nome fica comigo",
+        "efeitos": {
+          "torcida": 11,
+          "dinheiro": -11,
+          "diretoria": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "valdir_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 35
+        }
+      },
+      "texto": "Ligaram avisando do enterro. Apareceram sete pessoas e três eram jogadores que ele empresariou. Ninguém sabia o nome da mãe dele.",
+      "esquerda": {
+        "rotulo": "Falo no microfone",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3,
+          "diretoria": 3
+        },
+        "flags": [
+          "falou_no_enterro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Fico no fundo",
+        "efeitos": {
+          "forma": 3,
+          "diretoria": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    }
+  ],
+  "cargos": {
+    "empresario": {
+      "nome": "Valdir",
+      "papel": "Empresário. Camisa social, corrente por fora."
+    }
+  },
+  "cargo": "empresario"
+}

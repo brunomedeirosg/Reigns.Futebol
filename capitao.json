@@ -1,0 +1,1114 @@
+{
+  "versao": "0.1",
+  "cargo": "capitao",
+  "cota": 35,
+  "notas": "Bloco completo do cargo CAPITÃO (persistência: rotativo COM ARQUÉTIPO — Almeida 40%, Setúbal 20%, Bonfim 20%, Duda 20%; nunca repete o da vida anterior). São 15 cartas COMUNS, que usam {nome} e servem a qualquer arquétipo, mais 5 cartas ESPECÍFICAS por arquétipo, porque cada um muda valores e não só o nome. Só o Almeida é generoso. O eco deste arco — você no papel dele, o sucessor no seu — está em cartas/sucessor.json, e muda de sentido conforme qual arquétipo você teve.",
+  "cartas": [
+    {
+      "id": "capitao_partida",
+      "era": [
+        "estouro",
+        "travessia",
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 0,
+      "tipo": "partida",
+      "peso_dramatico": "importante",
+      "texto": "Empate no último minuto, pênalti a favor, cinquenta mil pessoas em pé. {nome} está com a bola na mão e olhando pra você.",
+      "esquerda": {
+        "rotulo": "Eu bato",
+        "tipo": "risco",
+        "sucesso": {
+          "efeitos": {
+            "torcida": 24,
+            "diretoria": 11
+          },
+          "flags": [
+            "gol_da_final"
+          ],
+          "estatisticas": {
+            "gols": 1
+          }
+        },
+        "falha": {
+          "efeitos": {
+            "torcida": -21,
+            "forma": -9
+          },
+          "flags": [
+            "perdeu_penalti"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Bate você, capitão",
+        "efeitos": {
+          "diretoria": 11,
+          "torcida": -11,
+          "forma": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_bracadeira",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 26
+        }
+      },
+      "texto": "{nome} pendura a chuteira e entrega a braçadeira. Aceitar significa ser o primeiro a falar quando tudo der errado.",
+      "esquerda": {
+        "rotulo": "Eu assumo",
+        "efeitos": {
+          "diretoria": 14,
+          "torcida": 11,
+          "forma": -9
+        },
+        "flags": [
+          "capitao"
+        ]
+      },
+      "direita": {
+        "rotulo": "Prefiro só jogar",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": -11,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Cinco horas de ônibus e ele senta do seu lado sem perguntar. Diz que já viu quatro moleques como você e que dois viraram vendedor.",
+      "esquerda": {
+        "rotulo": "Pergunto dos dois",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Digo que sou diferente",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_estouro_02",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O bicho da vitória é dividido em partes iguais entre quem jogou, e {nome} propõe incluir os que ficaram no banco.",
+      "esquerda": {
+        "rotulo": "Divido com todos",
+        "efeitos": {
+          "torcida": 6,
+          "dinheiro": -6
+        },
+        "flags": [
+          "dividiu_o_bicho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Só quem jogou",
+        "efeitos": {
+          "dinheiro": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_estouro_03",
+      "era": [
+        "estouro",
+        "travessia",
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Ele controla o som do vestiário e o volume da conversa. Hoje o som está desligado e ninguém sabe por quê.",
+      "esquerda": {
+        "rotulo": "Pergunto o motivo",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico na minha",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_estouro_04",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Você errou o posicionamento três vezes e ele gritou com você na frente de todo mundo, no meio do treino, com nome e sobrenome.",
+      "esquerda": {
+        "rotulo": "Respondo na hora",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Engulo e corrijo",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Três meses de salário atrasado e {nome} propõe que o grupo não entre em campo no domingo. Falta um voto, e o voto é o seu.",
+      "esquerda": {
+        "rotulo": "Voto pela greve",
+        "efeitos": {
+          "torcida": 14,
+          "diretoria": -14
+        },
+        "flags": [
+          "votou_greve"
+        ]
+      },
+      "direita": {
+        "rotulo": "Voto pra jogar",
+        "efeitos": {
+          "diretoria": 12,
+          "torcida": -14
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_travessia_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele descobriu que você ganha o triplo dele e tem trinta e quatro anos. Comentou uma vez, rindo, e nunca mais tocou no assunto.",
+      "esquerda": {
+        "rotulo": "Falo do meu contrato",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo o assunto morrer",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_travessia_03",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele chega uma hora antes para alongar sozinho, sem música, olhando o gramado vazio. Não convidou ninguém em treze anos.",
+      "esquerda": {
+        "rotulo": "Chego junto",
+        "efeitos": {
+          "forma": 4,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Respeito a hora dele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_travessia_04",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele falhou no gol da derrota e a torcida cantou o nome dele com raiva. No vestiário ninguém falou nada e ele ficou de costas.",
+      "esquerda": {
+        "rotulo": "Vou falar com ele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Ninguém fala nada",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele anunciou que para no fim da temporada e pediu que você não fale nada na coletiva. A imprensa já sabe e vai perguntar.",
+      "esquerda": {
+        "rotulo": "Falo bem dele",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Cumpro o pedido",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Última partida dele e o time está ganhando de três. Ele quer sair aos oitenta e cinco, e você está com a bola no pé na frente do gol.",
+      "esquerda": {
+        "rotulo": "Toco pra ele",
+        "efeitos": {
+          "torcida": 19,
+          "forma": -11
+        },
+        "flags": [
+          "tocou_pro_capitao"
+        ]
+      },
+      "direita": {
+        "rotulo": "Faço meu gol",
+        "efeitos": {
+          "forma": 16,
+          "torcida": -11
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "No último treino dele, ele te chama e diz uma frase que você ainda não entende. Pede que você guarde para quando fizer sentido.",
+      "esquerda": {
+        "rotulo": "Peço que explique",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Guardo a frase",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": [
+          "guardou_a_frase"
+        ]
+      }
+    },
+    {
+      "id": "capitao_auge_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Reunião sem comissão técnica, portas fechadas, e ele pede que cada um diga uma verdade sobre o grupo. Você é o quarto a falar.",
+      "esquerda": {
+        "rotulo": "Falo a minha verdade",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Passo a vez",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_auge_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O jantar de despedida dele tem elenco, comissão e roupeiro. A diretoria mandou um representante que saiu antes da sobremesa.",
+      "esquerda": {
+        "rotulo": "Faço o discurso",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo pro presidente",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_almeida_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "almeida",
+      "unico": true,
+      "texto": "Ele passou quarenta minutos depois do treino mostrando como se protege a bola de costas. Não pediu nada e não contou a ninguém.",
+      "esquerda": {
+        "rotulo": "Peço mais uma hora",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Agradeço e vou",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_almeida_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "almeida",
+      "unico": true,
+      "texto": "Você errou e a imprensa pegou. Ele deu entrevista dizendo que o erro foi do time, e ninguém tinha pedido isso a ele.",
+      "esquerda": {
+        "rotulo": "Assumo em público",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Aceito a proteção",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_almeida_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "arquetipo": "almeida",
+      "unico": true,
+      "texto": "Ele tira a braçadeira, entrega na sua mão e diz que você vai ser melhor nisso do que ele foi. Fala isso sem ironia nenhuma.",
+      "esquerda": {
+        "rotulo": "Aceito na hora",
+        "efeitos": {
+          "diretoria": 14,
+          "torcida": 11,
+          "forma": -9
+        },
+        "flags": [
+          "capitao"
+        ]
+      },
+      "direita": {
+        "rotulo": "Digo que é cedo",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": -11,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_almeida_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "almeida",
+      "unico": true,
+      "texto": "Ele te convida pro aniversário da filha, num sítio, sem imprensa. Você é o único do elenco convidado e não sabe por quê.",
+      "esquerda": {
+        "rotulo": "Vou ao sítio",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -3,
+          "diretoria": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Invento um treino",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_almeida_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "almeida",
+      "unico": true,
+      "texto": "Ele parou de jogar e foi trabalhar com a mulher numa loja de material esportivo. Manda mensagem no seu aniversário, todo ano.",
+      "esquerda": {
+        "rotulo": "Respondo sempre",
+        "efeitos": {
+          "torcida": 6,
+          "forma": 3,
+          "dinheiro": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo de responder",
+        "efeitos": {
+          "forma": 6,
+          "dinheiro": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_setubal_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "setubal",
+      "unico": true,
+      "texto": "Duas semanas no grupo e ele não falou uma palavra com você. Falou com o massagista sobre você, alto, sabendo que você ouvia.",
+      "esquerda": {
+        "rotulo": "Puxo conversa à força",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Ignoro de volta",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_setubal_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "capitao",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "setubal",
+      "unico": true,
+      "texto": "Ele pediu ao treinador para você jogar fora de posição, dizendo que era pelo bem do time. Você descobriu pelo massagista.",
+      "esquerda": {
+        "rotulo": "Falo com o treinador",
+        "efeitos": {
+          "diretoria": -6,
+          "forma": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Jogo onde mandarem",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_setubal_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "arquetipo": "setubal",
+      "unico": true,
+      "texto": "Ele vai sair e indicou outro para a braçadeira, alguém com menos jogos que você. O vestiário achou estranho e ninguém comentou.",
+      "esquerda": {
+        "rotulo": "Cobro na frente dele",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": -14,
+          "forma": 7
+        },
+        "flags": [
+          "cobrou_a_bracadeira"
+        ]
+      },
+      "direita": {
+        "rotulo": "Aceito calado",
+        "efeitos": {
+          "diretoria": 11,
+          "forma": 11,
+          "torcida": -9
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_setubal_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "setubal",
+      "unico": true,
+      "texto": "Ele está encostado, sem contrato e sem clube, e mandou mensagem pedindo que você fale bem dele com o seu empresário.",
+      "esquerda": {
+        "rotulo": "Falo bem dele",
+        "efeitos": {
+          "torcida": 4,
+          "dinheiro": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não respondo",
+        "efeitos": {
+          "forma": 4,
+          "dinheiro": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_setubal_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "setubal",
+      "unico": true,
+      "texto": "No último dia ele admite, sem pedir desculpa, que sabotou você porque tinha medo. Diz que faria de novo e vai embora.",
+      "esquerda": {
+        "rotulo": "Digo que entendo",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Digo o que penso",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": [
+          "nao_perdoou_o_capitao"
+        ]
+      }
+    },
+    {
+      "id": "capitao_bonfim_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "bonfim",
+      "unico": true,
+      "texto": "Primeiro dia e ele já te chama de irmão, paga o almoço e diz que aqui dentro é tudo família. Nem perguntou o seu nome inteiro.",
+      "esquerda": {
+        "rotulo": "Entro na roda",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Mantenho distância",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_bonfim_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "arquetipo": "bonfim",
+      "unico": true,
+      "texto": "Ele te leva a um jantar com uns amigos que trabalham com esporte e ninguém diz exatamente em quê. Todos conhecem o seu salário.",
+      "esquerda": {
+        "rotulo": "Fico pro jantar",
+        "efeitos": {
+          "dinheiro": 16,
+          "diretoria": -11,
+          "torcida": -7
+        },
+        "flags": [
+          "conheceu_o_esquema"
+        ]
+      },
+      "direita": {
+        "rotulo": "Saio na entrada",
+        "efeitos": {
+          "diretoria": 11,
+          "forma": 9,
+          "dinheiro": -9
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_bonfim_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "arquetipo": "bonfim",
+      "unico": true,
+      "texto": "Ele entrega a braçadeira e no mesmo dia pede um favor pequeno, que envolve não comentar uma coisa que você viu no vestiário.",
+      "esquerda": {
+        "rotulo": "Aceito o pacote",
+        "efeitos": {
+          "diretoria": 14,
+          "torcida": 11,
+          "forma": -9
+        },
+        "flags": [
+          "capitao",
+          "devendo_favor"
+        ]
+      },
+      "direita": {
+        "rotulo": "Recuso os dois",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": -11,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_bonfim_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "arquetipo": "bonfim",
+      "unico": true,
+      "texto": "O nome dele saiu num inquérito e o seu aparece uma vez, como testemunha de um jantar. Ele pede que você não lembre do jantar.",
+      "esquerda": {
+        "rotulo": "Não lembro de nada",
+        "efeitos": {
+          "diretoria": -12,
+          "dinheiro": 10,
+          "torcida": -6
+        },
+        "flags": [
+          "silencio_no_inquerito"
+        ]
+      },
+      "direita": {
+        "rotulo": "Conto o que vi",
+        "efeitos": {
+          "diretoria": 10,
+          "torcida": 10,
+          "dinheiro": -10
+        },
+        "flags": [
+          "delatou"
+        ]
+      }
+    },
+    {
+      "id": "capitao_bonfim_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "bonfim",
+      "unico": true,
+      "texto": "Ele parou de jogar de um dia pro outro e ninguém do elenco sabe onde ele está. O telefone dele dá desligado há quatro meses.",
+      "esquerda": {
+        "rotulo": "Procuro ele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -3,
+          "dinheiro": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não procuro",
+        "efeitos": {
+          "forma": 6,
+          "dinheiro": 3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_duda_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "duda",
+      "unico": true,
+      "texto": "Ele estourou aos dezenove como você e quebrou aos vinte e quatro. Contou tudo no primeiro dia, sem drama, e você não escutou.",
+      "esquerda": {
+        "rotulo": "Peço detalhes",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Mudo de assunto",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_duda_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "arquetipo": "duda",
+      "unico": true,
+      "texto": "Ele levantou o meião e mostrou a cicatriz de vinte centímetros. Disse que foi num treino de terça, e que ele estava treinando dobrado.",
+      "esquerda": {
+        "rotulo": "Corto o treino extra",
+        "efeitos": {
+          "forma": -20,
+          "diretoria": -20,
+          "torcida": 12
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "fio": {
+          "id": "fio_cicatriz_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Ele levantou o meião por um motivo."
+      },
+      "direita": {
+        "rotulo": "Continuo dobrando",
+        "efeitos": {
+          "forma": 20,
+          "diretoria": 12,
+          "torcida": -12
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "fio": {
+          "id": "fio_cicatriz_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Você escolheu a mesma cicatriz que ele."
+      }
+    },
+    {
+      "id": "capitao_duda_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "arquetipo": "duda",
+      "unico": true,
+      "texto": "Ele entrega a braçadeira dizendo que ela pesa mais do que parece, e que você vai descobrir isso num sábado qualquer.",
+      "esquerda": {
+        "rotulo": "Aceito",
+        "efeitos": {
+          "diretoria": 11,
+          "torcida": 11,
+          "forma": -9
+        },
+        "flags": [
+          "capitao"
+        ]
+      },
+      "direita": {
+        "rotulo": "Passo pra outro",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": -11,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_duda_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "duda",
+      "unico": true,
+      "texto": "Ele voltou de uma lesão, jogou onze partidas e sentiu a mesma coisa no mesmo lugar. Dessa vez não chorou e ninguém consolou.",
+      "esquerda": {
+        "rotulo": "Fico com ele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Foco no meu jogo",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "capitao_duda_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "capitao",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "duda",
+      "unico": true,
+      "texto": "Ele virou preparador na base do clube, ganhando um oitavo do que ganhava, e diz que é a primeira vez na vida que dorme bem.",
+      "esquerda": {
+        "rotulo": "Pergunto se vale",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Acho que é derrota",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    }
+  ]
+}

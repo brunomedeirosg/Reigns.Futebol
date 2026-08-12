@@ -1,0 +1,598 @@
+{
+  "versao": "0.1",
+  "cargo": "companheira",
+  "cota": 16,
+  "notas": "Bloco completo do cargo COMPANHEIRA (persistência: íntimo — Nara, Bete, Lívia ou Yasmin; pessoa nova a cada vida porque você é uma pessoa nova). REGRA INEGOCIÁVEL: nunca escrever como obstáculo. Se uma carta faz o jogador sentir que ela está atrapalhando, a carta está errada — o obstáculo é a ausência dele, não a presença dela. Este cargo controla a porta da carreira internacional: a carta companheira_pedagio é FORÇADA pelo motor antes de qualquer proposta do exterior.",
+  "cartas": [
+    {
+      "id": "companheira_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "companheira",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Vocês se conheceram há oito meses e ela já entendeu que você não escolhe em que cidade acorda. Ela pergunta se isso é aviso ou convite.",
+      "esquerda": {
+        "rotulo": "É convite",
+        "efeitos": {
+          "forma": 12,
+          "diretoria": -10,
+          "torcida": 6
+        },
+        "flags": [
+          "com_companheira"
+        ],
+        "fio": {
+          "id": "companheira_pedagio",
+          "em": [
+            4,
+            10
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "É aviso",
+        "efeitos": {
+          "diretoria": 12,
+          "forma": -10,
+          "dinheiro": 6
+        },
+        "flags": [
+          "sozinho_por_escolha"
+        ]
+      }
+    },
+    {
+      "id": "companheira_pedagio",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "companheira",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "forcada": true,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "A proposta é do outro país e começa em três semanas. Ela tem cliente, contrato e uma carreira que não cabe na mala. Ela não vai pedir para você ficar.",
+      "esquerda": {
+        "rotulo": "Vamos os dois",
+        "efeitos": {
+          "forma": 12,
+          "dinheiro": -11,
+          "diretoria": 6
+        },
+        "flags": [
+          "companheira_veio_junto"
+        ]
+      },
+      "direita": {
+        "rotulo": "Vou sozinho",
+        "efeitos": {
+          "dinheiro": 18,
+          "forma": -11
+        },
+        "flags": [
+          "companheira_ficou"
+        ]
+      }
+    },
+    {
+      "id": "companheira_carreira_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "companheira",
+      "peso": 12,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "companheira_veio_junto"
+        ]
+      },
+      "texto": "Oito meses no país novo e o diploma dela não vale aqui. Ela está fazendo prova de proficiência às sete da manhã e não reclamou nenhuma vez.",
+      "esquerda": {
+        "rotulo": "Pago o que for",
+        "efeitos": {
+          "dinheiro": -7,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Ela dá um jeito",
+        "efeitos": {
+          "dinheiro": 4,
+          "forma": -4,
+          "torcida": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_carreira_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "companheira_veio_junto"
+        ]
+      },
+      "texto": "Ofereceram a ela o cargo que ela queria, na cidade que vocês deixaram. Ela contou no jantar, com a mesma voz de sempre, e esperou.",
+      "esquerda": {
+        "rotulo": "Volta, eu me viro",
+        "efeitos": {
+          "forma": -7,
+          "diretoria": 3,
+          "torcida": 3
+        },
+        "flags": [
+          "companheira_voltou"
+        ]
+      },
+      "direita": {
+        "rotulo": "Peço que ela recuse",
+        "efeitos": {
+          "forma": 3,
+          "dinheiro": -3,
+          "torcida": -3
+        },
+        "flags": [
+          "ela_abriu_mao"
+        ]
+      }
+    },
+    {
+      "id": "companheira_ruptura",
+      "era": [
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "companheira_veio_junto"
+        ]
+      },
+      "texto": "Cinco países em sete anos. Ela fez a conta do que deixou pelo caminho e leu em voz alta, sem acusar ninguém, só somando.",
+      "esquerda": {
+        "rotulo": "Escolho ela dessa vez",
+        "efeitos": {
+          "diretoria": -14,
+          "forma": 10,
+          "torcida": -6
+        },
+        "flags": [
+          "escolheu_a_companheira"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não posso parar agora",
+        "efeitos": {
+          "diretoria": 12,
+          "forma": -10,
+          "torcida": 6
+        },
+        "flags": [
+          "companheira_terminou"
+        ]
+      }
+    },
+    {
+      "id": "companheira_distancia_01",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "companheira_ficou",
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "Fuso de quatro horas, três chamadas perdidas por semana. Ela mandou uma foto do apartamento novo e você não reconheceu nenhum móvel.",
+      "esquerda": {
+        "rotulo": "Vou em toda folga",
+        "efeitos": {
+          "dinheiro": -16,
+          "forma": -10,
+          "torcida": 6
+        },
+        "flags": [
+          "ponte_aerea"
+        ]
+      },
+      "direita": {
+        "rotulo": "A gente se resolve",
+        "efeitos": {
+          "forma": 11,
+          "dinheiro": 10,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_distancia_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 14,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "companheira_ficou"
+        ]
+      },
+      "texto": "Ela não brigou. Disse que passou um ano esperando você decidir uma coisa que você já tinha decidido, e desligou antes de você responder.",
+      "esquerda": {
+        "rotulo": "Pego o primeiro voo",
+        "efeitos": {
+          "forma": -16,
+          "dinheiro": -10,
+          "torcida": 9
+        },
+        "flags": [
+          "correu_atras"
+        ]
+      },
+      "direita": {
+        "rotulo": "Deixo acontecer",
+        "efeitos": {
+          "forma": 9,
+          "dinheiro": 10,
+          "diretoria": 9
+        },
+        "flags": [
+          "companheira_terminou"
+        ]
+      }
+    },
+    {
+      "id": "companheira_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "Você chegou às duas da manhã do voo e o café estava pronto às sete. Ninguém combinou isso e ninguém agradece mais.",
+      "esquerda": {
+        "rotulo": "Fico acordado com ela",
+        "efeitos": {
+          "forma": -7,
+          "torcida": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Durmo até o treino",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "Uma foto dela saiu num site de fofoca com o nome errado e trinta mil comentários embaixo. Ela desativou tudo em dez minutos e não comentou.",
+      "esquerda": {
+        "rotulo": "Respondo publicamente",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "A gente ignora",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "forma": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "Ela quer ter um filho agora, e você tem vinte e nove anos e três anos de contrato. Ela diz que não existe hora boa e que essa é a hora possível.",
+      "esquerda": {
+        "rotulo": "Vamos ter",
+        "efeitos": {
+          "forma": -11,
+          "dinheiro": -11,
+          "torcida": 9
+        },
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Depois do contrato",
+        "efeitos": {
+          "dinheiro": 11,
+          "forma": 9,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "companheira",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "tem_filho"
+        ]
+      },
+      "texto": "Você jogou noventa minutos e chegou em casa sem conseguir subir a escada. Ela resolveu a escola, o médico e o mercado, e não contou nada.",
+      "esquerda": {
+        "rotulo": "Divido a carga",
+        "efeitos": {
+          "forma": -4,
+          "diretoria": -4,
+          "torcida": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo com ela",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "companheira",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ],
+        "idade": {
+          "min": 32
+        }
+      },
+      "texto": "Ela nunca pediu nada em doze anos. Pediu agora, uma vez só e sem levantar a voz: que você marque uma data para parar.",
+      "esquerda": {
+        "rotulo": "Marco a data",
+        "efeitos": {
+          "diretoria": -16,
+          "forma": 11,
+          "torcida": -7
+        },
+        "flags": [
+          "marcou_despedida"
+        ]
+      },
+      "direita": {
+        "rotulo": "Mais uma temporada",
+        "efeitos": {
+          "diretoria": 11,
+          "forma": -11,
+          "torcida": 7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "companheira",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "Ela aprendeu a fazer o gelo, a enfaixar e a não perguntar quanto dói. Isso levou anos e você nunca reparou acontecendo.",
+      "esquerda": {
+        "rotulo": "Agradeço em voz alta",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não falo nada",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "companheira",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "A aposentadoria fez de você um homem de trinta e cinco anos em casa o dia inteiro, pela primeira vez. Ela pergunta o que você pretende fazer amanhã.",
+      "esquerda": {
+        "rotulo": "Não sei ainda",
+        "efeitos": {
+          "forma": -11,
+          "torcida": 11,
+          "diretoria": -9
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Vou trabalhar em algo",
+        "efeitos": {
+          "dinheiro": 11,
+          "forma": 9,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "companheira",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "Ela abriu o próprio escritório enquanto você jogava e agora oferece sociedade. É o dinheiro dela, o nome dela e um lugar para você aprender do zero.",
+      "esquerda": {
+        "rotulo": "Entro como aprendiz",
+        "efeitos": {
+          "dinheiro": -3,
+          "torcida": 3,
+          "forma": 3
+        },
+        "flags": [
+          "socio_da_companheira"
+        ]
+      },
+      "direita": {
+        "rotulo": "Entro com capital",
+        "efeitos": {
+          "dinheiro": 7,
+          "torcida": -3,
+          "diretoria": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "companheira_ausencia",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "companheira",
+      "peso": 7,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "requer": {
+        "semFlags": [
+          "com_companheira"
+        ]
+      },
+      "texto": "Aniversário de vinte e nove anos, jantar com o preparador, o massagista e o roupeiro. Todo mundo vai embora às nove e meia.",
+      "esquerda": {
+        "rotulo": "Saio com o grupo",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -8
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Volto pro hotel",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    }
+  ]
+}

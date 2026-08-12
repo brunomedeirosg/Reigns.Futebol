@@ -1,0 +1,610 @@
+{
+  "versao": "0.1",
+  "cargo": "apostas",
+  "cota": 14,
+  "notas": "Bloco completo do cargo PATROCÍNIO DE APOSTAS (persistência: rotativo — Ravi, Dudu ou Sharon). Voz: informal demais, íntimo rápido demais, ri antes do fim da própria frase, todo pedido vem embrulhado em elogio. É o motor da família de finais da ganância. Produz TRÊS fontes de recusou_apostas (estouro, travessia, declínio) e DUAS de rompeu_apostas — os dourados de DINHEIRO 100, DINHEIRO 0 e TORCIDA 0 dependem delas e não podem ficar na mão de uma carta só.",
+  "cartas": [
+    {
+      "id": "apostas_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "apostas",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A proposta é postar três vezes por mês. O valor é o seu salário anual. Ele chama isso de embaixador e ri antes de terminar a palavra.",
+      "esquerda": {
+        "rotulo": "Fecho",
+        "efeitos": {
+          "dinheiro": 42,
+          "torcida": -16
+        },
+        "flags": [
+          "patrocinio_apostas"
+        ],
+        "fio": {
+          "id": "fio_apostas_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Agora eles têm o seu telefone."
+      },
+      "direita": {
+        "rotulo": "Não é pra mim",
+        "efeitos": {
+          "dinheiro": -20,
+          "torcida": 16,
+          "diretoria": 9
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "fio": {
+          "id": "fio_apostas_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Eles anotaram que você sabe dizer não."
+      }
+    },
+    {
+      "id": "apostas_estouro_02",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "apostas",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} apareceu no CT de boné e com uma caixa de tênis do seu número. Não pediu nada e não falou de contrato. Só quis tirar uma foto.",
+      "esquerda": {
+        "rotulo": "Tiro a foto",
+        "efeitos": {
+          "dinheiro": 6,
+          "torcida": 3,
+          "diretoria": -3
+        },
+        "flags": [
+          "foto_com_a_marca"
+        ]
+      },
+      "direita": {
+        "rotulo": "Devolvo o tênis",
+        "efeitos": {
+          "diretoria": 6,
+          "dinheiro": -3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "apostas_estouro_03",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "apostas",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "Três posts por mês, e o texto vem pronto. Este diz que você aposta todo fim de semana e que a diversão é garantida.",
+      "esquerda": {
+        "rotulo": "Posto do jeito deles",
+        "efeitos": {
+          "dinheiro": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Reescrevo o texto",
+        "efeitos": {
+          "torcida": 6,
+          "dinheiro": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "apostas_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "apostas",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "semFlags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "A marca voltou, agora com contrato em três moedas e um jurídico que aceita tudo. {nome} diz que da última vez você foi cauteloso e que cautela tem prazo.",
+      "esquerda": {
+        "rotulo": "Agora eu fecho",
+        "efeitos": {
+          "dinheiro": 32,
+          "torcida": -12,
+          "diretoria": -9
+        },
+        "flags": [
+          "patrocinio_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2a",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Eles sabem esperar melhor do que você."
+      },
+      "direita": {
+        "rotulo": "Cautela sem prazo",
+        "efeitos": {
+          "dinheiro": -21,
+          "torcida": 18,
+          "diretoria": 9
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2b",
+          "em": [
+            20,
+            30
+          ]
+        },
+        "eco": "Duas recusas viram fama antes de virar hábito."
+      }
+    },
+    {
+      "id": "apostas_travessia_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "Eles querem você num evento fechado com investidores, em país sem regulação. Passagem, cachê e nenhuma foto oficial. {nome} diz que é só um jantar.",
+      "esquerda": {
+        "rotulo": "Vou ao jantar",
+        "efeitos": {
+          "dinheiro": 6,
+          "diretoria": -3,
+          "torcida": -3
+        },
+        "flags": [
+          "jantar_dos_investidores"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não vou",
+        "efeitos": {
+          "dinheiro": -6,
+          "diretoria": 3,
+          "torcida": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "apostas_travessia_03",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Tem um grupo no vestiário onde se aposta em tudo: cartão, escanteio, pênalti. Ninguém aposta em jogo próprio, dizem eles.",
+      "esquerda": {
+        "rotulo": "Entro no grupo",
+        "efeitos": {
+          "dinheiro": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico fora",
+        "efeitos": {
+          "diretoria": 7,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "apostas_travessia_04",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "recusou_apostas"
+        ]
+      },
+      "texto": "Uma seguradora quer você justamente porque você recusou a casa de apostas. Paga menos, exige mais e vem com cláusula de conduta de oito páginas.",
+      "esquerda": {
+        "rotulo": "Assino com eles",
+        "efeitos": {
+          "dinheiro": 6,
+          "diretoria": 3,
+          "forma": -3
+        },
+        "flags": [
+          "patrocinio_limpo"
+        ]
+      },
+      "direita": {
+        "rotulo": "Fico sem patrocínio",
+        "efeitos": {
+          "dinheiro": -6,
+          "torcida": 3,
+          "forma": 3
+        },
+        "flags": [
+          "sem_patrocinio"
+        ]
+      }
+    },
+    {
+      "id": "apostas_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 20,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "{nome} pergunta, rindo, se você tem palpite pro jogo de domingo. Depois repete a pergunta sem rir.",
+      "esquerda": {
+        "rotulo": "Saio do contrato",
+        "efeitos": {
+          "dinheiro": -30,
+          "torcida": 14,
+          "diretoria": 11
+        },
+        "flags": [
+          "rompeu_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Sair no meio custa mais do que entrar."
+      },
+      "direita": {
+        "rotulo": "Faço que não ouvi",
+        "efeitos": {
+          "dinheiro": 20,
+          "diretoria": -16,
+          "torcida": -11
+        },
+        "flags": [
+          "investigacao_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Ele já sabia a resposta antes de perguntar."
+      }
+    },
+    {
+      "id": "apostas_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Eles querem lançar um aplicativo com o seu nome, o seu rosto e a sua assinatura na tela de abertura. Cinco por cento do faturamento é seu.",
+      "esquerda": {
+        "rotulo": "Meu nome no app",
+        "efeitos": {
+          "dinheiro": 32,
+          "torcida": -16,
+          "diretoria": -7
+        },
+        "flags": [
+          "patrocinio_apostas",
+          "app_com_meu_nome"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Seu nome agora abre sozinho, sem você."
+      },
+      "direita": {
+        "rotulo": "Nome não se aluga",
+        "efeitos": {
+          "dinheiro": -20,
+          "torcida": 20,
+          "diretoria": 7
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Alguém vai aparecer nessa tela. Não você."
+      }
+    },
+    {
+      "id": "apostas_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "Um e-mail do departamento de integridade da federação pede uma conversa de rotina sobre os seus contratos. {nome} oferece o advogado da empresa.",
+      "esquerda": {
+        "rotulo": "Uso meu advogado",
+        "efeitos": {
+          "dinheiro": -7,
+          "diretoria": 3,
+          "torcida": 3
+        },
+        "flags": [
+          "advogado_proprio"
+        ]
+      },
+      "direita": {
+        "rotulo": "Aceito o deles",
+        "efeitos": {
+          "dinheiro": 3,
+          "diretoria": -3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "apostas_auge_04",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "apostas",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "O roteiro tem você entrando em campo e a legenda dizendo que a sorte favorece quem tem coragem. Você grava em duas horas.",
+      "esquerda": {
+        "rotulo": "Grava do jeito deles",
+        "efeitos": {
+          "dinheiro": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Mudo a legenda",
+        "efeitos": {
+          "torcida": 6,
+          "dinheiro": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "apostas_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "apostas",
+      "peso": 14,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ],
+        "semFlags": [
+          "rompeu_apostas"
+        ]
+      },
+      "texto": "Um moleque do sub-20 foi flagrado apostando no próprio jogo e citou o seu nome como exemplo de quem fatura com isso. {nome} pede calma.",
+      "esquerda": {
+        "rotulo": "Rompo hoje",
+        "efeitos": {
+          "dinheiro": -27,
+          "torcida": 20,
+          "diretoria": 11
+        },
+        "flags": [
+          "rompeu_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Romper com plateia tem outro preço."
+      },
+      "direita": {
+        "rotulo": "Não é meu problema",
+        "efeitos": {
+          "dinheiro": 20,
+          "torcida": -14,
+          "diretoria": -11
+        },
+        "flags": [
+          "ignorou_o_moleque"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "O moleque vai repetir isso a vida inteira."
+      }
+    },
+    {
+      "id": "apostas_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "apostas",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "Renovação na mesa com um terço do valor anterior, porque agora você é o rosto de um mercado que já tem rosto mais novo.",
+      "esquerda": {
+        "rotulo": "Assino por um terço",
+        "efeitos": {
+          "dinheiro": 27,
+          "torcida": -27
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_aptarde_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "O mercado descobriu quanto você vale hoje."
+      },
+      "direita": {
+        "rotulo": "Recuso e saio",
+        "efeitos": {
+          "dinheiro": -27,
+          "torcida": 27
+        },
+        "flags": [
+          "recusou_apostas"
+        ],
+        "fio": {
+          "id": "fio_aptarde_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Você saiu antes de ser dispensado."
+      }
+    },
+    {
+      "id": "apostas_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "apostas",
+      "peso": 16,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "investigacao_apostas"
+        ]
+      },
+      "texto": "O inquérito ofereceu acordo: você conta o que sabe sobre o esquema e sai do processo. {nome} para de rir no meio da frase, pela primeira vez.",
+      "esquerda": {
+        "rotulo": "Conto tudo",
+        "efeitos": {
+          "diretoria": 11,
+          "dinheiro": -11,
+          "torcida": 9
+        },
+        "flags": [
+          "delatou"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não falo nada",
+        "efeitos": {
+          "dinheiro": 11,
+          "diretoria": -9,
+          "torcida": -7
+        },
+        "flags": [
+          "silencio_no_inquerito"
+        ]
+      }
+    }
+  ]
+}

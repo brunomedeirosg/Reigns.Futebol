@@ -1,0 +1,535 @@
+{
+ "versao": "0.1",
+ "cargo": "mae",
+ "cota": 17,
+ "notas": "Bloco completo do cargo MÃE (persistência: íntimo — Dona Marlene, Sirlene, Zuleide ou Fátima; pessoa nova a cada vida porque você renasceu). Voz: frases curtas, pergunta em vez de afirmar, nunca pede diretamente, e quando está brava chama você pelo nome inteiro. É o custo humano de tudo, e nunca uma cobrança explícita — o que dói é o que ela não diz.",
+ "cartas": [
+  {
+   "id": "mae_base_01",
+   "era": [
+    "base"
+   ],
+   "cargo": "mae",
+   "peso": 9,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ela pegou dois ônibus para trazer marmita e perguntar quando você volta a estudar. O treino é daqui a vinte minutos.",
+   "esquerda": {
+    "rotulo": "Volto pra escola",
+    "efeitos": {
+     "dinheiro": -7,
+     "torcida": 7
+    },
+    "flags": [
+     "estuda"
+    ],
+    "fio": {
+     "id": "curto_estudo_b2",
+     "em": [
+      3,
+      5
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "É agora ou nunca",
+    "efeitos": {
+     "forma": 7,
+     "dinheiro": -3
+    },
+    "flags": [
+     "largou_escola"
+    ]
+   }
+  },
+  {
+   "id": "mae_base_02",
+   "era": [
+    "base",
+    "estouro"
+   ],
+   "cargo": "mae",
+   "peso": 6,
+   "tipo": "rotina",
+   "peso_dramatico": "padrao",
+   "cooldown": 25,
+   "texto": "Ela liga toda noite às nove e pergunta se você comeu. Você já jantou às sete, com o grupo, e ela sabe disso.",
+   "esquerda": {
+    "rotulo": "Atendo sempre",
+    "efeitos": {
+     "forma": 7,
+     "torcida": -4
+    },
+    "flags": []
+   },
+   "direita": {
+    "rotulo": "Ligo no domingo",
+    "efeitos": {
+     "forma": -7,
+     "dinheiro": 4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_base_03",
+   "era": [
+    "base"
+   ],
+   "cargo": "mae",
+   "peso": 10,
+   "tipo": "evento",
+   "peso_dramatico": "padrao",
+   "unico": true,
+   "texto": "O seu pai apareceu no portão do CT depois de nove anos, dizendo que quer ajudar. Ela pediu para você não decidir hoje.",
+   "esquerda": {
+    "rotulo": "Escuto o que ele quer",
+    "efeitos": {
+     "dinheiro": -4,
+     "forma": -4,
+     "torcida": 4
+    },
+    "flags": [
+     "pai_voltou"
+    ]
+   },
+   "direita": {
+    "rotulo": "Não desço",
+    "efeitos": {
+     "forma": 4,
+     "diretoria": 4,
+     "torcida": -4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_estouro_01",
+   "era": [
+    "estouro"
+   ],
+   "cargo": "mae",
+   "peso": 10,
+   "tipo": "evento",
+   "peso_dramatico": "padrao",
+   "unico": true,
+   "texto": "Primeiro salário de profissional na conta. Ela não pediu nada e deixou a conta de luz em cima da mesa, virada para baixo.",
+   "esquerda": {
+    "rotulo": "Pago tudo dela",
+    "efeitos": {
+     "dinheiro": -7,
+     "torcida": 4
+    },
+    "flags": [
+     "sustenta_a_mae"
+    ]
+   },
+   "direita": {
+    "rotulo": "Guardo o meu",
+    "efeitos": {
+     "dinheiro": 4,
+     "forma": 4,
+     "torcida": -4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_estouro_02",
+   "era": [
+    "estouro",
+    "travessia"
+   ],
+   "cargo": "mae",
+   "peso": 10,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Você quer comprar uma casa para ela num bairro melhor. Ela diz que gosta das vizinhas e pergunta se você não prefere guardar.",
+   "esquerda": {
+    "rotulo": "Compro mesmo assim",
+    "efeitos": {
+     "dinheiro": -18,
+     "torcida": 10,
+     "forma": 4
+    },
+    "flags": [
+     "familia_perto"
+    ]
+   },
+   "direita": {
+    "rotulo": "Guardo o dinheiro",
+    "efeitos": {
+     "dinheiro": 16,
+     "torcida": -9,
+     "forma": -4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_estouro_03",
+   "era": [
+    "estouro",
+    "travessia",
+    "auge"
+   ],
+   "cargo": "mae",
+   "peso": 6,
+   "tipo": "rotina",
+   "peso_dramatico": "padrao",
+   "cooldown": 30,
+   "texto": "Apareceram sete parentes que você não conhecia, todos com um projeto. Ela atendeu o telefone de todos eles.",
+   "esquerda": {
+    "rotulo": "Ajudo os sete",
+    "efeitos": {
+     "dinheiro": -7,
+     "torcida": 7
+    },
+    "flags": []
+   },
+   "direita": {
+    "rotulo": "Ela explica que não",
+    "efeitos": {
+     "dinheiro": 7,
+     "torcida": -3
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_travessia_01",
+   "era": [
+    "travessia",
+    "auge"
+   ],
+   "cargo": "mae",
+   "peso": 7,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "cooldown": 25,
+   "texto": "Ela liga às seis da manhã porque errou o fuso de novo. Diz que está tudo bem e a voz diz o contrário.",
+   "esquerda": {
+    "rotulo": "Compro a passagem",
+    "efeitos": {
+     "dinheiro": -16,
+     "forma": 9
+    },
+    "flags": [
+     "familia_perto"
+    ]
+   },
+   "direita": {
+    "rotulo": "Depois da temporada",
+    "efeitos": {
+     "forma": -18,
+     "diretoria": 10,
+     "torcida": -9
+    },
+    "flags": []
+   },
+   "requer": {
+    "flags": [
+     "jogou_na_europa"
+    ]
+   }
+  },
+  {
+   "id": "mae_travessia_02",
+   "era": [
+    "travessia"
+   ],
+   "cargo": "mae",
+   "peso": 9,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "requer": {
+    "flags": [
+     "jogou_na_europa"
+    ]
+   },
+   "texto": "Você ofereceu trazer ela para morar com você no exterior. Ela agradeceu, perguntou do frio, e mudou de assunto duas vezes.",
+   "esquerda": {
+    "rotulo": "Insisto",
+    "efeitos": {
+     "dinheiro": -16,
+     "forma": 11,
+     "torcida": -6
+    },
+    "flags": [
+     "familia_perto"
+    ]
+   },
+   "direita": {
+    "rotulo": "Aceito o não dela",
+    "efeitos": {
+     "forma": -11,
+     "dinheiro": 9,
+     "torcida": 6
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_travessia_03",
+   "era": [
+    "travessia",
+    "auge"
+   ],
+   "cargo": "mae",
+   "peso": 12,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ela contou por telefone que fez uns exames. Contou depois do resultado, e do jeito que ela conta as coisas quando são graves.",
+   "esquerda": {
+    "rotulo": "Pego o próximo voo",
+    "efeitos": {
+     "forma": -12,
+     "diretoria": -10,
+     "torcida": 6
+    },
+    "flags": [
+     "mae_doente"
+    ]
+   },
+   "direita": {
+    "rotulo": "Mando o melhor médico",
+    "efeitos": {
+     "dinheiro": -16,
+     "diretoria": 10,
+     "forma": -4
+    },
+    "flags": [
+     "mae_doente"
+    ]
+   }
+  },
+  {
+   "id": "mae_auge_01",
+   "era": [
+    "auge"
+   ],
+   "cargo": "mae",
+   "peso": 6,
+   "tipo": "rotina",
+   "peso_dramatico": "padrao",
+   "cooldown": 25,
+   "texto": "Ela viu o valor da sua renovação no jornal e ligou preocupada, perguntando se você tem certeza de que merece isso.",
+   "esquerda": {
+    "rotulo": "Explico o contrato",
+    "efeitos": {
+     "forma": -4,
+     "torcida": 7
+    },
+    "flags": []
+   },
+   "direita": {
+    "rotulo": "Digo que é engano",
+    "efeitos": {
+     "forma": 7,
+     "torcida": -4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_auge_02",
+   "era": [
+    "auge"
+   ],
+   "cargo": "mae",
+   "peso": 10,
+   "tipo": "evento",
+   "peso_dramatico": "padrao",
+   "unico": true,
+   "texto": "É a primeira final dela na tribuna, com o uniforme do trabalho por baixo do casaco, porque ela saiu direto do turno.",
+   "esquerda": {
+    "rotulo": "Peço que ela pare",
+    "efeitos": {
+     "dinheiro": -7,
+     "torcida": 3,
+     "forma": 3
+    },
+    "flags": [
+     "sustenta_a_mae"
+    ]
+   },
+   "direita": {
+    "rotulo": "Ela decide sozinha",
+    "efeitos": {
+     "dinheiro": 3,
+     "forma": 3,
+     "torcida": -3
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_auge_03",
+   "era": [
+    "auge",
+    "declinio"
+   ],
+   "cargo": "mae",
+   "peso": 12,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "requer": {
+    "flags": [
+     "mae_doente"
+    ]
+   },
+   "texto": "O tratamento é longo e o melhor hospital fica a doze horas de voo de onde você joga. Ela pergunta se dá para fazer perto de casa.",
+   "esquerda": {
+    "rotulo": "Trago ela pra cá",
+    "efeitos": {
+     "dinheiro": -16,
+     "forma": -9,
+     "torcida": 9
+    },
+    "flags": [
+     "familia_perto"
+    ]
+   },
+   "direita": {
+    "rotulo": "Pago o de lá",
+    "efeitos": {
+     "dinheiro": -11,
+     "diretoria": 11,
+     "forma": 7
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_declinio_01",
+   "era": [
+    "declinio"
+   ],
+   "cargo": "mae",
+   "peso": 11,
+   "tipo": "evento",
+   "peso_dramatico": "padrao",
+   "unico": true,
+   "texto": "Ela parou de perguntar quando você volta. Não brigou, não cobrou, só parou, e faz uns dois anos que você não tinha notado.",
+   "esquerda": {
+    "rotulo": "Ligo agora",
+    "efeitos": {
+     "forma": -4,
+     "torcida": 4,
+     "diretoria": -4
+    },
+    "flags": []
+   },
+   "direita": {
+    "rotulo": "Depois da temporada",
+    "efeitos": {
+     "diretoria": 4,
+     "forma": 4,
+     "torcida": -4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_declinio_02",
+   "era": [
+    "declinio"
+   ],
+   "cargo": "mae",
+   "peso": 11,
+   "tipo": "evento",
+   "peso_dramatico": "padrao",
+   "unico": true,
+   "requer": {
+    "idade": {
+     "min": 32
+    }
+   },
+   "texto": "Ela te viu mancando na televisão e disse uma frase só, do jeito dela: perguntou se ainda é divertido.",
+   "esquerda": {
+    "rotulo": "Digo que não é mais",
+    "efeitos": {
+     "forma": 4,
+     "torcida": -4,
+     "diretoria": -4
+    },
+    "flags": [
+     "marcou_despedida"
+    ]
+   },
+   "direita": {
+    "rotulo": "Digo que é",
+    "efeitos": {
+     "forma": -4,
+     "torcida": 4,
+     "diretoria": 4
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_base_04",
+   "era": [
+    "base"
+   ],
+   "cargo": "mae",
+   "peso": 6,
+   "tipo": "rotina",
+   "peso_dramatico": "padrao",
+   "cooldown": 30,
+   "texto": "Ela lava o seu uniforme de treino à mão porque a máquina estraga o tecido, e você nunca pediu isso a ela.",
+   "esquerda": {
+    "rotulo": "Levo pra lavanderia",
+    "efeitos": {
+     "dinheiro": -6,
+     "torcida": 6
+    },
+    "flags": []
+   },
+   "direita": {
+    "rotulo": "Deixo ela lavar",
+    "efeitos": {
+     "dinheiro": 6,
+     "torcida": -6
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "mae_base_05",
+   "era": [
+    "base",
+    "estouro"
+   ],
+   "cargo": "mae",
+   "peso": 9,
+   "tipo": "evento",
+   "peso_dramatico": "padrao",
+   "unico": true,
+   "texto": "Ela nunca foi te ver jogar. Diz que fica nervosa, e ouve o jogo pelo rádio na cozinha, em pé, com o pano de prato na mão.",
+   "esquerda": {
+    "rotulo": "Insisto que ela vá",
+    "efeitos": {
+     "forma": -7,
+     "torcida": 7
+    },
+    "flags": [
+     "mae_no_estadio"
+    ]
+   },
+   "direita": {
+    "rotulo": "Deixo no rádio",
+    "efeitos": {
+     "forma": 7,
+     "torcida": -3
+    },
+    "flags": []
+   }
+  }
+ ]
+}

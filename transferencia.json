@@ -1,0 +1,88 @@
+{
+  "versao": "0.1",
+  "cargo": "misto",
+  "cota": 2,
+  "notas": "AS DUAS CARTAS DA JANELA. Peso 0: o motor as empurra na fila no fim de temporada, quando FORMA e TORCIDA justificam a subida ou quando FORMA e DIRETORIA obrigam a descida. Usam os tokens {clube}, {clube_novo} e {patamar_novo}, resolvidos em tempo de jogo — é o que faz a proposta ter nome e patamar em vez de ser um número na ficha. A opção com 'aceitaProposta' é a única do jogo que troca o clube.",
+  "cartas": [
+    {
+      "id": "transferencia_sobe",
+      "era": [
+        "base",
+        "estouro",
+        "travessia",
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "cooldown": 3,
+      "texto": "O {clube_novo} pagou a multa inteira e quer você na segunda-feira. É {patamar_novo}, e o {clube} descobriu pelo jornal.",
+      "esquerda": {
+        "rotulo": "Assino e viajo",
+        "efeitos": {
+          "dinheiro": 18,
+          "torcida": -11,
+          "forma": -6
+        },
+        "flags": [
+          "trocou_de_clube_cedo"
+        ],
+        "aceitaProposta": true
+      },
+      "direita": {
+        "rotulo": "Fico onde estou",
+        "efeitos": {
+          "torcida": 16,
+          "dinheiro": -11,
+          "diretoria": 6
+        },
+        "flags": [
+          "recusou_proposta"
+        ]
+      }
+    },
+    {
+      "id": "transferencia_desce",
+      "era": [
+        "base",
+        "estouro",
+        "travessia",
+        "auge",
+        "declinio",
+        "legado"
+      ],
+      "cargo": "empresario",
+      "peso": 0,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "cooldown": 3,
+      "texto": "Ele diz que o {clube} não conta mais com você e que o {clube_novo} aceita seu salário. É {patamar_novo}, e é a única porta aberta hoje.",
+      "esquerda": {
+        "rotulo": "Aceito e recomeço",
+        "efeitos": {
+          "forma": 16,
+          "dinheiro": -11,
+          "torcida": -6
+        },
+        "flags": [
+          "recomecou_embaixo"
+        ],
+        "aceitaProposta": true
+      },
+      "direita": {
+        "rotulo": "Cumpro contrato aqui",
+        "efeitos": {
+          "dinheiro": 14,
+          "forma": -11,
+          "diretoria": -7
+        },
+        "flags": [
+          "encostado"
+        ]
+      }
+    }
+  ]
+}

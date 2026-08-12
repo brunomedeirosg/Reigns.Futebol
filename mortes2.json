@@ -1,0 +1,474 @@
+{
+  "versao": "0.1",
+  "cargo": "misto",
+  "cota": 14,
+  "notas": "MORTES SÚBITAS, SEGUNDA LEVA — 14 cartas para fechar 4 por era. A cobertura estava torta: base 2, estouro 2, travessia 2, auge 4, declínio 1, legado 0. Cada uma tem final próprio em finais.json e é TEMÁTICA DA ERA: na base você morre de moleque, no auge você morre de importante, no legado você morre de saudade. Regras mantidas: telegrafada pelo TEXTO (nunca pela interface), nunca as duas opções fatais, e a opção segura nunca é estritamente melhor.",
+  "cartas": [
+    {
+      "id": "morte_base_van",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "A van da base quebrou na estrada e o motorista pediu que ninguém desça na pista. Tem um posto a duzentos metros e está todo mundo com fome.",
+      "esquerda": {
+        "rotulo": "Espero na van",
+        "efeitos": {
+          "forma": -8,
+          "torcida": -9,
+          "diretoria": 9
+        },
+        "flags": [],
+        "eco": "Duzentos metros na pista, e ninguém desceu."
+      },
+      "direita": {
+        "rotulo": "Vou até o posto",
+        "morte": {
+          "final": "morte_van",
+          "chance": 1.0
+        }
+      }
+    },
+    {
+      "id": "morte_base_pelada",
+      "era": [
+        "base"
+      ],
+      "cargo": "parceiro",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Pelada no campo de terra da sua rua, na véspera do jogo pelo sub-17, com os caras que jogam de coturno. Todo mundo quer ver se você virou craque.",
+      "esquerda": {
+        "rotulo": "Fico no gol",
+        "efeitos": {
+          "torcida": 10,
+          "forma": -7,
+          "diretoria": -6
+        },
+        "flags": [],
+        "eco": "Você foi para o gol e ninguém deixou de reparar."
+      },
+      "direita": {
+        "rotulo": "Jogo descalço",
+        "morte": {
+          "final": "morte_pelada",
+          "chance": 1.0
+        }
+      }
+    },
+    {
+      "id": "morte_estouro_bicicleta",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "imprensa",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Um programa quer você fazendo bicicleta na piscina de bolinhas do estúdio, ao vivo, de terno. O apresentador diz que é rapidinho.",
+      "esquerda": {
+        "rotulo": "Faço a bicicleta",
+        "morte": {
+          "final": "morte_estudio",
+          "chance": 1.0
+        }
+      },
+      "direita": {
+        "rotulo": "Faço embaixadinha",
+        "efeitos": {
+          "torcida": 9,
+          "diretoria": -8,
+          "dinheiro": 7
+        },
+        "flags": [],
+        "eco": "Embaixadinha de terno rende menos clique."
+      }
+    },
+    {
+      "id": "morte_estouro_moto",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "parceiro",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele comprou uma moto de mil cilindradas com o primeiro salário e quer te mostrar o que ela faz na marginal, três da manhã, sem capacete sobrando.",
+      "esquerda": {
+        "rotulo": "Vou na garupa",
+        "morte": {
+          "final": "morte_garupa",
+          "chance": 1.0
+        }
+      },
+      "direita": {
+        "rotulo": "Chamo um carro",
+        "efeitos": {
+          "torcida": -9,
+          "dinheiro": -8,
+          "forma": 9
+        },
+        "flags": [],
+        "eco": "Ele foi sozinho e voltou contando."
+      }
+    },
+    {
+      "id": "morte_travessia_neve",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "fisio",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Primeiro inverno de verdade, menos oito graus, e o time inteiro treina de manga comprida. Você nunca sentiu isso e acha que é frescura.",
+      "esquerda": {
+        "rotulo": "Visto tudo que derem",
+        "efeitos": {
+          "forma": 10,
+          "torcida": -9,
+          "diretoria": 7
+        },
+        "flags": [],
+        "eco": "Menos oito graus não negociam com ninguém."
+      },
+      "direita": {
+        "rotulo": "Treino de manga curta",
+        "morte": {
+          "final": "morte_frio",
+          "chance": 0.55
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 11,
+            "forma": -12
+          },
+          "flags": [
+            "joelho_ignorado"
+          ]
+        }
+      }
+    },
+    {
+      "id": "morte_travessia_visto",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "empresario",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O visto de trabalho venceu há onze dias e ele diz que ninguém confere isso. Tem amistoso em outro país no fim de semana e o ônibus passa a fronteira.",
+      "esquerda": {
+        "rotulo": "Fico e resolvo",
+        "efeitos": {
+          "diretoria": -10,
+          "dinheiro": -8,
+          "forma": 8
+        },
+        "flags": [
+          "negocia_sozinho"
+        ],
+        "eco": "Onze dias de atraso e você contou os onze."
+      },
+      "direita": {
+        "rotulo": "Vou no ônibus",
+        "morte": {
+          "final": "morte_fronteira",
+          "chance": 1.0
+        }
+      }
+    },
+    {
+      "id": "morte_auge_jetski",
+      "era": [
+        "auge"
+      ],
+      "cargo": "companheira",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Folga de três dias, mar aberto, jet ski alugado sem instrução nenhuma. Ela pediu para você não ir longe e você respondeu que conhece o mar.",
+      "esquerda": {
+        "rotulo": "Fico na enseada",
+        "efeitos": {
+          "torcida": -8,
+          "forma": 10,
+          "diretoria": 8
+        },
+        "flags": [
+          "familia_perto"
+        ],
+        "eco": "Ela pediu uma vez e você ficou na enseada."
+      },
+      "direita": {
+        "rotulo": "Vou até a ilha",
+        "morte": {
+          "final": "morte_mar",
+          "chance": 1.0
+        }
+      }
+    },
+    {
+      "id": "morte_declinio_infiltra",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "fisio",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Terceira infiltração no mesmo joelho em quarenta dias. Ela diz que não aplica mais e que existe quem aplique. Existe mesmo, e atende à noite.",
+      "esquerda": {
+        "rotulo": "Procuro quem aplica",
+        "morte": {
+          "final": "morte_infiltracao",
+          "chance": 0.7
+        },
+        "sobrevive": {
+          "efeitos": {
+            "forma": 13,
+            "torcida": 10
+          },
+          "flags": [
+            "infiltracao_cronica"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Aceito o não dela",
+        "efeitos": {
+          "forma": -10,
+          "torcida": -10,
+          "diretoria": 9
+        },
+        "flags": [
+          "joelho_tratado"
+        ],
+        "eco": "Ela disse não e você não procurou o sim."
+      }
+    },
+    {
+      "id": "morte_declinio_pesagem",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Pesagem semanal e você está quatro quilos acima. Um companheiro tem uma cápsula que resolve em três dias e diz que metade do elenco usa.",
+      "esquerda": {
+        "rotulo": "Corro de madrugada",
+        "efeitos": {
+          "forma": -10,
+          "diretoria": -9,
+          "torcida": 10
+        },
+        "flags": [
+          "treino_dobrado"
+        ],
+        "eco": "Quatro quilos em três semanas, correndo sozinho."
+      },
+      "direita": {
+        "rotulo": "Tomo a cápsula",
+        "morte": {
+          "final": "morte_capsula",
+          "chance": 0.75
+        },
+        "sobrevive": {
+          "efeitos": {
+            "forma": 12,
+            "diretoria": 10
+          },
+          "flags": [
+            "suplemento_cinzento"
+          ]
+        }
+      }
+    },
+    {
+      "id": "morte_declinio_despedida",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele oferece um jogo de despedida com estádio cheio, agora, aos trinta e dois, enquanto ainda vende ingresso. Aceitar é escolher a data do fim.",
+      "esquerda": {
+        "rotulo": "Ainda não é hora",
+        "efeitos": {
+          "diretoria": -10,
+          "torcida": 10,
+          "dinheiro": -8
+        },
+        "flags": [],
+        "eco": "Você recusou o estádio cheio. Ele anotou a data."
+      },
+      "direita": {
+        "rotulo": "Marco a despedida",
+        "morte": {
+          "final": "morte_despedida",
+          "chance": 1.0
+        }
+      }
+    },
+    {
+      "id": "morte_legado_veterano",
+      "era": [
+        "legado"
+      ],
+      "cargo": "fisio",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Trinta e cinco anos, jogo de veterano beneficente, gramado pesado e um lateral de vinte e dois querendo aparecer. Todo mundo esperando você jogar.",
+      "esquerda": {
+        "rotulo": "Jogo dez minutos",
+        "efeitos": {
+          "torcida": -9,
+          "forma": 10,
+          "diretoria": 8
+        },
+        "flags": [],
+        "eco": "Dez minutos e o lateral não te achou."
+      },
+      "direita": {
+        "rotulo": "Entro inteiro",
+        "morte": {
+          "final": "morte_veterano",
+          "chance": 0.6
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 13,
+            "forma": -11
+          },
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "morte_legado_reserva",
+      "era": [
+        "legado"
+      ],
+      "cargo": "imprensa",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "O time perde de dois, faltam quinze minutos e a transmissão fecha na sua cara no banco. Faz oito meses que você não entra em campo e quarenta mil pessoas sabem disso.",
+      "esquerda": {
+        "rotulo": "Fico sentado",
+        "efeitos": {
+          "forma": 9,
+          "diretoria": 9,
+          "torcida": -10
+        },
+        "flags": [],
+        "eco": "Ele olhou o banco e você não levantou."
+      },
+      "direita": {
+        "rotulo": "Peço para entrar",
+        "morte": {
+          "final": "morte_ultimos_quinze",
+          "chance": 0.65
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 14,
+            "diretoria": -10
+          },
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "morte_legado_homenagem",
+      "era": [
+        "legado"
+      ],
+      "cargo": "organizada",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Eles querem carregar você no colo do meio do campo até a arquibancada, quarenta mil pessoas, sem ensaio nenhum. O gramado está encharcado.",
+      "esquerda": {
+        "rotulo": "Deixo me carregarem",
+        "morte": {
+          "final": "morte_colo",
+          "chance": 1.0
+        }
+      },
+      "direita": {
+        "rotulo": "Vou andando",
+        "efeitos": {
+          "torcida": -10,
+          "diretoria": 9,
+          "forma": 8
+        },
+        "flags": [
+          "encarou_organizada"
+        ],
+        "eco": "Quarenta mil pessoas e você foi andando."
+      }
+    },
+    {
+      "id": "morte_legado_ultimo_treino",
+      "era": [
+        "legado"
+      ],
+      "cargo": "roupeiro",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Último treino antes de pendurar. Ele separou a chuteira que você usou na estreia, dezoito anos atrás, e deixou em cima do banco sem dizer nada.",
+      "esquerda": {
+        "rotulo": "Uso a da estreia",
+        "morte": {
+          "final": "morte_chuteira_velha",
+          "chance": 0.8
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 12,
+            "forma": -10
+          },
+          "flags": [
+            "familia_perto"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Uso a de sempre",
+        "efeitos": {
+          "torcida": -9,
+          "forma": 9,
+          "dinheiro": 8
+        },
+        "flags": [],
+        "eco": "A chuteira da estreia voltou para a caixa."
+      }
+    }
+  ]
+}

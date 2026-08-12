@@ -1,0 +1,490 @@
+{
+  "versao": "0.1",
+  "cargo": "sucessor",
+  "cota": 14,
+  "notas": "Bloco completo do cargo SUCESSOR (persistência: íntimo — Kaique, Wesley, Juninho ou Davi). Voz: educadíssimo, chama você de senhor, e isso dói mais que qualquer provocação; fala em gíria com os outros e trava com você. Produz DUAS fontes de padrinho_do_kaique (declínio e legado), exigida por três finais dourados. Contém a carta do ECO DO CAPITÃO — você no papel dele, o sucessor no seu.",
+  "cartas": [
+    {
+      "id": "sucessor_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 12,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "{nome} tem dezoito anos, joga na sua posição e pediu seu conselho na frente de todo mundo. Ele é melhor do que você era na idade dele.",
+      "esquerda": {
+        "rotulo": "Ensino tudo",
+        "efeitos": {
+          "torcida": 25,
+          "diretoria": 18,
+          "forma": -18
+        },
+        "flags": [
+          "padrinho_do_kaique"
+        ],
+        "fio": {
+          "id": "fio_sucessor_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "O vestiário inteiro ouviu a sua resposta."
+      },
+      "direita": {
+        "rotulo": "Que se vire",
+        "efeitos": {
+          "forma": 18,
+          "torcida": -18,
+          "diretoria": -9
+        },
+        "flags": [
+          "negou_o_sucessor"
+        ],
+        "fio": {
+          "id": "fio_sucessor_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Ele perguntou na frente de todo mundo. E ouviu."
+      }
+    },
+    {
+      "id": "sucessor_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O treinador escalou {nome} na sua posição e avisou você depois, no corredor, andando. Ele tem dezoito anos e pediu desculpas a você.",
+      "esquerda": {
+        "rotulo": "Não é culpa dele",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -4,
+          "diretoria": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo de falar com ele",
+        "efeitos": {
+          "forma": 4,
+          "torcida": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele disse na TV que cresceu te vendo jogar e que você é o ídolo dele. Você ouviu isso no vestiário, de agasalho, sem ter entrado em campo.",
+      "esquerda": {
+        "rotulo": "Agradeço em público",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Finjo que não vi",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_declinio_04",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Ele chega quarenta minutos antes e sai depois de todo mundo, igual você fazia. Ninguém precisou pedir isso a ele.",
+      "esquerda": {
+        "rotulo": "Chego antes dele",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo o campo dele",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_declinio_05",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "assinou_com_valdir"
+        ]
+      },
+      "texto": "O empresário de {nome} é o mesmo seu, e ele já apresentou o moleque ao clube que te comprou. Ninguém consultou você sobre nada disso.",
+      "esquerda": {
+        "rotulo": "Cobro do empresário",
+        "efeitos": {
+          "diretoria": 4,
+          "dinheiro": -4,
+          "torcida": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não me meto",
+        "efeitos": {
+          "dinheiro": 4,
+          "torcida": -4,
+          "forma": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_declinio_06",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele perdeu um gol feito e a arquibancada vaiou de um jeito que você conhece bem. Ele procurou você com os olhos, do gramado para o banco.",
+      "esquerda": {
+        "rotulo": "Levanto e aplaudo",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -3,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico sentado",
+        "efeitos": {
+          "forma": 3,
+          "torcida": -3,
+          "diretoria": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_declinio_07",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 12,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "padrinho_do_kaique"
+        ]
+      },
+      "texto": "Ele precisa de dinheiro para a cirurgia do pai e pediu a você, não ao clube, porque tem vergonha do clube. Não falou nenhum valor.",
+      "esquerda": {
+        "rotulo": "Pago sem perguntar",
+        "efeitos": {
+          "dinheiro": -7,
+          "torcida": 3,
+          "forma": 3
+        },
+        "flags": [
+          "pagou_a_cirurgia"
+        ]
+      },
+      "direita": {
+        "rotulo": "Levo ele ao clube",
+        "efeitos": {
+          "diretoria": 3,
+          "dinheiro": -3,
+          "torcida": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_declinio_08",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "sucessor",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Os mais novos chamam ele pelo apelido que era seu. Não fizeram por mal e ninguém percebeu, inclusive ele.",
+      "esquerda": {
+        "rotulo": "Deixo passar",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Falo do apelido",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "{nome} pediu que você acompanhasse a estreia dele de perto, na beira do campo, com o cargo que fosse. Ele não sabe que isso é um pedido grande.",
+      "esquerda": {
+        "rotulo": "Fico ao lado dele",
+        "efeitos": {
+          "torcida": 21,
+          "diretoria": 18,
+          "dinheiro": -18
+        },
+        "flags": [
+          "padrinho_do_kaique"
+        ],
+        "fio": {
+          "id": "fio_heranca_b2a",
+          "em": [
+            6,
+            12
+          ]
+        },
+        "eco": "A primeira foto da estreia dele já tem dono."
+      },
+      "direita": {
+        "rotulo": "Assisto da tribuna",
+        "efeitos": {
+          "diretoria": 18,
+          "dinheiro": 11,
+          "torcida": -18
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_heranca_b2b",
+          "em": [
+            6,
+            12
+          ]
+        },
+        "eco": "Da tribuna dá para ver tudo, menos ele."
+      }
+    },
+    {
+      "id": "sucessor_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O clube deu a {nome} o seu número no dia da sua despedida. Perguntaram a ele antes e não perguntaram a você.",
+      "esquerda": {
+        "rotulo": "Entrego eu mesmo",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": 3,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não vou à cerimônia",
+        "efeitos": {
+          "forma": 3,
+          "diretoria": -3,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_legado_03",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele está jogando com dor e escondendo do departamento médico, exatamente como você fez aos dezoito. Ele nega quando você pergunta.",
+      "esquerda": {
+        "rotulo": "Conto pro médico",
+        "efeitos": {
+          "torcida": -4,
+          "forma": 4,
+          "diretoria": 4
+        },
+        "flags": [
+          "salvou_o_sucessor"
+        ]
+      },
+      "direita": {
+        "rotulo": "Guardo o segredo",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_legado_04",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "assinou_com_valdir"
+        ]
+      },
+      "texto": "{nome} vai assinar com o mesmo empresário que te levou. Ele pediu sua opinião e vai fazer o contrário se você disser que não.",
+      "esquerda": {
+        "rotulo": "Falo a verdade",
+        "efeitos": {
+          "torcida": 4,
+          "dinheiro": -4,
+          "diretoria": 4
+        },
+        "flags": [
+          "avisou_o_sucessor"
+        ]
+      },
+      "direita": {
+        "rotulo": "Digo que é bom cara",
+        "efeitos": {
+          "dinheiro": 4,
+          "torcida": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "sucessor_legado_05",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 16,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "viveu_arco_capitao"
+        ]
+      },
+      "texto": "Ele pediu um conselho na frente de todo o vestiário, do mesmo jeito que você pediu um dia. Você lembra exatamente da resposta que recebeu.",
+      "esquerda": {
+        "rotulo": "Repito o que ouvi",
+        "efeitos": {
+          "torcida": 14,
+          "forma": -10,
+          "diretoria": 9
+        },
+        "flags": [
+          "repetiu_o_ciclo"
+        ]
+      },
+      "direita": {
+        "rotulo": "Digo o contrário",
+        "efeitos": {
+          "forma": 10,
+          "torcida": -10,
+          "diretoria": -9
+        },
+        "flags": [
+          "quebrou_o_ciclo"
+        ]
+      }
+    },
+    {
+      "id": "sucessor_legado_06",
+      "era": [
+        "legado"
+      ],
+      "cargo": "sucessor",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} é capitão agora e tem um moleque de dezoito na cola dele. Ele te ligou para perguntar como é que se faz isso.",
+      "esquerda": {
+        "rotulo": "Conto como foi",
+        "efeitos": {
+          "torcida": 6,
+          "forma": 3,
+          "dinheiro": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Ele vai descobrir",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -3,
+          "dinheiro": 3
+        },
+        "flags": []
+      }
+    }
+  ]
+}

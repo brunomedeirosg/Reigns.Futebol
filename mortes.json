@@ -1,0 +1,436 @@
+{
+  "versao": "0.1",
+  "cargo": "vários",
+  "cota": 10,
+  "notas": "Cartas de MORTE SÚBITA. Uma das opções encerra a carreira na hora, independente dos medidores. As quatro regras: (1) a opção fatal está TELEGRAFADA no texto e no rótulo — o jogador sabe que é besteira, a piada é ter feito mesmo assim; (2) nunca as duas opções são fatais; (3) a opção segura nunca é estritamente melhor, senão a escolha é falsa; (4) chance 1.0 é morte certa, chance menor é aposta e exige bloco 'sobrevive' com recompensa grande. Pesos baixos: numa carreira de 120 cartas, uma ou duas dessas aparecem, e só matam se o jogador escolher o lado errado. Cada carta pertence ao cargo que a apresenta.",
+  "cartas": [
+    {
+      "id": "morte_base_peneira",
+      "era": [
+        "base"
+      ],
+      "cargo": "mae",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Churrasco da família no sábado, peneira decisiva no domingo às sete da manhã. Ela avisou que a maionese ficou fora da geladeira a tarde inteira.",
+      "esquerda": {
+        "rotulo": "Como só um pouco",
+        "morte": {
+          "final": "morte_peneira",
+          "chance": 0.65
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 12,
+            "forma": 10
+          },
+          "flags": [
+            "estomago_de_ferro"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Arroz e frango, só",
+        "efeitos": {
+          "forma": 10,
+          "torcida": -10
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_peneira_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Sua mãe vai contar essa no Natal inteiro."
+      }
+    },
+    {
+      "id": "morte_base_apito",
+      "era": [
+        "base"
+      ],
+      "cargo": "coord_base",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Final do sub-20, pênalti inventado contra vocês no último minuto, e o árbitro a um metro de você com as costas viradas.",
+      "esquerda": {
+        "rotulo": "Empurro o árbitro",
+        "morte": {
+          "final": "morte_apito"
+        }
+      },
+      "direita": {
+        "rotulo": "Xingo o chão",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": -11
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_apito_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "O apito daquele jogo ainda te encontra."
+      }
+    },
+    {
+      "id": "morte_estouro_tatuagem",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "capitao",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Você perdeu a aposta do bolão do vestiário. O combinado era tatuar o escudo do rival na canela, e o vestiário inteiro está filmando.",
+      "esquerda": {
+        "rotulo": "Pago em dinheiro",
+        "efeitos": {
+          "dinheiro": -7,
+          "torcida": -7
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_tatuagem_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Aquele vídeo já saiu do vestiário."
+      },
+      "direita": {
+        "rotulo": "Aposta é aposta",
+        "morte": {
+          "final": "morte_tatuagem",
+          "chance": 0.8
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 16,
+            "diretoria": -10
+          },
+          "flags": [
+            "lenda_do_vestiario"
+          ]
+        }
+      }
+    },
+    {
+      "id": "morte_estouro_carro",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "empresario",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Carro novo, primeira vez no volante dele, e a vaga do estacionamento do clube é apertada. Tem gente do marketing filmando a chegada.",
+      "esquerda": {
+        "rotulo": "Deixo o roupeiro",
+        "efeitos": {
+          "torcida": -11,
+          "diretoria": 9
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_carro_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "O marketing guardou o arquivo bruto."
+      },
+      "direita": {
+        "rotulo": "Estaciono sozinho",
+        "morte": {
+          "final": "morte_carro",
+          "chance": 0.5
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 11,
+            "dinheiro": 9
+          },
+          "flags": []
+        }
+      }
+    },
+    {
+      "id": "morte_travessia_procuracao",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "empresario",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "assinou_com_valdir"
+        ]
+      },
+      "texto": "Ele precisa de uma procuração assinada hoje e o campo do objeto está em branco. Diz que preenche depois, do avião, e que confiança é isso.",
+      "esquerda": {
+        "rotulo": "Assino em branco",
+        "morte": {
+          "final": "morte_procuracao",
+          "chance": 0.7
+        },
+        "sobrevive": {
+          "efeitos": {
+            "dinheiro": 18,
+            "diretoria": -7
+          },
+          "flags": [
+            "deve_pro_valdir"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Preenche na frente",
+        "efeitos": {
+          "dinheiro": -10,
+          "diretoria": 7
+        },
+        "flags": [
+          "negocia_sozinho"
+        ],
+        "fio": {
+          "id": "fio_procuracao_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Aquele campo em branco tem dono agora."
+      }
+    },
+    {
+      "id": "morte_travessia_live",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Três da manhã, você ao vivo para catorze pessoas, falando do presidente do clube com uma sinceridade que só existe às três da manhã.",
+      "esquerda": {
+        "rotulo": "Falo tudo mesmo",
+        "morte": {
+          "final": "morte_live",
+          "chance": 0.75
+        },
+        "sobrevive": {
+          "efeitos": {
+            "torcida": 16,
+            "diretoria": -11
+          },
+          "flags": [
+            "fala_demais",
+            "tomou_posicao"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Desligo e durmo",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -6
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_live_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Catorze pessoas viram. Uma delas gravou."
+      }
+    },
+    {
+      "id": "morte_auge_var",
+      "era": [
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Terceiro gol anulado na mesma partida, decisão de campeonato, e o monitor do VAR na sua frente com a mão do árbitro em cima dele.",
+      "esquerda": {
+        "rotulo": "Aplaudo com ironia",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": -10
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_var_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "A câmera do VAR também filma pra fora."
+      },
+      "direita": {
+        "rotulo": "Quebro o monitor",
+        "morte": {
+          "final": "morte_var"
+        }
+      }
+    },
+    {
+      "id": "morte_auge_helicoptero",
+      "era": [
+        "auge"
+      ],
+      "cargo": "apostas",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Festa da marca a quatrocentos quilômetros, na véspera da final, ida e volta de helicóptero na mesma noite. O cachê é absurdo e a previsão do tempo é ruim.",
+      "esquerda": {
+        "rotulo": "Vou de helicóptero",
+        "morte": {
+          "final": "morte_helicoptero",
+          "chance": 0.6
+        },
+        "sobrevive": {
+          "efeitos": {
+            "dinheiro": 18,
+            "forma": -10
+          },
+          "flags": [
+            "patrocinio_apostas"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Mando um vídeo",
+        "efeitos": {
+          "dinheiro": 7,
+          "torcida": -4,
+          "forma": 3
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_helicoptero_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Aquela noite tinha duas versões possíveis."
+      }
+    },
+    {
+      "id": "morte_auge_selecao",
+      "era": [
+        "auge"
+      ],
+      "cargo": "imprensa",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 27
+        }
+      },
+      "texto": "O coordenador da seleção pediu resposta hoje e você está irritado, cansado e com o celular na mão. Um áudio resolve em trinta segundos.",
+      "esquerda": {
+        "rotulo": "Gravo o áudio agora",
+        "morte": {
+          "final": "morte_selecao",
+          "chance": 0.7
+        },
+        "sobrevive": {
+          "efeitos": {
+            "forma": 12,
+            "torcida": -11
+          },
+          "flags": [
+            "recusou_selecao"
+          ]
+        }
+      },
+      "direita": {
+        "rotulo": "Respondo amanhã",
+        "efeitos": {
+          "diretoria": 10,
+          "forma": -7
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_selecao_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Amanhã é depois do prazo que ele deu."
+      }
+    },
+    {
+      "id": "morte_declinio_aposta",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "apostas",
+      "peso": 4,
+      "tipo": "morte_subita",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "patrocinio_apostas"
+        ]
+      },
+      "texto": "Discussão boba no vestiário sobre quem bate o próximo pênalti. Duzentos reais no aplicativo resolvem a discussão, e é o seu próprio jogo.",
+      "esquerda": {
+        "rotulo": "Aposto duzentos",
+        "morte": {
+          "final": "morte_aposta"
+        }
+      },
+      "direita": {
+        "rotulo": "Aposto um café",
+        "efeitos": {
+          "torcida": 11,
+          "dinheiro": -10
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_duzentos_b2",
+          "em": [
+            16,
+            26
+          ]
+        },
+        "eco": "Alguém no vestiário apostou os duzentos."
+      }
+    }
+  ]
+}

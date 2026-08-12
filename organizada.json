@@ -1,0 +1,499 @@
+{
+  "versao": "0.1",
+  "cargo": "organizada",
+  "cota": 16,
+  "notas": "Bloco completo do cargo A ORGANIZADA (persistência: institucional — nunca foi uma pessoa, não muda porque não é gente). Voz: SEMPRE no plural; nunca ameaça diretamente, descreve. Nenhuma carta deve dar instrução ou glamour à violência — a tensão vem do que fica implícito. Retrato sem nenhum rosto legível.",
+  "cartas": [
+    {
+      "id": "organizada_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "organizada",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Estenderam uma faixa com o seu nome na curva sul, antes de você ter feito qualquer coisa. Agora existe uma faixa para tirar.",
+      "esquerda": {
+        "rotulo": "Aponto pra faixa",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Finjo não ver",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_estouro_02",
+      "era": [
+        "estouro",
+        "travessia",
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "cooldown": 30,
+      "texto": "Vinte homens no portão do CT depois da quarta derrota. Eles não querem confusão. Querem que alguém desça e escute.",
+      "esquerda": {
+        "rotulo": "Desço sozinho",
+        "efeitos": {
+          "torcida": 12,
+          "diretoria": -12
+        },
+        "flags": [
+          "encarou_organizada"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não desço",
+        "efeitos": {
+          "diretoria": 12,
+          "torcida": -16
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_estouro_03",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "organizada",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Eles mandaram uma lista com três exigências para o grupo. A primeira é raça. As outras duas também.",
+      "esquerda": {
+        "rotulo": "Levo pro vestiário",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Rasgo a lista",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_estouro_04",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "organizada",
+      "peso": 8,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Sua primeira vaia foi na terceira partida, depois de um passe errado. Doze pessoas vaiaram e você ouviu as doze.",
+      "esquerda": {
+        "rotulo": "Peço a bola de novo",
+        "efeitos": {
+          "forma": 4,
+          "torcida": 4,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Jogo pra trás",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": -4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "organizada",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "A curva daqui canta noventa minutos, em pé, sem parar, e não te conhece. Eles cantam o nome de quem saiu antes de você chegar.",
+      "esquerda": {
+        "rotulo": "Vou até a curva",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Espero merecer",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_travessia_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Montaram um mosaico com o seu rosto ocupando a arquibancada inteira. Custou dinheiro que aquela gente não tem.",
+      "esquerda": {
+        "rotulo": "Pago o próximo",
+        "efeitos": {
+          "dinheiro": -7,
+          "torcida": 7
+        },
+        "flags": [
+          "pagou_mosaico"
+        ]
+      },
+      "direita": {
+        "rotulo": "Agradeço só",
+        "efeitos": {
+          "torcida": 3,
+          "dinheiro": 3,
+          "diretoria": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_travessia_03",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Depois da quinta derrota eles descreveram, num áudio, o caminho que você faz de casa até o CT. Não ameaçaram nada.",
+      "esquerda": {
+        "rotulo": "Aviso a polícia",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -7
+        },
+        "flags": [
+          "denunciou_organizada"
+        ]
+      },
+      "direita": {
+        "rotulo": "Mudo de caminho",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Trinta homens em volta do carro no estacionamento do CT. A janela está fechada e eles não estão gritando, o que é pior.",
+      "esquerda": {
+        "rotulo": "Abro a janela",
+        "efeitos": {
+          "torcida": 16,
+          "forma": -10,
+          "diretoria": -6
+        },
+        "flags": [
+          "encarou_organizada"
+        ]
+      },
+      "direita": {
+        "rotulo": "Espero a segurança",
+        "efeitos": {
+          "diretoria": 12,
+          "torcida": -12
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Eles querem duzentos ingressos para a final e o clube liberou vinte. A diferença, historicamente, sai do bolso de alguém.",
+      "esquerda": {
+        "rotulo": "Pago a diferença",
+        "efeitos": {
+          "dinheiro": -7,
+          "torcida": 7
+        },
+        "flags": [
+          "pagou_ingressos"
+        ]
+      },
+      "direita": {
+        "rotulo": "Problema do clube",
+        "efeitos": {
+          "diretoria": 3,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "organizada",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Houve confusão com a torcida visitante e um garoto de quinze anos está no hospital. O microfone quer a sua opinião sobre a organizada.",
+      "esquerda": {
+        "rotulo": "Condeno com nome",
+        "efeitos": {
+          "torcida": -7,
+          "diretoria": 7
+        },
+        "flags": [
+          "condenou_organizada"
+        ]
+      },
+      "direita": {
+        "rotulo": "Culpo os dois lados",
+        "efeitos": {
+          "torcida": 3,
+          "diretoria": -3,
+          "dinheiro": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_auge_04",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "organizada",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Inventaram um cântico com o seu nome e uma rima que você não repetiria na frente da sua mãe. Cinquenta mil pessoas cantam.",
+      "esquerda": {
+        "rotulo": "Canto junto",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico calado",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "organizada",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "A faixa da curva sul agora tem o seu nome e a palavra vergonha, na mesma linha. É a mesma faixa de dez anos atrás.",
+      "esquerda": {
+        "rotulo": "Falo com eles",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo a faixa lá",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "organizada",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "A imprensa te atacou a semana inteira e eles publicaram uma nota te defendendo. Ninguém pediu, e vem com uma condição implícita.",
+      "esquerda": {
+        "rotulo": "Agradeço em público",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": [
+          "devendo_a_organizada"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não me associo",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_declinio_03",
+      "era": [
+        "declinio",
+        "legado"
+      ],
+      "cargo": "organizada",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Onze mil pessoas num estádio de sessenta mil, e a curva sul canta como se estivesse cheia. Dá para ouvir cada palavra.",
+      "esquerda": {
+        "rotulo": "Aplaudo a curva",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Olho pro chão",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "organizada",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Na despedida penduraram a mesma faixa da sua estreia, com a tinta desbotada e uma frase nova costurada embaixo.",
+      "esquerda": {
+        "rotulo": "Levo a faixa pra casa",
+        "efeitos": {
+          "torcida": 19,
+          "diretoria": -9,
+          "dinheiro": -7
+        },
+        "flags": [
+          "guardou_a_faixa"
+        ]
+      },
+      "direita": {
+        "rotulo": "Deixo com eles",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": 9,
+          "forma": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "organizada_legado_02",
+      "era": [
+        "legado"
+      ],
+      "cargo": "organizada",
+      "peso": 11,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Eles ocuparam a sala da presidência a semana inteira e agora querem você como candidato. Dizem que é o único nome que a torcida aceita.",
+      "esquerda": {
+        "rotulo": "Aceito ser candidato",
+        "efeitos": {
+          "diretoria": 12,
+          "torcida": 10,
+          "dinheiro": -10
+        },
+        "flags": [
+          "candidato_da_torcida"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não é o meu lugar",
+        "efeitos": {
+          "forma": 10,
+          "diretoria": -10,
+          "torcida": -10
+        },
+        "flags": []
+      }
+    }
+  ]
+}

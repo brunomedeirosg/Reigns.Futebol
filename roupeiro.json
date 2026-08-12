@@ -1,0 +1,448 @@
+{
+  "versao": "0.1",
+  "cargo": "roupeiro",
+  "cota": 14,
+  "notas": "Bloco completo do cargo ROUPEIRO (persistência: ETERNO — é sempre Seu Otávio, idêntico em todas as eras e em todas as vidas). É o dispositivo da reencarnação e o único cargo que não quer nada de você. Voz: fala do passado como se fosse ontem e do presente como se já tivesse acontecido; chama você por um apelido que você nunca deu a ele. As quatro últimas cartas são travadas por requer.vida — só existem a partir da 2ª, 3ª e 4ª vida, e é por elas que o jogador descobre sozinho que está reencarnando. REGRA: ele nunca explica. Nunca escrever uma carta em que o roupeiro diga a palavra reencarnação.",
+  "cartas": [
+    {
+      "id": "roupeiro_base_01",
+      "era": [
+        "base"
+      ],
+      "cargo": "roupeiro",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Ele te chama por um apelido desde o primeiro dia, e você nunca disse esse apelido para ninguém. Diz que é óbvio, e continua dobrando.",
+      "esquerda": {
+        "rotulo": "De onde tirou isso?",
+        "efeitos": {
+          "forma": -4,
+          "torcida": 7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo ele chamar",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_base_02",
+      "era": [
+        "base"
+      ],
+      "cargo": "roupeiro",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele guardou uma camisa com o número que você queria, sem você ter pedido. Diz que estava sobrando, e que sobra sempre a que precisa.",
+      "esquerda": {
+        "rotulo": "Aceito a camisa",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": [
+          "camisa_do_roupeiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Uso a que me deram",
+        "efeitos": {
+          "diretoria": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_base_03",
+      "era": [
+        "base",
+        "estouro"
+      ],
+      "cargo": "roupeiro",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele lava trinta uniformes por dia há quarenta anos e sabe quem treinou de verdade pelo peso da camisa molhada.",
+      "esquerda": {
+        "rotulo": "Pergunto o meu peso",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não quero saber",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_base_04",
+      "era": [
+        "base"
+      ],
+      "cargo": "roupeiro",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele fica num banquinho no corredor entre os dois vestiários e vê todo mundo passar nos dois sentidos. Nunca contou nada a ninguém.",
+      "esquerda": {
+        "rotulo": "Sento com ele",
+        "efeitos": {
+          "torcida": 6,
+          "forma": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Passo reto",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_base_05",
+      "era": [
+        "base"
+      ],
+      "cargo": "roupeiro",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele conta de um garoto igual a você, mesmo pé, mesma teimosia, que passou por aqui e não deu em nada. Não diz o nome do garoto.",
+      "esquerda": {
+        "rotulo": "Pergunto o nome",
+        "efeitos": {
+          "forma": -6,
+          "torcida": 6
+        },
+        "flags": [
+          "perguntou_o_nome"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não quero saber",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_estouro_01",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "roupeiro",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele guardou a sua primeira chuteira da base numa sacola com o seu nome escrito à mão. Diz que sempre guarda, e que às vezes serve.",
+      "esquerda": {
+        "rotulo": "Levo a sacola",
+        "efeitos": {
+          "torcida": 7,
+          "dinheiro": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Pode jogar fora",
+        "efeitos": {
+          "dinheiro": 7,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "roupeiro",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Você mandou uma camisa do clube novo para ele e ele agradeceu dizendo que não usa camisa de outro time. Falou sem mágoa nenhuma.",
+      "esquerda": {
+        "rotulo": "Mando outra coisa",
+        "efeitos": {
+          "dinheiro": -6,
+          "torcida": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não mando mais nada",
+        "efeitos": {
+          "dinheiro": 6,
+          "torcida": -6
+        },
+        "flags": []
+      },
+      "requer": {
+        "flags": [
+          "trocou_de_clube"
+        ]
+      }
+    },
+    {
+      "id": "roupeiro_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "roupeiro",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Em dez anos ele nunca pediu ingresso, camisa, foto ou favor. Você percebeu isso hoje e não sabe o que fazer com a informação.",
+      "esquerda": {
+        "rotulo": "Ofereço alguma coisa",
+        "efeitos": {
+          "dinheiro": -7,
+          "torcida": 7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não estrago isso",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "roupeiro",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Quinze anos depois ele está no mesmo banquinho, com o mesmo avental e os mesmos óculos na ponta do nariz. Você envelheceu e ele não.",
+      "esquerda": {
+        "rotulo": "Comento a idade dele",
+        "efeitos": {
+          "forma": -6,
+          "torcida": 6
+        },
+        "flags": [
+          "notou_o_roupeiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Não comento nada",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "roupeiro",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele pesou a sua camisa depois do treino e não disse nada, o que em quinze anos nunca aconteceu.",
+      "esquerda": {
+        "rotulo": "Pergunto o número",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Prefiro não saber",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_legado_01",
+      "era": [
+        "legado"
+      ],
+      "cargo": "roupeiro",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele dobrou a sua camisa da despedida de um jeito diferente, com o número para fora, e disse que dessa vez você levou mais longe.",
+      "esquerda": {
+        "rotulo": "Dessa vez?",
+        "efeitos": {
+          "torcida": 11,
+          "forma": -11,
+          "diretoria": -6
+        },
+        "flags": [
+          "ouviu_dessa_vez"
+        ]
+      },
+      "direita": {
+        "rotulo": "Agradeço e saio",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": 11,
+          "torcida": -9
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_vida2_01",
+      "era": [
+        "base",
+        "estouro"
+      ],
+      "cargo": "roupeiro",
+      "peso": 14,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "vida": {
+          "min": 2
+        }
+      },
+      "texto": "Ele te chamou por um nome que não é o seu, com naturalidade total, e se corrigiu rindo. O nome que ele disse não está na ficha de ninguém do clube.",
+      "esquerda": {
+        "rotulo": "Quem é esse?",
+        "efeitos": {
+          "forma": -6,
+          "torcida": 6
+        },
+        "flags": [
+          "ouviu_o_nome_antigo"
+        ]
+      },
+      "direita": {
+        "rotulo": "Deixo passar",
+        "efeitos": {
+          "forma": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_vida3_01",
+      "era": [
+        "base",
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "roupeiro",
+      "peso": 16,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "vida": {
+          "min": 3
+        }
+      },
+      "texto": "Ele parou de errar o nome. Agora usa os dois, o seu e o outro, na mesma frase, sem explicar, e volta a dobrar camisa.",
+      "esquerda": {
+        "rotulo": "Exijo explicação",
+        "efeitos": {
+          "forma": -11,
+          "torcida": 11,
+          "diretoria": -7
+        },
+        "flags": [
+          "entendeu_o_roupeiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Entro no jogo dele",
+        "efeitos": {
+          "torcida": 11,
+          "forma": 11,
+          "diretoria": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "roupeiro_vida4_01",
+      "era": [
+        "base",
+        "estouro",
+        "travessia",
+        "auge"
+      ],
+      "cargo": "roupeiro",
+      "peso": 18,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "vida": {
+          "min": 4
+        }
+      },
+      "texto": "Ele conta, dobrando camisa, como acabou a sua vida anterior. Conta os detalhes certos, na ordem certa, e pergunta se dessa vez vai ser diferente.",
+      "esquerda": {
+        "rotulo": "Digo que vai",
+        "efeitos": {
+          "torcida": 12,
+          "forma": 10,
+          "diretoria": -10
+        },
+        "flags": [
+          "prometeu_ao_roupeiro"
+        ]
+      },
+      "direita": {
+        "rotulo": "Digo que não sei",
+        "efeitos": {
+          "forma": -10,
+          "torcida": 10,
+          "diretoria": 10
+        },
+        "flags": []
+      }
+    }
+  ]
+}

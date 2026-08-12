@@ -1,0 +1,116 @@
+{
+  "_leia": "Fonte única de cor do CRAQUE. O CSS do jogo e os arquivos de arte leem daqui. Nunca escolher cor no olho dentro do editor de vetor.",
+  "eras": {
+    "base": {
+      "nome": "A Base",
+      "fundo": "#2C3A2E",
+      "superficie": "#4A6741",
+      "traco": "#12160F",
+      "texto": "#F4F1E8",
+      "texto_secundario": "#E2DCCC",
+      "destaque": "#D9C79B",
+      "humor": "verde-barro e cal; luz de fim de tarde em campo de terra"
+    },
+    "estouro": {
+      "nome": "O Estouro",
+      "fundo": "#1E2A38",
+      "superficie": "#2F5068",
+      "traco": "#0B0F14",
+      "texto": "#F2F5F8",
+      "texto_secundario": "#C3CFD9",
+      "destaque": "#F2703A",
+      "humor": "refletor de estádio, primeira vez sob luz forte"
+    },
+    "travessia": {
+      "nome": "A Travessia",
+      "fundo": "#232830",
+      "superficie": "#4E5A66",
+      "traco": "#0E1013",
+      "texto": "#F5F7F9",
+      "texto_secundario": "#CFD6DD",
+      "destaque": "#9FB4C7",
+      "humor": "cinza-azulado, inverno, vidro; frio que não é só temperatura"
+    },
+    "auge": {
+      "nome": "O Auge",
+      "fundo": "#2A2113",
+      "superficie": "#6E5522",
+      "traco": "#120E07",
+      "texto": "#FBF6E9",
+      "texto_secundario": "#E3D8B6",
+      "destaque": "#E8B93B",
+      "humor": "dourado saturado; tudo brilha e nada é seu"
+    },
+    "declinio": {
+      "nome": "O Declínio",
+      "fundo": "#2B2422",
+      "superficie": "#6B5348",
+      "traco": "#100C0B",
+      "texto": "#F8F1EC",
+      "texto_secundario": "#E0D2C8",
+      "destaque": "#C88A5A",
+      "humor": "âmbar frio, luz de fim de jogo, arquibancada esvaziando"
+    },
+    "legado": {
+      "nome": "O Legado",
+      "fundo": "#22242A",
+      "superficie": "#4A4E58",
+      "traco": "#0D0E11",
+      "texto": "#F7F6F3",
+      "texto_secundario": "#C9CBD0",
+      "destaque": "#E8E3D8",
+      "humor": "quase monocromático; a cor já foi"
+    }
+  },
+  "medidores": {
+    "forma": {
+      "cor": "#5FA08A",
+      "icone": "raio"
+    },
+    "torcida": {
+      "cor": "#E85D4A",
+      "icone": "megafone"
+    },
+    "diretoria": {
+      "cor": "#7A8B99",
+      "icone": "gravata"
+    },
+    "dinheiro": {
+      "cor": "#C89B3C",
+      "icone": "cifrao"
+    }
+  },
+  "molduras_ficha": {
+    "dourada": "#E8B93B",
+    "prata": "#B8BCC2",
+    "cinza": "#6B6E73",
+    "preta": "#1A1A1A",
+    "verde": "#4E8C5A"
+  },
+  "regras": [
+    "Máximo 5 cores por retrato, contando o preto do traço.",
+    "A cor de assinatura do cargo nunca muda de era — é como o jogador o reconhece.",
+    "Texto de carta usa SEMPRE 'texto' (ou 'texto_secundario'), nunca 'destaque'. O destaque é acento: barra, ícone ativo, borda. Testado: destaque sobre superficie reprova em 5 das 6 eras.",
+    "Contraste mínimo de 4.5:1 entre qualquer texto e o fundo sobre o qual ele cai. Rodar ferramentas/validar-paleta.py depois de mexer em qualquer cor.",
+    "Nunca usar a cor de um medidor como cor decorativa: ela só significa aquele medidor.",
+    "Cor de assinatura escura (treinador, organizada, companheira, coord_base) exige contorno claro de 4px no retrato quando a era for escura, senão a silhueta some.",
+    "A carta se separa do fundo por CONTORNO de 3px na cor 'traco', não por contraste de área — os fundos são escuros de propósito."
+  ],
+  "cargos": {
+    "empresario": "#C89B3C",
+    "mae": "#5B7C99",
+    "coord_base": "#4A6741",
+    "treinador": "#3A3A3C",
+    "imprensa": "#C4453B",
+    "capitao": "#E8E3D8",
+    "diretor": "#7A8B99",
+    "fisio": "#5FA08A",
+    "apostas": "#39D353",
+    "sucessor": "#F2703A",
+    "organizada": "#1A1A1A",
+    "companheira": "#6B4E8C",
+    "filho": "#F5D76E",
+    "roupeiro": "#8A7355",
+    "parceiro": "#D96E8A"
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "versao": "0.1",
+  "cargo": "diretor",
+  "cota": 16,
+  "notas": "Bloco completo do cargo DIRETORIA ESPORTIVA (persistência: rotativo — Mr. Hollis, Herr Brandt ou Mr. Oyelaran). Voz: vocabulário de planilha aplicado a gente, educadíssimo, nunca levanta a voz e nunca muda de ideia. Ele gosta de você de verdade, do mesmo jeito que gosta de uma boa aquisição. Produz a segunda fonte de recusou_fundo e de contrato_longo.",
+  "cartas": [
+    {
+      "id": "diretor_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "diretor",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "medidores": {
+          "forma": {
+            "min": 55
+          }
+        },
+        "idade": {
+          "min": 19
+        }
+      },
+      "texto": "Ele voou catorze horas para ver quarenta minutos seus. No intervalo, manda mensagem para o seu empresário e não para você.",
+      "esquerda": {
+        "rotulo": "Falo direto com ele",
+        "efeitos": {
+          "dinheiro": -4,
+          "diretoria": 4,
+          "torcida": 4
+        },
+        "flags": [
+          "negocia_sozinho"
+        ]
+      },
+      "direita": {
+        "rotulo": "Deixo com o agente",
+        "efeitos": {
+          "dinheiro": 7,
+          "diretoria": -4
+        },
+        "flags": [
+          "valdir_negocia"
+        ]
+      }
+    },
+    {
+      "id": "diretor_estouro_02",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "diretor",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "O clube oferece renovação com aumento pequeno e multa gigante. Assinar te protege. Assinar também te prende.",
+      "esquerda": {
+        "rotulo": "Assino",
+        "efeitos": {
+          "diretoria": 19,
+          "dinheiro": 7,
+          "forma": -7
+        },
+        "flags": [
+          "contrato_longo"
+        ]
+      },
+      "direita": {
+        "rotulo": "Espero o mercado",
+        "efeitos": {
+          "dinheiro": -11,
+          "diretoria": -11,
+          "torcida": 7
+        },
+        "flags": [
+          "contrato_curto"
+        ]
+      }
+    },
+    {
+      "id": "diretor_estouro_03",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "diretor",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "{nome} te mostra um gráfico com a sua curva de rendimento e um ponto marcado como janela ideal de liquidez. O ponto é você.",
+      "esquerda": {
+        "rotulo": "Pergunto o que é isso",
+        "efeitos": {
+          "diretoria": -4,
+          "forma": 7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Não faço pergunta",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_travessia_01",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "diretor",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "A proposta é do {clube_novo}, {patamar_novo}, e {nome} recomenda aceitar porque em dois anos o seu valor cai. Ele diz isso com carinho sincero.",
+      "esquerda": {
+        "rotulo": "Aceito a proposta",
+        "efeitos": {
+          "dinheiro": 16,
+          "torcida": -11,
+          "forma": -4
+        },
+        "flags": [
+          "subiu_de_clube"
+        ],
+        "aceitaProposta": {
+          "delta": 1
+        }
+      },
+      "direita": {
+        "rotulo": "Fico onde estou",
+        "efeitos": {
+          "torcida": 11,
+          "dinheiro": -11,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_travessia_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "diretor",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "Ele contratou um intérprete para as suas reuniões, e o intérprete trabalha para o clube. Tudo o que você diz passa por ele antes.",
+      "esquerda": {
+        "rotulo": "Trago meu tradutor",
+        "efeitos": {
+          "dinheiro": -4,
+          "diretoria": -4,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Uso o do clube",
+        "efeitos": {
+          "diretoria": 4,
+          "dinheiro": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_travessia_03",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "diretor",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "flags": [
+          "jogou_na_europa"
+        ]
+      },
+      "texto": "Seis meses no país e você ainda dá entrevista por intérprete. O diretor diz que isso aparece no relatório de integração.",
+      "esquerda": {
+        "rotulo": "Estudo à noite",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": [
+          "fala_o_idioma"
+        ]
+      },
+      "direita": {
+        "rotulo": "Meu pé fala",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_travessia_04",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "diretor",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "O contrato novo tem bônus por partida jogada, não por vitória. {nome} explica que isso alinha incentivos.",
+      "esquerda": {
+        "rotulo": "Peço bônus por título",
+        "efeitos": {
+          "dinheiro": -7,
+          "diretoria": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Aceito por partida",
+        "efeitos": {
+          "dinheiro": 7,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "diretor",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Eles querem oitenta por cento dos seus direitos de imagem em troca de um aumento de salário que cobre o dobro disso, hoje.",
+      "esquerda": {
+        "rotulo": "Troco pelo aumento",
+        "efeitos": {
+          "dinheiro": 6,
+          "torcida": -3,
+          "diretoria": 3
+        },
+        "flags": [
+          "vendeu_a_imagem"
+        ]
+      },
+      "direita": {
+        "rotulo": "Imagem é minha",
+        "efeitos": {
+          "dinheiro": -6,
+          "diretoria": -3,
+          "torcida": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "diretor",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "{nome} apresenta um fundo que quer comprar parte do clube e parte de você, no mesmo contrato e na mesma página.",
+      "esquerda": {
+        "rotulo": "Entro no pacote",
+        "efeitos": {
+          "dinheiro": 27,
+          "diretoria": 14,
+          "torcida": -14
+        },
+        "flags": [
+          "fundo_comprou_direitos"
+        ],
+        "fio": {
+          "id": "fio_fundo_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Assinaram na mesma página por um motivo."
+      },
+      "direita": {
+        "rotulo": "Só o clube, não eu",
+        "efeitos": {
+          "dinheiro": -25,
+          "torcida": 14,
+          "diretoria": -7
+        },
+        "flags": [
+          "recusou_fundo"
+        ],
+        "fio": {
+          "id": "fio_fundo_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Separar as duas coisas foi caro e foi seu."
+      }
+    },
+    {
+      "id": "diretor_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "diretor",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Renovação por cinco anos com cláusula de saída que só o clube pode acionar. {nome} chama isso de estabilidade para as duas partes.",
+      "esquerda": {
+        "rotulo": "Assino cinco anos",
+        "efeitos": {
+          "diretoria": 18,
+          "dinheiro": 9,
+          "forma": -6
+        },
+        "flags": [
+          "contrato_longo"
+        ]
+      },
+      "direita": {
+        "rotulo": "Quero saída mútua",
+        "efeitos": {
+          "diretoria": -16,
+          "dinheiro": -6,
+          "torcida": 6
+        },
+        "flags": [
+          "contrato_curto"
+        ]
+      }
+    },
+    {
+      "id": "diretor_auge_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "diretor",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Pré-temporada com nove voos em dezesseis dias, por contrato de patrocínio. O departamento médico é contra e {nome} já respondeu a ele.",
+      "esquerda": {
+        "rotulo": "Faço a turnê",
+        "efeitos": {
+          "dinheiro": 4,
+          "diretoria": 4,
+          "forma": -4
+        },
+        "flags": [
+          "turne_de_patrocinio"
+        ]
+      },
+      "direita": {
+        "rotulo": "Fico e treino",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": -4,
+          "dinheiro": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_auge_05",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele te convida para almoçar uma vez por ano, sempre em janeiro, sempre no mesmo lugar. Nunca fala de contrato no almoço.",
+      "esquerda": {
+        "rotulo": "Vou ao almoço",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Digo que não dá",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 13,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "{nome} explica, com educação, que o seu salário agora aparece na coluna de passivo. Ele usa a palavra reestruturação duas vezes.",
+      "esquerda": {
+        "rotulo": "Aceito reduzir",
+        "efeitos": {
+          "dinheiro": -19,
+          "diretoria": 11,
+          "torcida": 4
+        },
+        "flags": [
+          "reduziu_salario"
+        ]
+      },
+      "direita": {
+        "rotulo": "Cumpram o contrato",
+        "efeitos": {
+          "diretoria": -11,
+          "dinheiro": 9,
+          "torcida": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Existe um clube menor que aceita te emprestar por seis meses. {nome} apresenta a coisa como oportunidade de recuperar minutagem.",
+      "esquerda": {
+        "rotulo": "Vou emprestado",
+        "efeitos": {
+          "forma": 4,
+          "torcida": -4,
+          "diretoria": 4
+        },
+        "flags": [
+          "emprestado"
+        ],
+        "aceitaProposta": {
+          "delta": -1
+        }
+      },
+      "direita": {
+        "rotulo": "Fico e brigo por vaga",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Eles oferecem rescisão com metade do que devem, à vista, hoje. {nome} deixa a caneta na mesa e olha o relógio uma vez.",
+      "esquerda": {
+        "rotulo": "Assino a rescisão",
+        "efeitos": {
+          "dinheiro": 7,
+          "diretoria": -3,
+          "torcida": -3
+        },
+        "flags": [
+          "rescindiu"
+        ]
+      },
+      "direita": {
+        "rotulo": "Vou até o fim",
+        "efeitos": {
+          "torcida": 3,
+          "diretoria": -3,
+          "dinheiro": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "diretor_declinio_04",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "diretor",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "requer": {
+        "idade": {
+          "min": 33
+        }
+      },
+      "texto": "Em vez de renovar como jogador, oferecem um cargo de embaixador do clube: você não joga mais e continua no organograma.",
+      "esquerda": {
+        "rotulo": "Aceito o cargo",
+        "efeitos": {
+          "diretoria": 6,
+          "dinheiro": 3,
+          "forma": -3
+        },
+        "flags": [
+          "embaixador_do_clube"
+        ]
+      },
+      "direita": {
+        "rotulo": "Quero jogar ainda",
+        "efeitos": {
+          "forma": 3,
+          "diretoria": -6,
+          "torcida": 3
+        },
+        "flags": []
+      }
+    }
+  ]
+}

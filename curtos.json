@@ -1,0 +1,970 @@
+{
+ "versao": "0.1",
+ "cargo": "misto",
+ "cota": 29,
+ "notas": "FIOS CURTOS — 12 fios que nascem e morrem DENTRO da mesma era, com janela de 3 a 8 cartas. Existem por um moteivo que os fios longos não resolvem: o jogador precisa entender que as escolhas dele mudam o futuro ainda na PRIMEIRA era, e não vinte minutos depois. Seis deles podem ENCERRAR a carreira por escolha (campo 'encerra'), com final de moldura verde — não é derrota, é outra vida. Os outros seis só pagam consequência. Batidas 2 e 3 têm peso 0: chegam pela agenda. ATUALIZAÇÃO 12/08: os abridores saíram do sorteio (peso 0) e passaram a ser AGENDADOS PELO MOTOR, um por era. Medido: com peso 3 eram 1,4% de chance por sorteio (18% em 14 cartas de Base) e entregavam 1,42 carta por carreira; com peso 9 dominavam a era. Peso não era a alavanca. As janelas das eras curtas (Base, Legado) foram para [3,5] porque uma janela de [4,9] não fecha dentro de uma era de 10 a 14 cartas. CORREÇÃO na mesma rodada: só são agendados os abridores cujo fio NÃO oferece saída do futebol — um por era, e por construção existe exatamente um desses em cada era (pensão, apelido, idioma, investimento, irmão, livro). Os seis que encerram a carreira (estudo, oficina, saudade, TV, clínica, escolinha) continuam no sorteio com peso 3.",
+ "cartas": [
+  {
+   "id": "curto_estudo_b2",
+   "era": [
+    "base"
+   ],
+   "cargo": "coord_base",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "A coordenação mudou o treino para as sete da manhã e a escola é às sete e meia. Ninguém fez isso por sua causa e ninguém vai desfazer por sua causa.",
+   "esquerda": {
+    "rotulo": "Chego na segunda aula",
+    "efeitos": {
+     "forma": 12,
+     "torcida": -8,
+     "diretoria": 10
+    },
+    "flags": [
+     "estuda"
+    ],
+    "fio": {
+     "id": "curto_estudo_b3",
+     "em": [
+      3,
+      5
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Perco o treino",
+    "efeitos": {
+     "forma": -11,
+     "diretoria": -10,
+     "torcida": 8
+    },
+    "flags": [
+     "estuda",
+     "estudo_a_serio"
+    ],
+    "fio": {
+     "id": "curto_estudo_b3",
+     "em": [
+      3,
+      5
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_estudo_b3",
+   "era": [
+    "base"
+   ],
+   "cargo": "mae",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "A prova do vestibular é domingo às oito. O teste que define quem sobe para o profissional é domingo às oito. Ela não disse nada e deixou a inscrição na mesa.",
+   "esquerda": {
+    "rotulo": "Vou fazer a prova",
+    "encerra": "vida_faculdade",
+    "efeitos": {}
+   },
+   "direita": {
+    "rotulo": "Vou ao teste",
+    "efeitos": {
+     "forma": 11,
+     "diretoria": 10,
+     "torcida": 9
+    },
+    "flags": [
+     "largou_escola"
+    ],
+    "eco": "A inscrição ficou na mesa até segunda-feira."
+   }
+  },
+  {
+   "id": "curto_pensao_b1",
+   "era": [
+    "base"
+   ],
+   "cargo": "mae",
+   "peso": 0,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "O clube paga uma ajuda de custo de valor pequeno e ela não sabe quanto é. Perguntou hoje, do jeito dela, dizendo que não é da conta dela.",
+   "esquerda": {
+    "rotulo": "Digo o valor certo",
+    "efeitos": {
+     "torcida": 13,
+     "dinheiro": -12,
+     "forma": 6
+    },
+    "flags": [
+     "sustenta_a_mae"
+    ],
+    "fio": {
+     "id": "curto_pensao_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Digo que é mais",
+    "efeitos": {
+     "dinheiro": 12,
+     "torcida": -10,
+     "diretoria": 6
+    },
+    "flags": [
+     "mentiu_o_valor"
+    ],
+    "fio": {
+     "id": "curto_pensao_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_pensao_b2",
+   "era": [
+    "base",
+    "estouro"
+   ],
+   "cargo": "mae",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ela apareceu no clube perguntando no setor financeiro, com o comprovante de ônibus na mão. A moça do guichê disse o valor com muita educação.",
+   "esquerda": {
+    "rotulo": "Peço desculpa a ela",
+    "efeitos": {
+     "torcida": 14,
+     "dinheiro": -10,
+     "forma": -8
+    },
+    "flags": [
+     "familia_perto"
+    ]
+   },
+   "direita": {
+    "rotulo": "Digo que ela mentiu",
+    "efeitos": {
+     "forma": 13,
+     "diretoria": 10,
+     "torcida": -12
+    },
+    "flags": []
+   }
+  },
+  {
+   "id": "curto_oficina_b1",
+   "era": [
+    "estouro"
+   ],
+   "cargo": "mae",
+   "peso": 3,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Seu tio quer você na oficina dele, meio período, aprendendo. Diz que futebol acaba e motor não acaba, e sua mãe ouviu a frase inteira sem discordar.",
+   "esquerda": {
+    "rotulo": "Vou meio período",
+    "efeitos": {
+     "dinheiro": 12,
+     "forma": -11,
+     "diretoria": -8
+    },
+    "flags": [
+     "oficina_do_tio"
+    ],
+    "fio": {
+     "id": "curto_oficina_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Futebol é o plano",
+    "efeitos": {
+     "forma": 13,
+     "torcida": 10,
+     "dinheiro": -8
+    },
+    "flags": [
+     "so_o_futebol"
+    ],
+    "fio": {
+     "id": "curto_oficina_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_oficina_b2",
+   "era": [
+    "estouro"
+   ],
+   "cargo": "mae",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "O tio vai vender a oficina se ninguém assumir, e ele deu duas semanas de prazo. Ela não vai pedir nada, e é justamente por isso que dói.",
+   "esquerda": {
+    "rotulo": "Ele vende",
+    "efeitos": {
+     "forma": 10,
+     "diretoria": 10,
+     "torcida": -10
+    },
+    "flags": [
+     "so_o_futebol"
+    ],
+    "eco": "A oficina foi vendida numa quinta-feira."
+   },
+   "direita": {
+    "rotulo": "Assumo a oficina",
+    "encerra": "vida_oficina",
+    "efeitos": {}
+   }
+  },
+  {
+   "id": "curto_apelido_b1",
+   "era": [
+    "estouro"
+   ],
+   "cargo": "imprensa",
+   "peso": 0,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Um narrador inventou um apelido para você no meio de um gol e o país adotou em dois dias. Não é o apelido que você tem em casa.",
+   "esquerda": {
+    "rotulo": "Adoto o do narrador",
+    "efeitos": {
+     "torcida": 14,
+     "dinheiro": 10,
+     "forma": -9
+    },
+    "flags": [
+     "apelido_de_tv"
+    ],
+    "fio": {
+     "id": "curto_apelido_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Corrijo ao vivo",
+    "efeitos": {
+     "diretoria": -10,
+     "forma": 12,
+     "torcida": -8
+    },
+    "flags": [
+     "apelido_de_casa"
+    ],
+    "fio": {
+     "id": "curto_apelido_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_apelido_b2",
+   "era": [
+    "estouro",
+    "travessia"
+   ],
+   "cargo": "roupeiro",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ele está bordando a camisa e para com a agulha no ar. Pergunta, sem levantar a cabeça, qual dos dois nomes vai nas costas pelos próximos dez anos.",
+   "esquerda": {
+    "rotulo": "O que o país usa",
+    "efeitos": {
+     "torcida": 13,
+     "dinheiro": 10,
+     "forma": -9
+    },
+    "flags": [
+     "apelido_de_tv"
+    ]
+   },
+   "direita": {
+    "rotulo": "O que minha mãe usa",
+    "efeitos": {
+     "torcida": -10,
+     "forma": 12,
+     "diretoria": 8
+    },
+    "flags": [
+     "apelido_de_casa",
+     "familia_perto"
+    ]
+   }
+  },
+  {
+   "id": "curto_saudade_b1",
+   "era": [
+    "travessia"
+   ],
+   "cargo": "companheira",
+   "peso": 3,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Sétimo mês fora, e ela conta que sua mãe passou dois dias no hospital e pediu para não te avisarem. Ela avisou.",
+   "esquerda": {
+    "rotulo": "Pego o próximo voo",
+    "efeitos": {
+     "diretoria": -12,
+     "torcida": 8,
+     "dinheiro": -10
+    },
+    "flags": [
+     "familia_perto"
+    ],
+    "fio": {
+     "id": "curto_saudade_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Ligo todo dia",
+    "efeitos": {
+     "forma": 12,
+     "diretoria": 10,
+     "torcida": -8
+    },
+    "flags": [
+     "longe_de_casa"
+    ],
+    "fio": {
+     "id": "curto_saudade_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_saudade_b2",
+   "era": [
+    "travessia"
+   ],
+   "cargo": "empresario",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Existe uma cláusula que te libera pagando três meses de salário. Ele leu ela em voz alta duas vezes e na segunda não olhou para você.",
+   "esquerda": {
+    "rotulo": "Pago e volto",
+    "encerra": "vida_voltou_pra_casa",
+    "efeitos": {}
+   },
+   "direita": {
+    "rotulo": "Cumpro o contrato",
+    "efeitos": {
+     "diretoria": 10,
+     "dinheiro": 10,
+     "torcida": -10
+    },
+    "flags": [
+     "longe_de_casa"
+    ],
+    "eco": "A cláusula continuou lá, sem ninguém usar."
+   }
+  },
+  {
+   "id": "curto_idioma_b1",
+   "era": [
+    "travessia"
+   ],
+   "cargo": "capitao",
+   "peso": 0,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ele fala com você em inglês por educação e o vestiário conversa na língua daqui. Você entende metade e responde um terço.",
+   "esquerda": {
+    "rotulo": "Estudo a língua",
+    "efeitos": {
+     "diretoria": 13,
+     "forma": -10,
+     "dinheiro": -8
+    },
+    "flags": [
+     "aprendeu_a_lingua"
+    ],
+    "fio": {
+     "id": "curto_idioma_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Falo dentro do campo",
+    "efeitos": {
+     "forma": 14,
+     "torcida": 10,
+     "diretoria": -9
+    },
+    "flags": [
+     "so_dentro_do_campo"
+    ],
+    "fio": {
+     "id": "curto_idioma_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_idioma_b2",
+   "era": [
+    "travessia",
+    "auge"
+   ],
+   "cargo": "treinador",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ele fez a preleção inteira e no fim perguntou, na frente de todos e na língua daqui, se você entendeu a parte da marcação.",
+   "esquerda": {
+    "rotulo": "Respondo na língua",
+    "efeitos": {
+     "diretoria": 14,
+     "torcida": 10,
+     "forma": -9
+    },
+    "flags": [
+     "aprendeu_a_lingua"
+    ]
+   },
+   "direita": {
+    "rotulo": "Mostro no quadro",
+    "efeitos": {
+     "forma": 13,
+     "torcida": 10,
+     "diretoria": -10
+    },
+    "flags": [
+     "so_dentro_do_campo"
+    ]
+   }
+  },
+  {
+   "id": "curto_tv_b1",
+   "era": [
+    "auge"
+   ],
+   "cargo": "imprensa",
+   "peso": 3,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Uma emissora quer você como comentarista fixo a partir de janeiro, e o contrato é de cinco anos. Você tem vinte e oito anos e está jogando o melhor futebol da vida.",
+   "esquerda": {
+    "rotulo": "Escuto a proposta",
+    "efeitos": {
+     "dinheiro": 13,
+     "diretoria": -11,
+     "forma": -8
+    },
+    "flags": [
+     "proposta_de_tv"
+    ],
+    "fio": {
+     "id": "curto_tv_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Nem quero o valor",
+    "efeitos": {
+     "forma": 12,
+     "torcida": 11,
+     "dinheiro": -9
+    },
+    "flags": [
+     "recusou_a_tv"
+    ],
+    "fio": {
+     "id": "curto_tv_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_tv_b2",
+   "era": [
+    "auge"
+   ],
+   "cargo": "empresario",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "A emissora dobrou e antecipou: começa no mês que vem, e para começar no mês que vem você precisa parar de jogar. Ele diz que aos vinte e oito isso não se repete.",
+   "esquerda": {
+    "rotulo": "Jogo enquanto der",
+    "efeitos": {
+     "torcida": 10,
+     "forma": 10,
+     "dinheiro": -10
+    },
+    "flags": [
+     "recusou_a_tv"
+    ],
+    "eco": "Cinco anos de contrato foram para outro."
+   },
+   "direita": {
+    "rotulo": "Aceito e paro",
+    "encerra": "vida_tv",
+    "efeitos": {}
+   }
+  },
+  {
+   "id": "curto_investe_b1",
+   "era": [
+    "auge"
+   ],
+   "cargo": "roupeiro",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ele conta que um antigo companheiro seu de alojamento apareceu no clube com um negócio de açaí em três cidades e uma planilha bonita. Deixou a planilha com ele.",
+   "esquerda": {
+    "rotulo": "Entro com metade",
+    "efeitos": {
+     "dinheiro": -13,
+     "torcida": 10,
+     "forma": 8
+    },
+    "flags": [
+     "socio_do_parceiro"
+    ],
+    "fio": {
+     "id": "curto_investe_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Só empresto o nome",
+    "efeitos": {
+     "dinheiro": 12,
+     "diretoria": -10,
+     "torcida": -8
+    },
+    "flags": [
+     "emprestou_o_nome"
+    ],
+    "fio": {
+     "id": "curto_investe_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_investe_b2",
+   "era": [
+    "auge",
+    "declinio"
+   ],
+   "cargo": "empresario",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "As três lojas fecharam em oito meses e existe uma dívida com o seu nome em duas delas. Ele te ligou antes de qualquer cobrança chegar.",
+   "esquerda": {
+    "rotulo": "Pago e não cobro",
+    "efeitos": {
+     "dinheiro": -14,
+     "torcida": 10,
+     "forma": 8
+    },
+    "flags": [
+     "familia_perto"
+    ]
+   },
+   "direita": {
+    "rotulo": "A dívida é dele",
+    "efeitos": {
+     "dinheiro": 12,
+     "torcida": -12,
+     "diretoria": 8
+    },
+    "flags": [
+     "negocia_sozinho"
+    ]
+   }
+  },
+  {
+   "id": "curto_clinica_b1",
+   "era": [
+    "declinio"
+   ],
+   "cargo": "fisio",
+   "peso": 3,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ela mandou o exame para um especialista de fora, sem te avisar, e a resposta chegou com uma frase sobre a sua vida depois dos cinquenta anos.",
+   "esquerda": {
+    "rotulo": "Quero ler a frase",
+    "efeitos": {
+     "forma": -10,
+     "diretoria": -10,
+     "torcida": 8
+    },
+    "flags": [
+     "leu_o_laudo"
+    ],
+    "fio": {
+     "id": "curto_clinica_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Não leio nada",
+    "efeitos": {
+     "forma": 12,
+     "torcida": 10,
+     "diretoria": -9
+    },
+    "flags": [
+     "joelho_ignorado"
+    ],
+    "fio": {
+     "id": "curto_clinica_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_clinica_b2",
+   "era": [
+    "declinio",
+    "legado"
+   ],
+   "cargo": "companheira",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ela leu o laudo que você não leu e perguntou uma coisa só: se você quer andar normal aos cinquenta ou jogar mais uma temporada. As duas coisas não cabem.",
+   "esquerda": {
+    "rotulo": "Quero andar depois",
+    "encerra": "vida_parou_a_tempo",
+    "efeitos": {}
+   },
+   "direita": {
+    "rotulo": "Mais uma temporada",
+    "efeitos": {
+     "torcida": 10,
+     "forma": -10,
+     "diretoria": 10
+    },
+    "flags": [
+     "joelho_ignorado",
+     "infiltracao_cronica"
+    ],
+    "eco": "Ela dobrou o laudo e guardou na gaveta."
+   }
+  },
+  {
+   "id": "curto_irmao_b1",
+   "era": [
+    "declinio"
+   ],
+   "cargo": "mae",
+   "peso": 0,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Seu irmão mais novo pediu dinheiro pela quarta vez no ano, e desta vez sua mãe pediu junto. Ninguém disse para que é.",
+   "esquerda": {
+    "rotulo": "Dou sem perguntar",
+    "efeitos": {
+     "dinheiro": -13,
+     "torcida": 10,
+     "diretoria": 8
+    },
+    "flags": [
+     "sustenta_a_mae"
+    ],
+    "fio": {
+     "id": "curto_irmao_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Pergunto para que é",
+    "efeitos": {
+     "dinheiro": 11,
+     "torcida": -10,
+     "forma": 9
+    },
+    "flags": [
+     "perguntou_ao_irmao"
+    ],
+    "fio": {
+     "id": "curto_irmao_b2",
+     "em": [
+      3,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_irmao_b2",
+   "era": [
+    "declinio"
+   ],
+   "cargo": "mae",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Era uma dívida de agiota e o prazo era ontem. Ela conta isso na cozinha, de pé, e diz que resolve sozinha se você não quiser se meter.",
+   "esquerda": {
+    "rotulo": "Resolvo hoje",
+    "efeitos": {
+     "dinheiro": -15,
+     "torcida": 11,
+     "forma": -8
+    },
+    "flags": [
+     "familia_perto",
+     "sustenta_a_mae"
+    ]
+   },
+   "direita": {
+    "rotulo": "Ele que resolva",
+    "efeitos": {
+     "dinheiro": 13,
+     "torcida": -11,
+     "diretoria": 9
+    },
+    "flags": [
+     "negocia_sozinho"
+    ]
+   }
+  },
+  {
+   "id": "curto_escolinha_b1",
+   "era": [
+    "legado"
+   ],
+   "cargo": "coord_base",
+   "peso": 3,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "O campo onde você aprendeu virou estacionamento e o terreno do lado está à venda por pouco. Ninguém te procurou para falar disso — você descobriu passando.",
+   "esquerda": {
+    "rotulo": "Pergunto o preço",
+    "efeitos": {
+     "dinheiro": -12,
+     "torcida": 11,
+     "diretoria": -8
+    },
+    "flags": [
+     "olhou_o_terreno"
+    ],
+    "fio": {
+     "id": "curto_escolinha_b2",
+     "em": [
+      3,
+      5
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Não é problema meu",
+    "efeitos": {
+     "dinheiro": 10,
+     "diretoria": 12,
+     "torcida": -10
+    },
+    "flags": [
+     "padrinho_sem_cargo"
+    ],
+    "fio": {
+     "id": "curto_escolinha_b2",
+     "em": [
+      3,
+      5
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_escolinha_b2",
+   "era": [
+    "legado"
+   ],
+   "cargo": "coord_base",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "O clube oferece um cargo com sala e carro, e o terreno do bairro tem oferta de outro comprador até sexta. Dá para pagar um dos dois e a semana é esta.",
+   "esquerda": {
+    "rotulo": "Aceito o cargo",
+    "efeitos": {
+     "diretoria": 10,
+     "dinheiro": 10,
+     "torcida": -10
+    },
+    "flags": [
+     "curso_de_treinador"
+    ],
+    "eco": "O terreno virou prédio em dezoito meses."
+   },
+   "direita": {
+    "rotulo": "Compro o terreno",
+    "encerra": "vida_escolinha",
+    "efeitos": {}
+   }
+  },
+  {
+   "id": "curto_livro_b1",
+   "era": [
+    "legado"
+   ],
+   "cargo": "imprensa",
+   "peso": 0,
+   "tipo": "evento",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Uma editora quer a sua biografia e o contrato exige nomes. Não os nomes bonitos: os outros, os que você aprendeu a não dizer em voz alta.",
+   "esquerda": {
+    "rotulo": "Escrevo com nomes",
+    "efeitos": {
+     "dinheiro": 12,
+     "diretoria": -13,
+     "torcida": 8
+    },
+    "flags": [
+     "tomou_posicao",
+     "biografia_com_nomes"
+    ],
+    "fio": {
+     "id": "curto_livro_b2",
+     "em": [
+      3,
+      5
+     ]
+    }
+   },
+   "direita": {
+    "rotulo": "Escrevo sem nomes",
+    "efeitos": {
+     "diretoria": 11,
+     "dinheiro": -10,
+     "torcida": -9
+    },
+    "flags": [
+     "calou"
+    ],
+    "fio": {
+     "id": "curto_livro_b2",
+     "em": [
+      3,
+      5
+     ]
+    }
+   }
+  },
+  {
+   "id": "curto_livro_b2",
+   "era": [
+    "legado"
+   ],
+   "cargo": "empresario",
+   "peso": 0,
+   "tipo": "arco",
+   "peso_dramatico": "importante",
+   "unico": true,
+   "texto": "Ele aparece no lançamento sem convite, compra dois exemplares e pede que você assine os dois. Diz que o segundo é para o advogado dele.",
+   "esquerda": {
+    "rotulo": "Assino os dois",
+    "efeitos": {
+     "torcida": 12,
+     "dinheiro": -10,
+     "diretoria": 8
+    },
+    "flags": [
+     "tomou_posicao"
+    ]
+   },
+   "direita": {
+    "rotulo": "Assino um só",
+    "efeitos": {
+     "diretoria": 11,
+     "forma": 10,
+     "torcida": -10
+    },
+    "flags": [
+     "negocia_sozinho"
+    ]
+   }
+  }
+ ]
+}

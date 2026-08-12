@@ -1,0 +1,1066 @@
+{
+  "versao": "0.1",
+  "cargo": "treinador",
+  "cota": 33,
+  "notas": "Bloco completo do cargo TREINADOR (persistência: rotativo COM ARQUÉTIPO — Rangel 40%, Iracema 30%, Peçanha 30%; nunca repete o da vida anterior). São 18 cartas COMUNS, que usam {nome} e servem a qualquer arquétipo, mais 5 ESPECÍFICAS por arquétipo. Rangel é o durão silencioso, Iracema é a primeira treinadora e é brilhante e atacada o tempo todo, Peçanha é o paizão que te protege demais e te deixa despreparado. Tensão do cargo: FORMA ↔ DIRETORIA.",
+  "cartas": [
+    {
+      "id": "treinador_estreia",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "treinador",
+      "peso": 14,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele te chama no vestiário e diz uma frase só: hoje você entra no segundo tempo. Não diz em que posição.",
+      "esquerda": {
+        "rotulo": "Pergunto onde jogo",
+        "efeitos": {
+          "diretoria": -4,
+          "forma": 7
+        },
+        "flags": [],
+        "estatisticas": {
+          "jogos": 1
+        }
+      },
+      "direita": {
+        "rotulo": "Só levanto e vou",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -4
+        },
+        "flags": [
+          "obediente"
+        ]
+      }
+    },
+    {
+      "id": "treinador_banco",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 12,
+      "tipo": "evento",
+      "peso_dramatico": "importante",
+      "cooldown": 20,
+      "texto": "Ele explica que é gestão de carga. Você entende que é o banco. A entrevista coletiva é em quarenta minutos.",
+      "esquerda": {
+        "rotulo": "Reclamo em público",
+        "efeitos": {
+          "torcida": 9,
+          "diretoria": -16
+        },
+        "flags": [
+          "atrito_tecnico"
+        ]
+      },
+      "direita": {
+        "rotulo": "Engulo",
+        "efeitos": {
+          "diretoria": 14,
+          "forma": -10,
+          "torcida": -11
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_estouro_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} quer você numa posição que não é a sua, dizendo que é onde o time precisa. Ninguém pediu a sua opinião.",
+      "esquerda": {
+        "rotulo": "Digo que não é minha",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Jogo onde mandarem",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_estouro_02",
+      "era": [
+        "estouro",
+        "travessia"
+      ],
+      "cargo": "treinador",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "Duas horas de treino tático sem bola, com cones e caminhada. Metade do grupo reclama baixo e {nome} finge não ouvir.",
+      "esquerda": {
+        "rotulo": "Reclamo alto",
+        "efeitos": {
+          "torcida": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Faço calado",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_estouro_03",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Substituído no intervalo do seu terceiro jogo, sem explicação, e {nome} não olhou na sua cara quando você passou por ele.",
+      "esquerda": {
+        "rotulo": "Cobro explicação",
+        "efeitos": {
+          "diretoria": -6,
+          "forma": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Espero ser chamado",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_travessia_01",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "{nome} vai ser demitido no domingo se perder, e todo mundo sabe. Ele escalou você e pediu, sem pedir, que você jogue por ele.",
+      "esquerda": {
+        "rotulo": "Jogo por ele",
+        "efeitos": {
+          "forma": -11,
+          "torcida": 12,
+          "diretoria": 6
+        },
+        "flags": [
+          "jogou_pelo_tecnico"
+        ]
+      },
+      "direita": {
+        "rotulo": "Jogo por mim",
+        "efeitos": {
+          "forma": 11,
+          "diretoria": -11,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_travessia_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Chegou um treinador novo que não te escalou nas três primeiras rodadas. No quarto dia ele pediu uma conversa de dez minutos.",
+      "esquerda": {
+        "rotulo": "Falo o que quero",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Escuto e concordo",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_travessia_03",
+      "era": [
+        "travessia",
+        "auge",
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Ele parou o vídeo no seu erro e deixou a imagem congelada por vinte segundos, sem falar nada, com o grupo todo na sala.",
+      "esquerda": {
+        "rotulo": "Assumo em voz alta",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Olho pro chão",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_travessia_04",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele deixou a lista de dispensados aberta na mesa e saiu da sala. Seu nome não está nela e você reconhece três dos que estão.",
+      "esquerda": {
+        "rotulo": "Aviso os três",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fecho a lista",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_auge_01",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "{nome} vai escolher o capitão e chamou três jogadores para conversar. Você é o segundo e sabe o que o primeiro disse.",
+      "esquerda": {
+        "rotulo": "Uso o que sei",
+        "efeitos": {
+          "diretoria": 6,
+          "torcida": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Falo só de mim",
+        "efeitos": {
+          "torcida": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_auge_02",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "O esquema novo dele funciona e te deixa longe do gol. O time está ganhando e você não apareceu em nenhum lance da rodada.",
+      "esquerda": {
+        "rotulo": "Peço mudança",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": -4,
+          "torcida": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Sirvo o esquema",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_auge_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele quebrou a lousa tática no intervalo e citou o seu nome duas vezes. Depois do jogo, veio pedir desculpa em particular.",
+      "esquerda": {
+        "rotulo": "Aceito a desculpa",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Digo que foi injusto",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6,
+          "torcida": 3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_auge_04",
+      "era": [
+        "auge",
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 25,
+      "texto": "A preleção dele tem quarenta minutos e você já ouviu essa mesma preleção quatro vezes nesta temporada, palavra por palavra.",
+      "esquerda": {
+        "rotulo": "Presto atenção",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Penso em outra coisa",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_auge_05",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 9,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "unico": true,
+      "texto": "Ele te olha nos olhos antes da final e diz uma frase de três palavras. Você não sabe se é confiança ou se é ameaça.",
+      "esquerda": {
+        "rotulo": "Pergunto o que é",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Entro em campo",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_declinio_01",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "importante",
+      "unico": true,
+      "texto": "Ele chama de gestão de carga e você entende que é o banco. A coletiva é em quarenta minutos e ele já falou com a imprensa.",
+      "esquerda": {
+        "rotulo": "Contradigo na coletiva",
+        "efeitos": {
+          "torcida": 11,
+          "diretoria": -18
+        },
+        "flags": [
+          "atrito_tecnico"
+        ]
+      },
+      "direita": {
+        "rotulo": "Repito o que ele disse",
+        "efeitos": {
+          "diretoria": 16,
+          "forma": -9,
+          "torcida": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_declinio_02",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele te chamou para pedir a sua opinião sobre um moleque de dezoito anos que joga na sua posição. Pediu sinceridade.",
+      "esquerda": {
+        "rotulo": "Digo que ele é bom",
+        "efeitos": {
+          "torcida": 20,
+          "forma": -20,
+          "diretoria": 10
+        },
+        "flags": [
+          "padrinho_do_kaique"
+        ],
+        "fio": {
+          "id": "fio_heranca_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Ele pediu sinceridade e anotou o que ouviu."
+      },
+      "direita": {
+        "rotulo": "Aponto os defeitos",
+        "efeitos": {
+          "forma": 20,
+          "diretoria": -20,
+          "torcida": -12
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_heranca_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Os defeitos que você apontou foram corrigidos."
+      }
+    },
+    {
+      "id": "treinador_declinio_03",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 6,
+      "tipo": "rotina",
+      "peso_dramatico": "padrao",
+      "cooldown": 30,
+      "texto": "Você aquece no intervalo, entra no aquecimento do segundo tempo e volta a sentar. Isso aconteceu nas últimas seis rodadas.",
+      "esquerda": {
+        "rotulo": "Continuo aquecendo",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico sentado",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_declinio_04",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 13,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "unico": true,
+      "texto": "Ele diz que você tem cabeça de treinador e que o curso de licença abre inscrição em março. Diz isso e volta a olhar o vídeo.",
+      "esquerda": {
+        "rotulo": "Me inscrevo",
+        "efeitos": {
+          "dinheiro": -19,
+          "diretoria": 24,
+          "forma": -11
+        },
+        "flags": [
+          "curso_de_treinador"
+        ],
+        "fio": {
+          "id": "fio_licenca_b2a",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Março chega e a inscrição tem o seu nome."
+      },
+      "direita": {
+        "rotulo": "Ainda sou jogador",
+        "efeitos": {
+          "forma": 19,
+          "torcida": 19,
+          "diretoria": -14
+        },
+        "flags": [],
+        "fio": {
+          "id": "fio_licenca_b2b",
+          "em": [
+            14,
+            22
+          ]
+        },
+        "eco": "Março chega todo ano. A vaga, não."
+      }
+    },
+    {
+      "id": "treinador_rangel_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "rangel",
+      "unico": true,
+      "texto": "Em quatro meses ele nunca disse o seu nome. Chama você pela camisa e o número, e chama o grupo de grupo.",
+      "esquerda": {
+        "rotulo": "Me apresento de novo",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Viro o número",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_rangel_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "rangel",
+      "unico": true,
+      "texto": "Ele falou com você uma vez em dois anos, sete palavras, no corredor. As sete palavras eram sobre como você pisa no apoio.",
+      "esquerda": {
+        "rotulo": "Mudo o apoio",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Jogo como sempre",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_rangel_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "rangel",
+      "unico": true,
+      "texto": "A diretoria queria te vender e ele disse não, em reunião, sem te contar. Você soube dois anos depois, por outra pessoa.",
+      "esquerda": {
+        "rotulo": "Agradeço atrasado",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Nunca comento",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_rangel_04",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "rangel",
+      "unico": true,
+      "texto": "Dez anos depois ele é o treinador do seu clube de novo, com a mesma mandíbula travada. Continua te chamando pelo número.",
+      "esquerda": {
+        "rotulo": "Cobro respeito",
+        "efeitos": {
+          "torcida": 4,
+          "diretoria": -4,
+          "forma": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Volto a ser o número",
+        "efeitos": {
+          "diretoria": 4,
+          "forma": 4,
+          "torcida": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_rangel_05",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "rangel",
+      "unico": true,
+      "texto": "Ele te tirou do time e não explicou, do mesmo jeito de sempre. Também não deu entrevista falando de você, do mesmo jeito de sempre.",
+      "esquerda": {
+        "rotulo": "Peço uma conversa",
+        "efeitos": {
+          "diretoria": -6,
+          "forma": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Aceito o silêncio",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_iracema_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "iracema",
+      "unico": true,
+      "texto": "Ela chegou com o melhor currículo do mercado e metade da imprensa apostando quanto tempo dura. Explicou o esquema em detalhe.",
+      "esquerda": {
+        "rotulo": "Faço perguntas",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": 4,
+          "torcida": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Espero pra ver",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_iracema_02",
+      "era": [
+        "travessia",
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 12,
+      "tipo": "arco",
+      "peso_dramatico": "legado",
+      "arquetipo": "iracema",
+      "unico": true,
+      "texto": "Um comentarista disse na TV que ela não tem pulso porque é mulher. O microfone chegou em você antes de chegar nela.",
+      "esquerda": {
+        "rotulo": "Digo o nome disso",
+        "efeitos": {
+          "torcida": 27,
+          "diretoria": -27
+        },
+        "flags": [
+          "tomou_posicao"
+        ],
+        "fio": {
+          "id": "fio_voz_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "Ela ouviu você antes de ouvir o comentarista."
+      },
+      "direita": {
+        "rotulo": "Falo só de futebol",
+        "efeitos": {
+          "diretoria": 20,
+          "torcida": -25
+        },
+        "flags": [
+          "calou"
+        ],
+        "fio": {
+          "id": "fio_voz_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "O microfone chegou em você primeiro. E passou."
+      }
+    },
+    {
+      "id": "treinador_iracema_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "iracema",
+      "unico": true,
+      "texto": "Ela te mostra os dados do seu desgaste e pergunta o que você quer fazer, de verdade, com a informação. Ninguém nunca perguntou.",
+      "esquerda": {
+        "rotulo": "Peço para poupar",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": -4,
+          "torcida": -4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Digo que aguento",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -4,
+          "diretoria": 4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_iracema_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "legado",
+      "arquetipo": "iracema",
+      "unico": true,
+      "texto": "Ela foi demitida com o time em terceiro e campanha melhor que a do antecessor. A nota do clube agradece os serviços prestados.",
+      "esquerda": {
+        "rotulo": "Falo contra o clube",
+        "efeitos": {
+          "torcida": 27,
+          "diretoria": -32
+        },
+        "flags": [
+          "tomou_posicao"
+        ],
+        "fio": {
+          "id": "fio_voz_b2a",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "A nota do clube fica no site. A sua também."
+      },
+      "direita": {
+        "rotulo": "Não me manifesto",
+        "efeitos": {
+          "diretoria": 21,
+          "torcida": -21
+        },
+        "flags": [
+          "calou"
+        ],
+        "fio": {
+          "id": "fio_voz_b2b",
+          "em": [
+            18,
+            28
+          ]
+        },
+        "eco": "A nota do clube ficou sozinha no site."
+      }
+    },
+    {
+      "id": "treinador_iracema_05",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "iracema",
+      "unico": true,
+      "texto": "Ela treina uma seleção agora e te ligou para avisar que não vai te convocar. Avisou ela mesma, antes de a lista sair.",
+      "esquerda": {
+        "rotulo": "Agradeço a ligação",
+        "efeitos": {
+          "torcida": 7,
+          "forma": -3
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Desligo na cara",
+        "efeitos": {
+          "forma": 7,
+          "torcida": -3,
+          "diretoria": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_pecanha_01",
+      "era": [
+        "estouro"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "pecanha",
+      "unico": true,
+      "texto": "Ele abraça antes de falar e chama todo mundo de campeão. Você foi cortado da lista de relacionados e ele não contou.",
+      "esquerda": {
+        "rotulo": "Pergunto direto",
+        "efeitos": {
+          "forma": 7,
+          "diretoria": -7
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Espero ele contar",
+        "efeitos": {
+          "diretoria": 7,
+          "forma": -3
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_pecanha_02",
+      "era": [
+        "travessia"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "pecanha",
+      "unico": true,
+      "texto": "Ele te poupou de quatro jogos difíceis seguidos, para te proteger da imprensa. Você está bem fisicamente e fora de ritmo.",
+      "esquerda": {
+        "rotulo": "Peço pra jogar",
+        "efeitos": {
+          "forma": 6,
+          "diretoria": -6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Aceito a proteção",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_pecanha_03",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "pecanha",
+      "unico": true,
+      "texto": "Ele disse que você é o melhor do grupo, na sua frente, e disse o mesmo para outros dois no mesmo dia. Você soube pelos dois.",
+      "esquerda": {
+        "rotulo": "Cobro a verdade",
+        "efeitos": {
+          "forma": 4,
+          "diretoria": -4,
+          "torcida": 4
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Fico com o elogio",
+        "efeitos": {
+          "diretoria": 4,
+          "torcida": -4,
+          "forma": -4
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_pecanha_04",
+      "era": [
+        "auge"
+      ],
+      "cargo": "treinador",
+      "peso": 10,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "pecanha",
+      "unico": true,
+      "texto": "Ninguém quer decepcionar ele, e por isso ninguém diz que o time não está funcionando. O grupo perdeu cinco das últimas seis.",
+      "esquerda": {
+        "rotulo": "Falo com ele",
+        "efeitos": {
+          "diretoria": -6,
+          "forma": 6
+        },
+        "flags": []
+      },
+      "direita": {
+        "rotulo": "Deixo como está",
+        "efeitos": {
+          "diretoria": 6,
+          "forma": -6
+        },
+        "flags": []
+      }
+    },
+    {
+      "id": "treinador_pecanha_05",
+      "era": [
+        "declinio"
+      ],
+      "cargo": "treinador",
+      "peso": 11,
+      "tipo": "evento",
+      "peso_dramatico": "padrao",
+      "arquetipo": "pecanha",
+      "unico": true,
+      "texto": "Ele te escalou machucado, contra o parecer médico, porque você pediu. Diz que confia em você mais do que confia no exame.",
+      "esquerda": {
+        "rotulo": "Jogo assim mesmo",
+        "efeitos": {
+          "torcida": 4,
+          "forma": -7
+        },
+        "flags": [
+          "jogou_contra_parecer"
+        ]
+      },
+      "direita": {
+        "rotulo": "Peço pra não jogar",
+        "efeitos": {
+          "forma": 4,
+          "torcida": -4,
+          "diretoria": -4
+        },
+        "flags": []
+      }
+    }
+  ]
+}
