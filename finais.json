@@ -3,11 +3,12 @@
   "_leia": "Fonte única dos finais. finais.md é a versão legível deste arquivo. Regra estrutural: toda família tem exatamente 5 finais — 1 dourado (multi-fator, difícil), 3 condicionais e 1 genérico sem condição. O genérico é sempre o último e é a rede de segurança: nunca pode existir morte sem final.",
   "regras": {
     "finais_por_familia": 5,
-    "dourados_por_familia": 1,
+    "dourados_por_familia": "0 ou 1",
     "genericos_por_familia": 1,
-    "fatores_minimos_no_dourado": 3,
+    "fatores_minimos_no_dourado": 2,
     "resolucao": "Percorre a família na ordem. O primeiro final cujas condições batem é o escolhido. Finais de contexto têm prioridade acima de qualquer família.",
-    "morte_subita": "Cartas de tipo morte_subita têm uma opção que encerra a carreira na hora, independente dos medidores. Regras: (1) a opção fatal tem que estar TELEGRAFADA no texto e no rótulo — o jogador precisa saber que está fazendo uma besteira, a piada é ter feito mesmo assim; (2) nunca as duas opções são fatais; (3) a opção segura nunca é estritamente melhor em medidores, senão a escolha é falsa; (4) chance padrão 1.0 (morte certa); com chance < 1.0 é aposta e precisa de um bloco 'sobrevive' com recompensa grande."
+    "morte_subita": "Cartas de tipo morte_subita têm uma opção que encerra a carreira na hora, independente dos medidores. Regras: (1) a opção fatal tem que estar TELEGRAFADA no texto e no rótulo — o jogador precisa saber que está fazendo uma besteira, a piada é ter feito mesmo assim; (2) nunca as duas opções são fatais; (3) a opção segura nunca é estritamente melhor em medidores, senão a escolha é falsa; (4) chance padrão 1.0 (morte certa); com chance < 1.0 é aposta e precisa de um bloco 'sobrevive' com recompensa grande.",
+    "_contrato_do_dourado": "No maximo 2 fatores. No maximo 1 pode ser algo que o jogador PLANEJOU (flag de escolha ou estatistica acumulada); o segundo tem de ser algo que ele ja tem sem ter perseguido — posicao do segundo medidor no instante da morte, era, idade, ou marca de mundo. Taca: no maximo 1, e so onde a taca for o assunto do final. Nunca `mundo` junto de flag planejada: sao dois planos."
   },
   "flags_derivadas": {
     "sem_escandalo": "nenhuma de {investigacao_apostas, laranja, deve_pro_valdir, fundo_comprou_direitos, patrocinio_apostas} ativa",
@@ -25,20 +26,15 @@
     {
       "id": "ctx_dia_certo",
       "nome": "Aposentadoria no dia certo",
-      "moldura": "dourada",
+      "moldura": "prata",
       "arte": "final_ctx_dia_certo",
       "condicoes": {
         "era": [
           "legado"
         ],
         "medidores_entre": {
-          "min": 40,
-          "max": 70
-        },
-        "estatisticas": {
-          "titulos": {
-            "min": 2
-          }
+          "min": 30,
+          "max": 80
         }
       },
       "texto": "Você parou antes de alguém pedir, com dois títulos na estante e nenhum medidor no extremo. Equilíbrio sozinho é mediocridade; equilíbrio depois de ter vencido é a coisa mais difícil deste jogo."
@@ -69,11 +65,6 @@
         "era": [
           "legado"
         ],
-        "estatisticas": {
-          "titulos": {
-            "min": 3
-          }
-        },
         "medidores": {
           "torcida": {
             "min": 80
@@ -136,21 +127,12 @@
       },
       "finais": [
         {
-          "id": "forma0_dourado",
+          "id": "forma0_deu_tudo",
           "nome": "Deu tudo o que tinha",
-          "moldura": "dourada",
+          "moldura": "prata",
           "condicoes": {
             "flags": [
               "joelho_tratado"
-            ],
-            "estatisticas": {
-              "titulos": {
-                "min": 3
-              }
-            },
-            "era": [
-              "declinio",
-              "legado"
             ],
             "medidores": {
               "torcida": {
@@ -217,17 +199,10 @@
           "moldura": "dourada",
           "condicoes": {
             "flags": [
-              "joelho_tratado",
-              "padrinho_do_kaique"
+              "joelho_tratado"
             ],
             "idade": {
               "min": 32
-            },
-            "medidores": {
-              "diretoria": {
-                "min": 40,
-                "max": 70
-              }
             }
           },
           "texto": "Você levou o corpo ao limite absoluto sem quebrá-lo e sem virar produto de ninguém. O protocolo tem o seu nome e três gerações vão durar mais por causa dele."
@@ -283,19 +258,13 @@
       },
       "finais": [
         {
-          "id": "torcida0_dourado",
+          "id": "torcida0_vilao",
           "nome": "O vilão necessário",
-          "moldura": "dourada",
+          "moldura": "prata",
           "condicoes": {
             "flags": [
-              "tomou_posicao",
-              "rompeu_apostas"
+              "tomou_posicao"
             ],
-            "estatisticas": {
-              "titulos": {
-                "min": 2
-              }
-            },
             "medidores": {
               "diretoria": {
                 "min": 60
@@ -364,19 +333,10 @@
             "flags": [
               "escolheu_o_filho"
             ],
-            "estatisticas": {
-              "titulos": {
-                "min": 4
-              },
-              "transferencias": {
-                "max": 0
-              }
-            },
-            "medidores": {
-              "forma": {
-                "min": 50
-              }
-            }
+            "era": [
+              "declinio",
+              "legado"
+            ]
           },
           "texto": "Você virou o clube inteiro e mesmo assim continuou sendo uma pessoa, porque um dia trocou um jogo por um aniversário. É o único jeito de a idolatria não esmagar ninguém."
         },
@@ -431,22 +391,14 @@
       },
       "finais": [
         {
-          "id": "diretoria0_dourado",
+          "id": "diretoria0_porta_da_frente",
           "nome": "Saiu pela porta da frente",
-          "moldura": "dourada",
+          "moldura": "prata",
           "condicoes": {
             "flags": [
               "recusou_apostas"
             ],
-            "flags_qualquer": [
-              "rompeu_valdir",
-              "processou_valdir",
-              "quitou_valdir"
-            ],
             "medidores": {
-              "dinheiro": {
-                "min": 60
-              },
               "torcida": {
                 "min": 60
               }
@@ -510,17 +462,11 @@
           "moldura": "dourada",
           "condicoes": {
             "flags": [
-              "curso_de_treinador",
-              "padrinho_do_kaique"
+              "curso_de_treinador"
             ],
             "era": [
               "legado"
-            ],
-            "medidores": {
-              "torcida": {
-                "min": 55
-              }
-            }
+            ]
           },
           "texto": "Você virou instituição sabendo exatamente o preço e assinou mesmo assim, porque queria a chave do alojamento. A base tem cama nova e ninguém sabe que foi você."
         },
@@ -580,22 +526,11 @@
             "flags": [
               "recusou_apostas"
             ],
-            "flags_qualquer": [
-              "processou_valdir",
-              "rompeu_valdir",
-              "quitou_valdir",
-              "recusou_fundo"
-            ],
             "medidores": {
               "torcida": {
                 "min": 70
               }
-            },
-            "era": [
-              "auge",
-              "declinio",
-              "legado"
-            ]
+            }
           },
           "texto": "Você recusou todos os atalhos, brigou na justiça com quem te roubava e perdeu. Não sobrou dinheiro nenhum. Sobrou o nome, que era exatamente o que estava em jogo."
         },
@@ -650,14 +585,12 @@
       },
       "finais": [
         {
-          "id": "dinheiro100_dourado",
+          "id": "dinheiro100_clube_comprado",
           "nome": "O clube que você comprou",
-          "moldura": "dourada",
+          "moldura": "prata",
           "condicoes": {
             "flags": [
-              "recusou_apostas",
-              "padrinho_do_kaique",
-              "sem_escandalo"
+              "recusou_apostas"
             ],
             "medidores": {
               "torcida": {
