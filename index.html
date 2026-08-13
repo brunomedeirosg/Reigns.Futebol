@@ -205,16 +205,7 @@ const IDADE_PARAR=v=>v<=1?33:v===2?34:v===3?35:36;
 const ERA_POR_IDADE=i=>i<19?"base":i<22?"estouro":i<26?"travessia":i<30?"auge":i<33?"declinio":"legado";
 const CARTAS_POR_TEMPORADA=7;
 
-const MARCAS={
- forma_0:{id:"corpo_lembrado",nome:"Corpo lembrado",desc:"Ganhos e perdas de FORMA são 25% maiores.",mult:{forma:1.25}},
- forma_100:{id:"fome_antiga",nome:"Fome antiga",desc:"Começa com FORMA 60, mas o corpo cobra a partir dos 27.",inicio:{forma:60},decaiCedo:true},
- torcida_0:{id:"cara_de_vilao",nome:"Cara de vilão",desc:"TORCIDA se move 30% menos. Imune ao ódio, incapaz de ser amado.",mult:{torcida:0.7}},
- torcida_100:{id:"carisma_herdado",nome:"Carisma herdado",desc:"Ganhos de TORCIDA 30% maiores, e cada um custa 1 de DIRETORIA.",mult:{torcida:1.3},pedagio:true},
- diretoria_0:{id:"ficha_suja",nome:"Ficha suja",desc:"Começa com DIRETORIA 40, mas ganha 20% mais DINHEIRO.",inicio:{diretoria:40},mult:{dinheiro:1.2}},
- diretoria_100:{id:"filho_do_clube",nome:"Filho do clube",desc:"Começa com DIRETORIA 65. Você nasceu devendo lealdade a um escudo.",inicio:{diretoria:65}},
- dinheiro_0:{id:"medo_de_passar_fome",nome:"Medo de passar fome",desc:"Ganhos de DINHEIRO 30% maiores.",mult:{dinheiro:1.3}},
- dinheiro_100:{id:"ganancia_antiga",nome:"Ganância antiga",desc:"DINHEIRO sobe 25% mais rápido. Inclusive nas cartas que te matam.",mult:{dinheiro:1.25}},
-};
+
 const NOMES=["Rafa","Juninho","Tico","Léo","Dedé","Vina","Kaio","Bidu","Neném","Zaca","Piu","Gabi"];
 // O apelido não é sorteado: vem do título conquistado. Ninguém nasce com apelido.
 
@@ -223,7 +214,6 @@ let E=null, VIDAS=0, MARCA_ATUAL=null, ULTIMO_ELENCO={}, VISTOS_FINAIS=new Set()
 
 function novoJogo(){
   VIDAS++;
-  const m=MARCA_ATUAL?MARCAS[MARCA_ATUAL]:null;
   E={
     medidores:{forma:50,torcida:50,diretoria:50,dinheiro:50},
     // P4 — a reencarnação passa a dar ACESSO, não só a marca de alma. Medido: só 27%
@@ -233,7 +223,7 @@ function novoJogo(){
     // vida 3 aos 20 (Estouro), vida 4+ aos 22 (Travessia).
     idade:IDADE_INICIAL(VIDAS),temporada:1,rodada:0,era:"base",contrato:2,lesao:0,
     flags:new Set(),estatisticas:{gols:0,jogos:0,titulos:0,selecoes:0,transferencias:0},
-    historico:[],fila:[],agenda:[],vida:VIDAS,marca:m,
+    historico:[],fila:[],agenda:[],vida:VIDAS,
     patamar:0,clube:sorteia(DADOS.clubes.clubes[0]),proposta:null,ultimoBalanco:null,ecoPendente:null,
     titulo:null,
     nome:sorteia(NOMES),apelido:null,elenco:{},arquetipos:{},
@@ -378,7 +368,7 @@ function rendimento(k,v){
 }
 
 function aplicar(efeitos){
-  const m=E.marca;
+  const m=E;
   for(let [k,v] of Object.entries(efeitos||{})){
     if(m&&m.mult&&m.mult[k]) v=Math.round(v*m.mult[k]);
     if(m&&m.pedagio&&k==="torcida"&&v>0) E.medidores.diretoria-=1;
@@ -560,7 +550,7 @@ function aplicarProposta(){
 function viraTemporada(){
   E.temporada++; E.idade++; E.contrato--;
   // o corpo sempre vence no fim: o decaimento acelera e não dá para compensar para sempre
-  const cedo=E.marca&&E.marca.decaiCedo, base=cedo?27:30;
+  const cedo=E&&EdecaiCedo, base=cedo?27:30;
   if(E.idade>=base+6) E.medidores.forma-=12;
   else if(E.idade>=base+3) E.medidores.forma-=8;
   else if(E.idade>=base) E.medidores.forma-=5;
@@ -625,7 +615,6 @@ function bate(cond){
   if(cond.sem_flags && cond.sem_flags.some(tem)) return false;
   if(cond.era && !cond.era.includes(E.era)) return false;
   if(cond.idade && (E.idade<(cond.idade.min??-99)||E.idade>(cond.idade.max??999))) return false;
-  if(cond.marca_de_alma && (!E.marca||E.marca.id!==cond.marca_de_alma)) return false;
   if(cond.medidores) for(const [k,v] of Object.entries(cond.medidores))
     if(E.medidores[k]<(v.min??-99)||E.medidores[k]>(v.max??999)) return false;
   if(cond.medidores_entre) for(const k of MEDIDORES)
@@ -859,10 +848,6 @@ function fim(final){
   let chave=null;
   for(const k of MEDIDORES){
     if(E.medidores[k]<=0) chave=k+"_0"; else if(E.medidores[k]>=100) chave=k+"_100";
-  }
-  MARCA_ATUAL=chave&&MARCAS[chave]?chave:MARCA_ATUAL;
-  const prox=MARCA_ATUAL?MARCAS[MARCA_ATUAL]:null;
-  $("marca").textContent = (VIDAS>=3&&prox) ? `Marca da próxima vida — ${prox.nome}: ${prox.desc}` : "";
 
   const escolhas=DADOS.finais.escolhas_de_vida||[];
   const precoces=Object.values(DADOS.finais.familias_precoces||{});
